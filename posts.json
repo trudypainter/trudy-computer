@@ -1,0 +1,164 @@
+{
+    "posts": [
+        {
+            "title": "LATENT LAB",
+            "year": "2022",
+            "location": "MIT Media Lab",
+            "description": "3D exploration of latent space and research project idea generation using a machine learning model trained on MIT Media Lab projects",
+            "image": "latent-lab/1.jpg",
+            "tags": "fullstack, machine learning, react, docker, 3D, archive",
+            "priority": "9",
+            "slug": "/projects/latent-lab"
+        },
+        {
+            "title": "MESHUP",
+            "year": "2022",
+            "location": "MIT Media Lab",
+            "description": "Collaborative, accelerated idea generation tool using a GAN trained on images of cars",
+            "image": "meshup/1.jpg",
+            "tags": "fullstack, web sockets, machine learning, docker, flask, react",
+            "priority": "8",
+            "slug": "/projects/meshup"
+        },
+        {
+            "title": "SPOTIFY BPM EXPLORER",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "Spotify library explorer by BPM",
+            "image": "spotify-bpm/1.jpg",
+            "tags": "fullstack, react, spotify api, flask, heroku",
+            "priority": "7",
+            "slug": "/projects/spotify-bpm"
+        },
+        {
+            "title": "TRUDY.TUBE",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "Every single song I\u2019ve listened to, charted by time of day",
+            "image": "spotfy-visualizer/1.jpg",
+            "tags": "fullstack, archive, react, flask, sql, heroku, spotify api",
+            "priority": "7",
+            "slug": "/projects/spotfy-visualizer"
+        },
+        {
+            "title": "ALTRUISTIC BOTNET",
+            "year": "2022",
+            "location": "MIT Class",
+            "description": "Artificial climate change news inflation botnet",
+            "image": "altruistic-botnet/1.jpg",
+            "tags": "bot",
+            "priority": "5",
+            "slug": "/projects/altruistic-botnet"
+        },
+        {
+            "title": "TRUDY.COMPUTER",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "How I made my personal website with a Notion CMS",
+            "image": "trudy-computer/1.jpg",
+            "tags": "fullstack, react, flask, heroku",
+            "priority": "5",
+            "slug": "/projects/trudy-computer"
+        },
+        {
+            "title": "SPOTIFY MONSTER",
+            "year": "2021",
+            "location": "MIT Class",
+            "description": "Social network of Spotify Tamagotchi on Arduino",
+            "image": "spotify-monster/1.jpg",
+            "tags": "fullstack, spotify api",
+            "priority": "4",
+            "slug": "/projects/spotify-monster"
+        },
+        {
+            "title": "CHROME SOCIAL",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "Fleeting human interactions in new Google Chrome tabs",
+            "image": "chrome-social/1.jpg",
+            "tags": "fullstack, web sockets, chrome extension, flask, sql",
+            "priority": "3",
+            "slug": "/projects/chrome-social"
+        },
+        {
+            "title": "VSCO ZINE GENERATOR",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Generate printable zines from a VSCO using Bindery JS",
+            "image": "vsco-zine/1.jpg",
+            "tags": "fullstack, flask, heroku",
+            "priority": "2",
+            "slug": "/projects/vsco-zine"
+        },
+        {
+            "title": "MEMOIR TWITTER BOT",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Memoir generator twitter bot",
+            "image": "memoir-twitter-bot/1.jpg",
+            "tags": "bot",
+            "priority": "2",
+            "slug": "/projects/memoir-twitter-bot"
+        },
+        {
+            "title": "REAL TALK RADIO",
+            "year": "2020",
+            "location": "MIT Media Lab",
+            "description": "Continuous audio stream of spoken interludes in Black Music",
+            "image": "real-talk-radio/1.jpg",
+            "tags": "fullstack, archive, flask, heroku",
+            "priority": "2",
+            "slug": "/projects/real-talk-radio"
+        },
+        {
+            "title": "PERSONAL NARRATIVE PREDICTOR",
+            "year": "2020",
+            "location": "MIT Media Lab",
+            "description": "Machine learning model for parsing informal stories",
+            "image": "personal-narrative/1.jpg",
+            "tags": "machine learning",
+            "priority": "2",
+            "slug": "/projects/personal-narrative"
+        },
+        {
+            "title": "BREADCRUMB",
+            "year": "2021",
+            "location": "MIT Class",
+            "description": "Final project for React web development class",
+            "image": "breadcrumb/1.jpg",
+            "tags": "fullstack, react, google cloud platform",
+            "priority": "2",
+            "slug": "/projects/breadcrumb"
+        },
+        {
+            "title": "POKEMON ARCHIVE",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Web crawler and archive for Pokemon cards",
+            "image": "pokemon-archive/1.jpg",
+            "tags": "archive",
+            "priority": "1",
+            "slug": "/projects/pokemon-archive"
+        },
+        {
+            "title": "TRUDY.TUBE v1.0",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Spotify listening collector + visualizer",
+            "image": "spotify-mood/1.jpg",
+            "tags": "fullstack, archive, heroku, flask, spotify api",
+            "priority": "1",
+            "slug": "/projects/spotify-mood"
+        },
+        {
+            "title": "PARIS FASHION WEEK",
+            "year": "2021",
+            "location": "Personal Project",
+            "description": "Modeled in virtual show for UK designer Martine Rose",
+            "image": "mrss21/1.jpg",
+            "tags": "misc",
+            "priority": "1",
+            "slug": "/projects/mrss21"
+        }
+    ]
+}

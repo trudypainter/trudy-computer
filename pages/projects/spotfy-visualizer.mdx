@@ -1,0 +1,47 @@
+---
+title: TRUDY.TUBE
+year: 2022
+location: Personal Project
+description: Every single song I’ve listened to, charted by time of day
+image: spotfy-visualizer/1.jpg
+tags: fullstack, archive, react, flask, sql, heroku, spotify api
+priority: 7
+---
+
+# [www.trudy.tube](http://www.trudy.tube) 🎧
+
+I was frustrated that I couldn’t see every song I listened to on Spotify. So, as a personal project, I made a Spotify listening archiver to…
+
+1.  Collect every single song I listen to and
+
+2.  Generate interactive listening charts, plotted by time of day.
+
+![](/spotfy-visualizer/2.jpg)
+
+## version 1.0
+
+In 2020, I made a [mood tracker for my Spotify listening behavior](http://www.trudy.computer/spotify-mood). I learned a lot of valuable skills about APIs, data organizing, and visualizations.
+
+However, there were a few things I thought could be improved from the old site.
+
+- The site was not reliable. I collected songs using a scheduled task on my physical MacBook. So, if I had my computer turned off or was not connected to the internet, the data wouldn't be collected. The data was also stored in CSV files in Github. This is a crafty, free solution. However, this isn't best practice for storing lots of large data.
+
+- The site was made using plain HTML/JS/CSS. This implementation was fine for this specific project, but I wanted to practice making more modular sites for the next project (React)
+
+- The mood graph was non-sensical. I thought the mood indices provided by the Spotify API would be more insightful. But, the graphs didn't make much sense.
+
+## version 2.0
+
+This time, I wanted to make a listening tracker that was reliable, modular, and insightful.
+
+So, this listening tracker is a React app with a Flask backend (hosted on Heroku). And the listening data is stored in an SQL database.
+
+The data is also all plotted by time of day. Users can hover on a circle to play a song, click the circle to open it in Spotify, and scroll below to see all recorded songs.
+
+### [⭐️ Check out www.trudy.tube 🐸](http://www.trudy.tube)
+
+Below is a demo and diagram of the new site.
+
+<Vimeo vimeoId="661674779" />
+
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/listening-explorer/spotifyvisualizer.png?raw=true)

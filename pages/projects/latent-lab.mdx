@@ -1,0 +1,121 @@
+---
+title: LATENT LAB
+year: 2022
+location: MIT Media Lab
+description: 3D exploration of latent space and research project idea generation using a machine learning model trained on MIT Media Lab projects
+image: latent-lab/1.jpg
+tags: fullstack, machine learning, react, docker, 3D, archive
+priority: 9
+---
+
+# LATENT LAB
+
+[Latent Lab](http://18.27.79.191:5000/) is a project for the Viral Communications Group at the MIT Media Lab. It explores the generative output space of a machine learning model trained on research projects in the Media Lab.
+
+It enables users to:
+
+1.  Explore how past projects are understood by a natural language machine learning model.
+
+2.  Generate potential new research ideas given influencing projects.
+
+3.  Upload outside research to see where a given title lands in the latent space.
+
+![Meshup in action](/latent-lab/2.jpg)
+
+For this project, I was the primary designer and fullstack developer. I designed and implemented the 3D interactive interface and developed the backend machine learning algorithms to populate the frontend. I also presented the project demo alongside my supervisor [Kevin Dunnell](https://www.media.mit.edu/people/dunnell/overview/) at the MIT Media Lab’s annual Spring Meeting.
+
+⭐ Latent Lab: [http://18.27.79.191:5000/](http://18.27.79.191:5000/)
+
+## Background
+
+During the fall of 2021, I worked on a project in the MIT Media Lab called [Meshup](http://www.trudy.computer/meshup).
+
+In Meshup, users “steer” a newly generated output of a car by clicking on influencing images. The project synthesizes the output using a GAN machine learning model trained on images of cars. The aim of this project was to create a tool to remove the friction of creating shared understandings of complex ideas. Below is an example of Meshup.
+
+![](/latent-lab/3.jpg)
+
+As we were developing this tool, my supervisor and I became fascinated with the [latent space](https://towardsdatascience.com/understanding-latent-space-in-machine-learning-de5a7c687d8d), the n-dimensional mathematical representation of all possible outputs of a generative machine learning model.
+
+![](/latent-lab/4.jpg)
+
+In the latent space, datapoints that are interpreted as more similar by the model are clustered closer together. Below is an example of the latent space of a dataset of handwritten numbers. Notice that numbers with similar shapes (like 9 and 4) are located closer together. And distinct numbers (like 8, 5, and 3) are organized in smaller, more compact clusters.
+
+![](/latent-lab/5.jpg)
+
+The latent space gets even cooler, though. Since every point in the latent space corresponds to some object understood by the model, we can linearly interpolate between points to generate a blended output. Below is an example of interpolating between 2 chairs.
+
+![](/latent-lab/6.jpg)
+
+## “What even happens in the MIT Media Lab?”
+
+Later in the year, heads of the lab were asking for a tool to explore projects within the MIT Media Lab. Projects at the lab can range from community bioengineering to zero-gravity painting to sustainable city design. Naturally, lab sponsors have questions about the range of past projects and possible future projects.
+
+My supervisor and I jumped at the opportunity to work on a tool to explore Media Lab projects. We saw huge potential to map research similarities within the latent space.
+
+We decided to fine tune the pre-trained [Optimus](https://github.com/ChunyuanLI/Optimus) language model with project titles from the Media Lab. Then, we developed an interface to do the following:
+
+### [1] Explore how past projects are understood by a natural language machine learning model.
+
+In the latent space of a generative model, datapoints that are closer together are understood as more similar by the machine learning model. I created an Exploration UI that reduced the 32 dimensions of the latent space into a 3 dimensional interactive model. Users could then literally explore inside the model and discover what projects were clustered together.
+
+![](/latent-lab/7.jpg)
+
+![](/latent-lab/8.jpg)
+
+### [2] Generate potential new research ideas given influencing projects.
+
+An exciting element of the latent space is the ability to interpolate between combinations of research topics. What would happen if 2 researchers collaborated?
+
+![](/latent-lab/9.jpg)
+
+A user can select Media Lab research titles as influencing projects by either [a] clicking on a point in the 3D model or [b] selecting a project title from the side menu. The yellow orb in the 3D model is then positioned to be the average coordinates of the selected projects. And, a new research title is synthesized given the point’s latent space location.
+
+![](/latent-lab/10.jpg)
+
+In the screenshot above, projects related to urban planning are selected. The synthesized title in the bottom right corner is “Montello 1998: Manhattan project” → this implies that the model understands the titles are related to cities and “Manhattan” is included in the generated research title.
+
+### [3] Upload outside research to see where a given title lands in the latent space.
+
+If a user has an idea for potential research, the user can upload the project title to the model. Then, the title is mapped to its position in the latent space. By examining surrounding projects (and corresponding researchers), a user could learn who to contact to make their idea a reality.
+
+![](/latent-lab/11.jpg)
+
+NOTE: This feature works just okay. In the example above, the selected Media Lab projects “AutomaTiles” and “Atomulates” are clustered close together. The uploaded project title “atomic molecules” is also close to that cluster.
+
+These projects don’t relate too much to each other, though. They just sound similar. → This implies that the model considers syntactic (words that look the same) and not just semantic relationships (words that have similar meaning). This can sometimes lead to confusing clusters.
+
+## My contributions
+
+I primarily worked as a fullstack developer for the project and contributed to the following:
+
+- Developed the frontend interface using React (reusable components) and Three.js (3D interactive model)
+
+- Developed an API for the model to populate the frontend with compatible three dimensional latent space representations
+
+- Developed a backend algorithm to interpolate between influencing research projects and synthesize new research titles
+
+- Presented and pitched the project to members at the [Media Lab’s Spring Meeting](https://www.media.mit.edu/events/mit-media-lab-spring-meeting-2022/)
+
+Below is one of my brain dumps from the planning stage of the project. Originally, I planned to implement a 2D canvas. However, the latent space is 32 dimensions, and when it got reduced to 2 dimensions, it lost too much relational information. Instead, I decided I would make a 3 dimensional UI to preserve as much information from the latent space as possible.
+
+![](/latent-lab/12.jpg)
+
+## Demos
+
+Below is a short video of the interface in use at the Spring Meeting.
+
+<Vimeo vimeoId="718825950" />
+
+Below is a screen recording of the web interface.
+
+<Vimeo vimeoId="718822551" />
+
+In the video above, projects relating to fabrics + textiles are clustered close together → implying that the machine learning model understands the similarity between them.
+
+However, the generated outputs honestly aren’t that related to fabrics + textiles. I’ve learned that it’s more intuitive to explore the latent space of image models rather than the word vectors of natural language models.
+
+## Next…
+
+I am starting independent research modeling how a latent space morphs over time (example application is researchers joining and leaving the Media Lab).
+
+⭐️ Access the Latent Lab website here: [http://18.27.79.191:5000/](http://18.27.79.191:5000/)
