@@ -21,19 +21,24 @@ export function Post(props) {
       </div>
 
       <div>
-        <div className="bg-gray-100 p-4 my-2 h-96 flex flex-col justify-center ">
+        <a
+          href={p.slug}
+          className="bg-gray-100 p-4 my-2 h-96 flex flex-col justify-center hover:cursor-pointer"
+        >
           <img
             src={p.image}
             className="max-h-96 p-4 object-contain"
             layout="fill"
           />
-        </div>
+        </a>
 
-        {p.tags.split(', ').map((elm) => (
-          <span className="border border-black rounded-full px-2 radius-32 mr-1 ">
-            {elm}
-          </span>
-        ))}
+        <div className="flex flex-wrap ">
+          {p.tags.split(', ').map((elm) => (
+            <span className="border  whitespace-nowrap border-black rounded-full px-2 radius-32 mr-1 mb-1">
+              {elm}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

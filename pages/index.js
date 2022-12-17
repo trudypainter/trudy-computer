@@ -23,14 +23,16 @@ export default function Home(props) {
 
   return (
     <>
-      <Header />
+      <div className="absolute inset-0 w-screen overflow-x-hidden">
+        <Header />
 
-      <div className="w-full flex flex-wrap ">
-        {posts.posts.map((p) => (
-          <Post post={p} />
-        ))}
+        <div className="w-full flex flex-wrap ">
+          {posts.posts.map((p) => (
+            <Post post={p} />
+          ))}
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
