@@ -6,19 +6,11 @@ import { Post } from '../components/post';
 import { useState } from 'react';
 
 import Image from 'next/image';
+import FilterBar from '../components/FilterBar';
 
 export default function Home(props) {
-  const [projects, updateProjects] = useState({
-    data: [],
-    locations: [],
-    topics: [],
-  });
-
   const allProjects = posts.posts;
-  const [selectedProjects, setSelectedProjects] = useState([]);
-  const [locations, setLocations] = useState([]);
-  const [topics, setTopics] = useState([]);
-
+  const [selectedProjects, setSelectedProjects] = useState(posts.posts);
   const [selectedTags, setSelectedTags] = useState([]);
 
   return (
@@ -26,8 +18,10 @@ export default function Home(props) {
       <div className="absolute inset-0 w-screen overflow-x-hidden">
         <Header />
 
+        <FilterBar allProjects={allProjects} />
+
         <div className="w-full flex flex-wrap ">
-          {posts.posts.map((p) => (
+          {selectedProjects.map((p) => (
             <Post post={p} />
           ))}
         </div>

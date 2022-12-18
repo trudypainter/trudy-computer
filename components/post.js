@@ -11,12 +11,14 @@ export function Post(props) {
         <Link href={p.slug}>
           <h1 className="text-2xl hover:cursor-pointer">{p.title}</h1>
         </Link>
-        <p>
-          <span className="border border-black rounded-full px-2 radius-32">
+        <div className="flex flex-wrap ">
+          <span className="border border-black rounded-full px-2 radius-32 mr-1 justify-center">
             {p.location}
           </span>{' '}
-          <span>{p.year}</span>
-        </p>
+          <span className="border border-transparent rounded-full px-0 radius-32 mr-1 justify-center">
+            {p.year}
+          </span>
+        </div>
         <p>{p.description}</p>
       </div>
 

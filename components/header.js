@@ -5,8 +5,8 @@ export function Header() {
   const [elsewhere, toggleElsewhere] = useState(true);
 
   return (
-    <div class="px-8 mx-auto py-8 h-96 bg-blue-100 border-black border-b">
-      <div class="w-[600px] max-w-full backdrop-opacity-40 bg-white/40">
+    <div class="px-8 mx-auto py-8 h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
+      <div class="w-[600px] max-w-full backdrop-opacity-60 bg-white/40">
         <p className="p-2">
           Trudy Painter is currently a senior at MIT and researcher at the{' '}
           <a
@@ -31,7 +31,7 @@ export function Header() {
           Next year, she is joining{' '}
           <a
             className="underline"
-            href="https://experiments.withgoogle.com/search?q=google%20creative%20lab"
+            href="https://experiments.withgoogle.com"
             target="_blank"
           >
             Google Creative Lab
@@ -66,25 +66,9 @@ export function Header() {
             <a
               className="underline"
               target="blank"
-              href="https://docs.google.com/spreadsheets/d/1pBokIjBV7lxDYNxqqxfLrNb7h3h4GuhWSbrrTGd9Fho/edit?usp=sharing"
-            >
-              Resume
-            </a>
-            ,{' '}
-            <a
-              className="underline"
-              target="blank"
               href="https://www.are.na/trudy-painter"
             >
               Are.na
-            </a>
-            ,{' '}
-            <a
-              className="underline"
-              target="blank"
-              href="https://vsco.co/bionicpinkytoe/gallery"
-            >
-              VSCO
             </a>
             ,{' '}
             <a
@@ -106,9 +90,25 @@ export function Header() {
             <a
               className="underline"
               target="blank"
+              href="https://vsco.co/bionicpinkytoe/gallery"
+            >
+              VSCO
+            </a>
+            ,{' '}
+            <a
+              className="underline"
+              target="blank"
               href="https://www.linkedin.com/in/trudy-painter/"
             >
               LinkedIn
+            </a>
+            ,{' '}
+            <a
+              className="underline"
+              target="blank"
+              href="TrudyPainterResume.pdf"
+            >
+              Resume
             </a>
           </div>
         )}

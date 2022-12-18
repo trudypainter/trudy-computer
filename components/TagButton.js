@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import './TagButton.css';
 
 const TagButton = (props) => {
   let [selected, setSelected] = useState(false);
 
+  let tagClass =
+    'border  whitespace-nowrap border-black rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer hover:bg-gray-100';
+
   const getMatchingProj = (tagList) => {
     let projList = [];
-    let tagNames = tagList.map((tag) => tag.name);
     for (let projObj of props.allProjects) {
-      if (tagNames.includes(projObj.location.name)) {
+      if (props.locations.includes(projObj.location)) {
         projList = [...projList, projObj];
       }
 
@@ -42,32 +43,12 @@ const TagButton = (props) => {
   };
 
   return (
-    <div>
-      {props.filterBar ? (
-        <div
-          className={selected ? 'selectedText' : 'text'}
-          onClick={tagClicked}
-        >
-          {props.tag.name} {selected && '✕'}
-          {/* <div
-            className="tag"
-            // style={{
-            //   backgroundColor: "white",
-            // }}
-          ></div> */}
-        </div>
-      ) : (
-        <div className="listText">
-          {props.tag.name}
-          {/* <div
-            className="tag"
-            // style={{
-            //   backgroundColor: "white",
-            // }}
-          ></div> */}
-        </div>
-      )}
-    </div>
+    <span
+      className={selected ? tagClass + 'bg-yellow-300' : tagClass}
+      onClick={tagClicked}
+    >
+      {props.tag} {selected && '✕'}
+    </span>
   );
 };
 

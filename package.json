@@ -2,7 +2,7 @@
   "name": "jaredpalmer",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "python3 make_posts_json.py && next dev",
     "build": "next build"
   },
   "dependencies": {

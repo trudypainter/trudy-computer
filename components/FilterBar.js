@@ -1,10 +1,17 @@
-import './FilterBar.css';
 import TagButton from './TagButton';
 import { useEffect } from 'react';
-import { filter } from 'htmlparser2/node_modules/domutils';
 
 const FilterBar = (props) => {
-  // console.log("✅ selected projects", props.selectedProjects);
+  let locationsArray = props.allProjects.map((proj) => proj.location);
+  let locations = [...new Set(locationsArray)];
+  let topicsArray = props.allProjects
+    .map((proj) => proj.tags.split(', '))
+    .flat();
+  let topics = [...new Set(topicsArray)];
+
+  console.log(locations);
+  console.log(topics);
+
   const handleScroll = () => {
     const filterBar = document.getElementById('filterBar');
     const position = filterBar.offsetTop - 42;
@@ -23,37 +30,36 @@ const FilterBar = (props) => {
   }, []);
 
   return (
-    <div id="filterBar" className="w-full">
-      <div className="tagsBar">
-        <div className="locationTitle">Type:</div>
+    <div
+      id="filterBar"
+      className="w-full border-black border-b border-r px-8 py-4"
+    >
+      <div className="flex flex-wrap">
+        <span className="locationTitle mr-1">Location: </span>
 
-        {props.locations != undefined &&
-          props.locations.map((tag) => (
-            <TagButton
-              tag={tag}
-              allProjects={props.allProjects}
-              filterBar={true}
-              selectedProjects={props.selectedProjects}
-              setSelectedProjects={props.setSelectedProjects}
-              selectedTags={props.selectedTags}
-              setSelectedTags={props.setSelectedTags}
-            ></TagButton>
-          ))}
+        {locations.map((tag) => (
+          <TagButton
+            tag={tag}
+            allProjects={props.allProjects}
+            selectedProjects={props.selectedProjects}
+            setSelectedProjects={props.setSelectedProjects}
+            selectedTags={props.selectedTags}
+            setSelectedTags={props.setSelectedTags}
+          ></TagButton>
+        ))}
       </div>
-      <div className="tagsBar">
-        <div className="locationTitle">Tags:</div>
-        {props.topics != undefined &&
-          props.topics.map((tag) => (
-            <TagButton
-              tag={tag}
-              allProjects={props.allProjects}
-              filterBar={true}
-              selectedProjects={props.selectedProjects}
-              setSelectedProjects={props.setSelectedProjects}
-              selectedTags={props.selectedTags}
-              setSelectedTags={props.setSelectedTags}
-            ></TagButton>
-          ))}
+      <div className="flex flex-wrap">
+        <span className="locationTitle whitespace-normal mr-1">Tags: </span>
+        {topics.map((tag) => (
+          <TagButton
+            tag={tag}
+            allProjects={props.allProjects}
+            selectedProjects={props.selectedProjects}
+            setSelectedProjects={props.setSelectedProjects}
+            selectedTags={props.selectedTags}
+            setSelectedTags={props.setSelectedTags}
+          ></TagButton>
+        ))}
       </div>
     </div>
   );
