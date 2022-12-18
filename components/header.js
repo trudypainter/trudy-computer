@@ -5,9 +5,9 @@ export function Header() {
   const [elsewhere, toggleElsewhere] = useState(true);
 
   return (
-    <div class="px-8 mx-auto py-8 h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
+    <div class="p-4 md:p-8 mx-auto md:h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
       <div class="w-[600px] max-w-full backdrop-blur-sm bg-white/40">
-        <p className="p-2">
+        <p className="p-4">
           Trudy Painter is currently a senior at MIT and researcher at the{' '}
           <a
             className="underline"
@@ -27,7 +27,7 @@ export function Header() {
           </a>
           .
         </p>
-        <p className="p-2">
+        <p className="p-4 pt-0">
           Next year, she is joining{' '}
           <a
             className="underline"
@@ -39,7 +39,7 @@ export function Header() {
           in NYC as a creative technologist.
         </p>
 
-        <p className="p-2">
+        <p className="p-4 pt-0">
           Say{' '}
           <a className="underline" href="mailto:hello@trudy.computer">
             hello@trudy.computer
@@ -62,7 +62,7 @@ export function Header() {
           )}
         </p>
         {!elsewhere && (
-          <div className="p-2">
+          <div className="p-4 pt-0">
             <a
               className="underline"
               target="blank"
