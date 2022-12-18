@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXEmbedProvider } from 'mdx-embed';
+import MDImage from './Img';
 import Link from 'next/link';
 
 const components = {};

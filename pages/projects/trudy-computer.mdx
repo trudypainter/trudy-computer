@@ -2,77 +2,41 @@
 title: TRUDY.COMPUTER
 year: 2022
 location: Personal Project
-description: How I made my personal website with a Notion CMS
-image: trudy-computer/1.jpg
-tags: fullstack, react, flask, heroku
+description: How I built my personal website using Vercel and Next.js
+image: https://d2w9rnfcy7mm78.cloudfront.net/19472243/original_b54dd892c42651489e6895286183352b.jpg?1671376656?bc=0
+tags: fullstack, react, next, vercel, sql, planet scale
 priority: 5
 ---
 
-# TRUDY.COMPUTER 
+# TRUDY.COMPUTER
+
+!['test'](https://d2w9rnfcy7mm78.cloudfront.net/19472243/original_b54dd892c42651489e6895286183352b.jpg?1671376656?bc=0 'hey')
+
+### Intentions
+
+I wanted to make a website from scratch. I think [handmade websites](https://gossipsweb.net/) are [awesome](https://tilde.town/~zach/folk-html.html) and can be a great form of self expression.
+
+There are lots of great [website generators](https://cargo.site/), but I wanted my website to be fully customizable and learn new skills during development.
+
+When thinking about the [design of my personal website](https://thecreativeindependent.com/guides/how-to-make-a-website-for-your-creative-work/), I wanted to balance representing myself
+personally and professionally. A lot of my web design inspiration is collected in this [Are.na channel](https://www.are.na/trudy-painter/ui-ux-e7l6cz6uksa).
+
+I want to feel comfortable sending my website to friends AND employers.
+
+### System Specs
+
+The frontend is made with React and Next.js, deployed on Vercel. Posts are written with Markdown. I also used Prisma and Planet Scale to count the number of site visits.
+
+The repo was adapted from [this blank Nextra repo](https://github.com/jaredpalmer/nextra-blank-custom-theme).
+
+The current repository can be found [here](https://github.com/trudypainter/nextra-trudy-computer).
+
+### Previous Versions
+
+Since I use my personal website as a playground to try out new web stacks, my website has been through a _few_ iterations.
+I used to use Flask, Heroku, and Notion for a backend. That was a fine approach, but it was slower than Vercel. And it was basically held together
+by scotch tape and bamboo underneath.
+
+Below is a screen recording of [my old website](https://github.com/trudypainter/trudy-computer-react) through!
 
 ![](/trudy-computer/2.jpg)
-
-### Intentions 
-
-I wanted to make a website from scratch. I think [handmade websites](https://gossipsweb.net/) are [awesome](https://tilde.town/~zach/folk-html.html) and can be a great form of self expression. 
-
-There are lots of great [website generators](https://cargo.site/), but I wanted my website to be fully customizable and learn new skills during development. 
-
-When thinking about the [design of my personal website](https://thecreativeindependent.com/guides/how-to-make-a-website-for-your-creative-work/), I wanted to balance representing myself personally and professionally. 
-
-I want to feel comfortable sending my website to friends AND employers. 
-
- 
-
-### System Specs 
-
-A lot of my minimalist/bruatlist web design inspiration is collected in this [Are.na channel](https://www.are.na/trudy-painter/ui-ux-e7l6cz6uksa). 
-
-The frontend is made with React. The backend is a Flask web server (hosted on Heroku) that turns Notion pages → to Markdown → into HTML. You can look at how the system was made in [this repository](https://github.com/trudypainter/trudy-computer-react). 
-
-### Interface Design 
-
-Below is the frontend interface from my initial design stages. You may notice that the original project grid included pictures. And, my personal website did include thumbnail pictures for a long time. 
-
-![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/trudy-computer/frontend.jpeg?raw=true) 
-
-However, there were 2 issues with this. [1] The landing page took too long to load and [2] I got super interested in sustainable web design and decided that image thumbnails weren’t essential. 
-
-⭐️ Check out more sustainable web design resources here: [https://sustainable.websites.ngo/](https://sustainable.websites.ngo/)  
-
-### Notion CMS 
-
-At first, I used a custom content management system before. There are plenty of CMS frameworks out there (like [Kirby](https://getkirby.com/) for example), but I wanted to design my own.  
-
-So my approach was to dedicate folders to [a] a JSON of project metadata, [b] a markdown file of the project writeup, and [c] store all the images in the same directory.  
-
-![](/trudy-computer/3.jpg)
-
- 
-
-Fine. This worked. But I hated the process of creating a new directory → writing in my code editor → pushing to Github → waiting for the web app to compile → checking how it looked → maybe making changes…. not smooth. 
-
-I use [Notion](https://www.notion.so/). And then I realized Notion has a good [API](https://developers.notion.com/). So why don’t I just reduce the friction of the workflow above by using Notion as a backend? 
-
-![](/trudy-computer/4.jpg)
-
-### Database Metadata 
-
-I implemented my Notion backend by using the database above as, well, my database. All of the pages in the database link to project pages.  
-
-Entries also have fields of metadata. They have [a] descriptions, [b] a location, and [c] topic tags. These fields are displayed in project cards on my landing page. 
-
-Entries also have a priority number. I ran into the issue that the database query doesn’t return entries in a specific order (it is random). And I want to control the order of the projects in my grid. So, I gave each project a number. The projects I care about the least got a 1. The projects that I care about more get higher numbers. I chose this numbering system because as I add new projects, I’ll just give them a higher number - there is no upper bound. Then, when I query the database, I can sort by priority number to get the project ordering I want. 
-
-Entries also have slugs that routes to the project’s writeup. So [www.trudy.computer/trudy-computer](http://www.trudy.computer/trudy-computer) will return this project’s writeup. 
-
-### Project Writeup Rendering 
-
-To get the content for the project page, I convert a Notion page → Markdown → HTML. I did this manually so I had complete control over the display of projects (and I was curious what the process of doing it was like).  
-
-# If you have interest in this for your website, 
-
-Please email me at tpainter@mit.edu. Or, take a look at my [Github repository](https://github.com/trudypainter/trudy-computer-react) of how I made this. 
-
- 
-

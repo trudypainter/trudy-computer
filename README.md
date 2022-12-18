@@ -1,11 +1,26 @@
-# Nextra Blank Custom Theme/Boilerplate Example
+# trudy-computer
 
-A nearly blank MDX blog/content site powered by a custom [Nextra](https://nextra.vercel.app) theme (see `components/layout.js`) w/Tailwind already setup. 
+Made with Next.js and MDX. Help from [this blank theme repo](https://github.com/jaredpalmer/nextra-blank-custom-theme).
 
-The post list for the blog index in `pages/index.js` comes out of `./posts.json`. If you wanted to get the Nextra page map to use on the index page, you _could_ make a blank `pages/index.mdx` and move that "page" component into `components/layout` (just check for `route === '/'`) and render it).
+To run and refresh `posts.json`
 
-Anyways, hopes this helps. Nextra rocks for static content. 
+```
+npm run dev
+```
 
+---
 
+## Planet Scale and Prisma stuff
 
+To connect
 
+```
+sudo pscale connect trudy-computer main --port 3309
+npx prisma studio
+```
+
+To update
+
+```
+npx prisma db push
+```

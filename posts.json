@@ -54,9 +54,9 @@
             "title": "TRUDY.COMPUTER",
             "year": "2022",
             "location": "Personal Project",
-            "description": "How I made my personal website with a Notion CMS",
-            "image": "trudy-computer/1.jpg",
-            "tags": "fullstack, react, flask, heroku",
+            "description": "How I built my personal website using Vercel and Next.js",
+            "image": "https://d2w9rnfcy7mm78.cloudfront.net/19472243/original_b54dd892c42651489e6895286183352b.jpg?1671376656?bc=0",
+            "tags": "fullstack, react, next, vercel, sql, planet scale",
             "priority": "5",
             "slug": "/projects/trudy-computer"
         },

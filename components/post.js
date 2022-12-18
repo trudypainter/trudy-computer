@@ -25,11 +25,11 @@ export function Post(props) {
       <div>
         <a
           href={p.slug}
-          className="bg-gray-100 p-4 my-2 h-96 flex flex-col justify-center hover:cursor-pointer"
+          className="bg-gray-100 p-4 my-2 h-96 -md:p-1 -md:h-73 flex flex-col justify-center hover:cursor-pointer"
         >
           <img
             src={p.image}
-            className="max-h-96 p-4 object-contain"
+            className="max-h-96 -md:max-h-72 p-4 object-contain"
             layout="fill"
           />
         </a>
