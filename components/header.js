@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export function Header() {
-  const [elsewhere, toggleElsewhere] = useState(false);
+  const [elsewhere, toggleElsewhere] = useState(true);
 
   return (
     <div class="px-8 mx-auto py-8 h-96 bg-blue-100 border-black border-b">
@@ -48,14 +48,14 @@ export function Header() {
           {elsewhere ? (
             <span
               onClick={() => toggleElsewhere(!elsewhere)}
-              class="hover:cursor-pointer"
+              class="hover:cursor-pointer whitespace-nowrap"
             >
               ▸ elsewhere
             </span>
           ) : (
             <span
               onClick={() => toggleElsewhere(!elsewhere)}
-              class="hover:cursor-pointer"
+              class="hover:cursor-pointer whitespace-nowrap"
             >
               ▾ elsewhere
             </span>
