@@ -6,7 +6,7 @@ export function Header() {
 
   return (
     <div class="px-8 mx-auto py-8 h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
-      <div class="w-[600px] max-w-full backdrop-opacity-60 bg-white/40">
+      <div class="w-[600px] max-w-full backdrop-blur-sm bg-white/40">
         <p className="p-2">
           Trudy Painter is currently a senior at MIT and researcher at the{' '}
           <a
