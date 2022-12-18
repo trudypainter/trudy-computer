@@ -2,7 +2,11 @@ import Marquee from 'react-fast-marquee';
 import { useEffect, useState } from 'react';
 
 const Scroller = (props) => {
-  const [scrollerInfo, updateScrollerInfo] = useState();
+  let data = `Website Views:  |  Songs Listened to Today:  |  Boston's Current Weather: `;
+
+  const [scrollerInfo, updateScrollerInfo] = useState(
+    [data, data, data].join('  | ') + '  |  '
+  );
   const [scrollSpeed, updateScrollSpeed] = useState(10);
 
   useEffect(() => {
