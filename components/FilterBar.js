@@ -1,5 +1,5 @@
 import TagButton from './TagButton';
-import { useEffect } from 'react';
+import { useEffect, componentDidMount } from 'react';
 
 const FilterBar = (props) => {
   let locationsArray = props.allProjects.map((proj) => proj.location);
@@ -12,27 +12,10 @@ const FilterBar = (props) => {
   console.log(locations);
   console.log(topics);
 
-  const handleScroll = () => {
-    const filterBar = document.getElementById('filterBar');
-    const position = filterBar.offsetTop - 42;
-    if (window.pageYOffset >= position) {
-      filterBar.classList.add('sticky');
-    } else {
-      filterBar.classList.remove('sticky');
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div
       id="filterBar"
-      className="w-full border-black border-b border-r px-8 py-4"
+      className="w-full border-black border-b border-r px-8 pt-3 pb-2 sticky top-0 backdrop-blur-sm bg-white/80"
     >
       <div className="flex flex-wrap">
         <span className="locationTitle mr-1">Location: </span>

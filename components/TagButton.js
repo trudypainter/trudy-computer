@@ -6,7 +6,7 @@ const TagButton = (props) => {
   //   console.log(props);
 
   let tagClass =
-    'border  whitespace-nowrap border-black rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer ';
+    'border  whitespace-nowrap border-black  rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer ';
 
   const getMatchingProj = (tagList) => {
     let projList = [];
@@ -51,7 +51,9 @@ const TagButton = (props) => {
   return (
     <span
       className={
-        selected ? tagClass + ' bg-[#00ff00]' : tagClass + 'hover:bg-gray-100'
+        selected
+          ? tagClass + ' bg-[#99f841]'
+          : tagClass + 'bg-white hover:bg-gray-100'
       }
       onClick={tagClicked}
     >

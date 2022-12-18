@@ -1,5 +1,5 @@
 {
-  "name": "jaredpalmer",
+  "name": "trudypainter",
   "private": true,
   "scripts": {
     "dev": "python3 make_posts_json.py && next dev",
