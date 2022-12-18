@@ -6,7 +6,7 @@ export function Header() {
 
   return (
     <div class="p-4 md:p-8 mx-auto md:h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
-      <div class="w-[600px] max-w-full backdrop-blur-sm bg-white/40">
+      <div class="w-[600px] max-w-full backdrop-blur-sm bg-white/60">
         <p className="p-4">
           Trudy Painter is currently a senior at MIT and researcher at the{' '}
           <a
@@ -106,7 +106,7 @@ export function Header() {
             <a
               className="underline"
               target="blank"
-              href="TrudyPainterResume.pdf"
+              href="TrudyPainter_Resume.pdf"
             >
               Resume
             </a>
