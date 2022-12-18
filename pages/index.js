@@ -18,7 +18,13 @@ export default function Home(props) {
       <div className="absolute inset-0 w-screen overflow-x-hidden">
         <Header />
 
-        <FilterBar allProjects={allProjects} />
+        <FilterBar
+          allProjects={allProjects}
+          selectedProjects={selectedProjects}
+          setSelectedProjects={setSelectedProjects}
+          selectedTags={selectedTags}
+          setSelectedTags={setSelectedTags}
+        />
 
         <div className="w-full flex flex-wrap ">
           {selectedProjects.map((p) => (

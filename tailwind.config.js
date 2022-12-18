@@ -3,11 +3,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    // colors: {
-    //   topsky: '#78A7E5',
-    //   bottomsky: '#93C3FD',
-    // },
     extend: {
+      colors: {
+        topsky: '#78A7E5',
+        bottomsky: '#93C3FD',
+      },
       typography: {
         DEFAULT: {
           css: {

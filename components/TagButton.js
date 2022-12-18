@@ -3,18 +3,20 @@ import { useState } from 'react';
 const TagButton = (props) => {
   let [selected, setSelected] = useState(false);
 
+  //   console.log(props);
+
   let tagClass =
-    'border  whitespace-nowrap border-black rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer hover:bg-gray-100';
+    'border  whitespace-nowrap border-black rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer ';
 
   const getMatchingProj = (tagList) => {
     let projList = [];
     for (let projObj of props.allProjects) {
-      if (props.locations.includes(projObj.location)) {
+      if (tagList.includes(projObj.location)) {
         projList = [...projList, projObj];
       }
 
-      for (let projTag of projObj.tags) {
-        if (tagNames.includes(projTag.name)) {
+      for (let projTag of projObj.tags.split(', ')) {
+        if (tagList.includes(projTag)) {
           projList = [...projList, projObj];
         }
       }
@@ -35,7 +37,11 @@ const TagButton = (props) => {
     } else {
       // add the project to list
       let newTagList = [...props.selectedTags, props.tag];
+      console.log(newTagList);
       props.setSelectedProjects(getMatchingProj(newTagList));
+
+      console.log('matching projcss..', getMatchingProj(newTagList));
+
       props.setSelectedTags(newTagList);
     }
 
@@ -44,7 +50,9 @@ const TagButton = (props) => {
 
   return (
     <span
-      className={selected ? tagClass + 'bg-yellow-300' : tagClass}
+      className={
+        selected ? tagClass + ' bg-[#00ff00]' : tagClass + 'hover:bg-gray-100'
+      }
       onClick={tagClicked}
     >
       {props.tag} {selected && '✕'}

@@ -45,6 +45,8 @@ const FilterBar = (props) => {
             setSelectedProjects={props.setSelectedProjects}
             selectedTags={props.selectedTags}
             setSelectedTags={props.setSelectedTags}
+            locations={locations}
+            topics={topics}
           ></TagButton>
         ))}
       </div>
@@ -58,6 +60,8 @@ const FilterBar = (props) => {
             setSelectedProjects={props.setSelectedProjects}
             selectedTags={props.selectedTags}
             setSelectedTags={props.setSelectedTags}
+            locations={locations}
+            topics={topics}
           ></TagButton>
         ))}
       </div>

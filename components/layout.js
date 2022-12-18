@@ -21,12 +21,14 @@ export default function Blog(props) {
       return (
         <>
           {sharedHead}
-          <div className="sticky top-6 left-8 text-green-400 md:text-black">
+          <div className="sticky top-6 left-8">
             <Link href="/">
-              <a className="py-8 px-8  rounded-full">Home</a>
+              <a className="px-4 py-2 md:py-2 md:px-8 bg-bottomsky z-80">
+                Home
+              </a>
             </Link>
           </div>{' '}
-          <div className="prose mx-auto py-24">
+          <div className="prose mx-auto py-24 -z-10">
             <MDXEmbedProvider>
               {' '}
               <MDXProvider components={components}>{children}</MDXProvider>{' '}
