@@ -23,7 +23,7 @@ export default function Blog(props) {
           {sharedHead}
           <div className="sticky top-6 left-8">
             <Link href="/">
-              <a className="px-4 py-2 md:py-2 md:px-8 bg-bottomsky z-80">
+              <a className="px-4 py-4  md:px-8 bg-bottomsky z-80 rounded-r-full">
                 Home
               </a>
             </Link>

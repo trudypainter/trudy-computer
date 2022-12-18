@@ -5,7 +5,7 @@ export function Post(props) {
   return (
     <div
       key={p.slug}
-      className="flex flex-col justify-between w-full lg:w-1/2 p-8 border-black border-b border-r "
+      className="flex flex-col justify-between w-full lg:w-1/2 py-8 px-4 md:p-8 border-black border-b border-r "
     >
       <div>
         <Link href={p.slug}>
