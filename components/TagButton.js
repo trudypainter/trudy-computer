@@ -21,7 +21,7 @@ const TagButton = (props) => {
         }
       }
     }
-    return projList;
+    return [...new Set(projList)];
   };
 
   const tagClicked = () => {
