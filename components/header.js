@@ -18,11 +18,11 @@ export function Header() {
           </a>
           . She focuses on developing AI tools to augment human workflows,
           rather than replace them. Examples of her recent work are{' '}
-          <a className="underline" target="_blank" href="/meshup">
+          <a className="underline" target="_blank" href="/projects/meshup">
             Meshup
           </a>{' '}
           and{' '}
-          <a className="underline" target="_blank" href="/latent-lab">
+          <a className="underline" target="_blank" href="/projects/latent-lab">
             Latent Lab
           </a>
           .
