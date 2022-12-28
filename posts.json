@@ -21,6 +21,16 @@
             "slug": "/projects/meshup"
         },
         {
+            "title": "CURATOR CENTRAL",
+            "year": "2022",
+            "location": "MIT Class",
+            "description": "Community web app to collect and annotate artworks using the Harvard Art API. Awarded Excellent Project in MIT's Software Studio Class.",
+            "tags": "fullstack, vue, vercel, sql",
+            "image": "/curatorcentral/1.gif",
+            "priority": "7",
+            "slug": "/projects/curatorcentral"
+        },
+        {
             "title": "SPOTIFY BPM EXPLORER",
             "year": "2022",
             "location": "Personal Project",
@@ -41,12 +51,22 @@
             "slug": "/projects/spotfy-visualizer"
         },
         {
+            "title": "MIT MUSIC MAP",
+            "year": "2022",
+            "location": "MIT Class",
+            "description": "Interactive data visualization of where MIT students listen to songs on campus.",
+            "tags": "p5.js, spotify api",
+            "image": "/mitmusicmap/map.gif",
+            "priority": "6",
+            "slug": "/projects/mitmusicmap"
+        },
+        {
             "title": "ALTRUISTIC BOTNET",
             "year": "2022",
             "location": "MIT Class",
             "description": "Artificial climate change news inflation botnet",
             "image": "altruistic-botnet/1.jpg",
-            "tags": "bot",
+            "tags": "bot, p5.js",
             "priority": "5",
             "slug": "/projects/altruistic-botnet"
         },

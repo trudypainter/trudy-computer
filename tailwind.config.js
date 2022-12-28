@@ -17,6 +17,9 @@ module.exports = {
             a: {
               'font-weight': '400',
             },
+            p: {
+              'line-height': '1.5rem',
+            },
           },
         },
       },
