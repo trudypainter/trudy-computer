@@ -15,7 +15,8 @@ const FilterBar = (props) => {
   return (
     <div
       id="filterBar"
-      className="-md:invisible text-sm -md:h-0 -md:p-0 -md:m-0 visible w-full border-black border-b border-r px-4 md:px-8 pt-3 pb-2 sticky top-7 -md:top-0 backdrop-blur-sm bg-white/80"
+      className="-md:invisible text-sm -md:h-0 -md:p-0 -md:m-0 visible w-full border-black border-b border-t border-r \
+      px-4 md:px-8 pt-3 pb-2 sticky top-0 -md:top-0 backdrop-blur-sm bg-white/80"
     >
       <div className="flex flex-wrap">
         <span className="locationTitle mr-1">Location: </span>

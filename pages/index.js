@@ -17,7 +17,7 @@ export default function Home(props) {
   return (
     <>
       <div className="absolute inset-0 w-screen overflow-x-hidden">
-        <Scroller />
+        {/* <Scroller /> */}
         <Header />
 
         <FilterBar

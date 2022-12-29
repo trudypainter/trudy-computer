@@ -5,7 +5,7 @@ export function Header() {
   const [elsewhere, toggleElsewhere] = useState(true);
 
   return (
-    <div class="p-4 md:p-8 mx-auto -md:py-16 md:h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black border-b">
+    <div class="p-4 md:p-8 mx-auto -md:py-16 md:h-[460px] bg-gradient-to-b from-[#78A7E5] to-[#93C3FD] border-black -md:border-b">
       <div class="w-[600px] max-w-full backdrop-blur-sm bg-white/100">
         <p className="p-4">
           Trudy Painter is currently a senior at MIT and researcher at the{' '}

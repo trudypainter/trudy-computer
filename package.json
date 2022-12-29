@@ -8,6 +8,7 @@
   "dependencies": {
     "@mdx-js/react": "^1.6.22",
     "@prisma/client": "^4.7.1",
+    "matter-js": "^0.18.0",
     "mdx-embed": "^1.1.2",
     "next": "^11.0.1",
     "nextra": "^0.4.5",
