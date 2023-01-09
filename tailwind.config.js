@@ -7,6 +7,12 @@ module.exports = {
       colors: {
         topsky: '#78A7E5',
         bottomsky: '#93C3FD',
+        funyellow: '#FEFF1F',
+        fungreen: '#6FE224',
+        funred: '#FC5D42',
+        funpink: '#FF3FB3',
+        funblue: '#28ABE2',
+        funpurple: '7E51F5',
       },
       typography: {
         DEFAULT: {

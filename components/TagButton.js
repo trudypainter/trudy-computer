@@ -52,7 +52,7 @@ const TagButton = (props) => {
     <span
       className={
         selected
-          ? tagClass + ' bg-[#99f841]'
+          ? tagClass + ' bg-[#FAFE4B]'
           : tagClass + 'bg-white hover:bg-gray-100'
       }
       onClick={tagClicked}
