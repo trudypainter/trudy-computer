@@ -6,7 +6,7 @@ export function Bio() {
   return (
     <div class="w-[720px] mx-auto p-4 -md:py-16 -md:rounded-none -md:outline-none border-black max-w-full backdrop-blur-sm text-black  rounded-r-lg">
       <p className="p-4">
-        Trudy Painter is currently a senior at MIT and researcher at the{' '}
+        Trudy Painter is a senior at MIT and researcher at the{' '}
         <a
           className="underline "
           target="_blank"
