@@ -4,8 +4,11 @@ export function Bio() {
   const [elsewhere, toggleElsewhere] = useState(true);
 
   return (
-    <div class="w-[720px] mx-auto p-4 -md:py-12 -md:rounded-none -md:outline-none border-black max-w-full  text-black  rounded-r-lg">
-      <p className="p-4">
+    <div
+      class="w-[720px] top-12 left-1/2 transform -translate-x-1/2  mx-auto p-4 -md:py-1 -md:rounded-none -md:outline-none
+     border-black max-w-full  text-black  rounded-r-lg absolute  "
+    >
+      <p className="p-4 ">
         Trudy Painter is a senior at MIT and researcher at the{' '}
         <a
           className="underline "
