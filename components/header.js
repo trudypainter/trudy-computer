@@ -43,7 +43,7 @@ export function Header() {
       class="px-8 py-16  bg-lightergreen
       border-black -md:border-b "
     >
-      <div className=" justify-between ">
+      <div className="   hover:cursor-default">
         <div>
           <p className="text-2xl my-4 lg:max-w-[50vw]">
             <span
@@ -71,7 +71,7 @@ export function Header() {
           </p>
         </div>
 
-        <div className="w-full lg:w-1/2 flex ">
+        <div className="w-32 ">
           <div
             style={{
               backgroundColor: moreColor,
