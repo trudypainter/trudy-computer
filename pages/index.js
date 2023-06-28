@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { Post } from '../components/post';
-import Scroller from '../components/scroller';
+// import Scroller from '../components/scroller';
 import { useState } from 'react';
 
 import Image from 'next/image';

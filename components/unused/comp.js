@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Matter from 'matter-js';
-import { Bio } from './bio';
+import { Bio } from './bioWithDropDown';
 
 const STATIC_DENSITY = 15;
 const PARTICLE_SIZE = 6;

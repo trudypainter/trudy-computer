@@ -13,6 +13,8 @@ module.exports = {
         funpink: '#FF3FB3',
         funblue: '#28ABE2',
         funpurple: '7E51F5',
+        dinamogreen: '#4DF437', // taken from dinamo type
+        lightergreen: '#01FF7E', // taken from the og website
       },
       typography: {
         DEFAULT: {
