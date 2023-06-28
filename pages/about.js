@@ -18,10 +18,9 @@ export default function About(props) {
 
   return (
     <>
-      <BackButton />
       <div className="md:flex max-w-[800px] mx-auto my-32 space-x-4">
-        <div className="mb-6 ml-4 w-96 ">
-          <img src="/about/me.jpg" width="250" height="250" />
+        <div className="mb-6 ml-4 w-96 relative">
+          <Image src="/about/me.jpg" width="250" height="250" />
         </div>
         <div className="max-w-[500px]">
           <div className="mb-6">
@@ -77,6 +76,7 @@ export default function About(props) {
           </div>
         </div>
       </div>
+      <BackButton />
     </>
   );
 }
