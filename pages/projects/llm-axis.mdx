@@ -1,0 +1,72 @@
+---
+title: LLM AXIS
+year: 2022
+location: Personal Project
+description: Customizable word organization graph using GPT4
+tags: fullstack, react, vercel, machine learning
+image: /llm-axis/llm-cover.gif
+priority: 8
+---
+
+<div style={{ position: 'relative', paddingBottom: '62.5%', height: '0' }}>
+  <iframe
+    src="https://www.loom.com/embed/a301b972a4b84092926cf7a3fc8c610e?sid=0581f610-c10d-4d25-a715-4a8a05169088"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+    style={{
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100%',
+    }}
+  ></iframe>
+</div>
+
+<Callout>
+  💡 Try out <a href="https://llm-axis.vercel.app/">LLM Axis</a>
+</Callout>
+
+### Inspiration
+
+I think about [this tweet](QcR9j683YE0Q0UnLhOOUT3BlbkFJFW9UFtZmvTsMdz6gds26) a lot.
+I agree that the final form of working with large language models should not be
+"sending texts." This graph experiment was a way for me to explore some other forms
+of interacting with large language models.
+
+![](/llm-axis/linus-tweet.png)
+
+### What is it?
+
+LLM Axis is a customizable word organization graph using GPT4. It's a way to
+explore the relationships between words and concepts. The graph axes and word list are fully customizable.
+
+Below are some examples of the graph in action.
+
+![](/llm-axis/fruits.png)
+
+![](/llm-axis/music.png)
+
+![](/llm-axis/presidents.png)
+
+### Prompt Scaffolding
+
+When you click "Reorganize Words," the app will send a prompt to GPT4 to
+get the positions for each of the words in the word list.
+
+![](/llm-axis/code.png)
+
+The prompt expects a JSON format response from GPT4 to render the words in HTML.
+
+### Tech Stack
+
+- Frontend: React, Tailwind
+- Backend: Next.js
+- Machine Learning: OpenAI GPT-4
+- Hosting: Vercel
+
+<Callout>
+  💡 <a href="https://github.com/trudypainter/llm-axis">Github Repository</a>
+</Callout>

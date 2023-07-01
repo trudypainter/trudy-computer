@@ -5,8 +5,9 @@ import { MDXEmbedProvider } from 'mdx-embed';
 import MDImage from './unused/Img';
 import Link from 'next/link';
 import BackButton from './backButton';
+import Callout from './Callout';
 
-const components = {};
+const components = { Callout };
 
 export default function Blog(props) {
   const { meta, route, ...rest } = props;
