@@ -14,8 +14,9 @@ export default function Blog(props) {
 
   const sharedHead = (
     <Head>
-      <meta property="og:title" content="Trudy" />
-      <meta property="og:site_name" content="Trudy Painter" />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:site_name" content={'Trudy Painter - ' + meta.title} />
     </Head>
   );
 
