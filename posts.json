@@ -61,6 +61,16 @@
             "slug": "/projects/spotfy-visualizer"
         },
         {
+            "title": "ARTTALK",
+            "year": "2023",
+            "location": "MIT Class",
+            "description": "Multimodal pointing and speaking to comment on artworks for MIT class Intelligent Multimodal User Interfaces",
+            "image": "arttalk/cover.png",
+            "tags": "fullstack, vercel, react, machine learning, sql, next, planet scale",
+            "priority": "7",
+            "slug": "/projects/arttalk"
+        },
+        {
             "title": "MIT MUSIC MAP",
             "year": "2022",
             "location": "MIT Class",
