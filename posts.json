@@ -4,9 +4,9 @@
             "title": "LATENT LAB",
             "year": "2022",
             "location": "MIT Media Lab",
-            "description": "3D exploration of latent space and research project idea generation using a machine learning model trained on MIT Media Lab projects",
-            "image": "latent-lab/1.jpg",
-            "tags": "fullstack, machine learning, react, docker, 3D, archive",
+            "description": "A fluid visual tool to explore a knowledge base, powered an LLM. Researh paper published at ICCC 2023.",
+            "image": "latent-lab/latentlabdemo.gif",
+            "tags": "fullstack, machine learning, react, docker, vercel, archive, d3",
             "priority": "9",
             "slug": "/projects/latent-lab"
         },
