@@ -26,7 +26,10 @@ module.exports = {
               'font-weight': '400',
             },
             p: {
-              'line-height': '1.5rem',
+              'line-height': '1.1rem',
+            },
+            div: {
+              'line-height': '0.3rem',
             },
           },
         },
@@ -44,12 +47,16 @@ module.exports = {
         '-md': { max: '767px' },
         // => @media (max-width: 767px) { ... }
 
+        phone: { max: '767px' },
+        // => @media (max-width: 767px) { ... }
+
         '-sm': { max: '639px' },
         // => @media (max-width: 639px) { ... }
       },
     },
     fontFamily: {
       sans: ['Helvetica Neue', 'Helvetica'],
+      serif: ['Times New Roman', 'Times', 'serif'],
     },
   },
   variants: {

@@ -1,7 +1,7 @@
 import TagButton from './TagButton';
 import { useEffect, componentDidMount } from 'react';
 
-const FilterBar = (props) => {
+const FilterBarSide = (props) => {
   let locationsArray = props.allProjects.map((proj) => proj.location);
   let locations = [...new Set(locationsArray)];
   let topicsArray = props.allProjects
@@ -9,17 +9,19 @@ const FilterBar = (props) => {
     .flat();
   let topics = [...new Set(topicsArray)];
 
+  let yearsArray = props.allProjects.map((proj) => proj.year);
+  let years = [...new Set(yearsArray)].sort((a, b) => b - a);
+
   console.log(locations);
   console.log(topics);
 
   return (
     <div
-      className="-md:invisible text-sm -md:h-0 -md:p-0 -md:m-0 
-      visible w-full border-black border-b border-t border-r \
-      px-2 pt-3 pb-2 sticky top-0 -md:top-0 backdrop-blur-sm bg-white/80"
+      className="-md:invisible -md:h-0 -md:p-0 
+      visible w-[300px] mt-4 flex flex-col space-y-4"
       id="filterBar"
     >
-      <div className="flex flex-wrap">
+      <div className="flex  flex-wrap">
         <span className="locationTitle mr-1">Location: </span>
 
         {locations.map((tag) => (
@@ -32,6 +34,23 @@ const FilterBar = (props) => {
             setSelectedTags={props.setSelectedTags}
             locations={locations}
             topics={topics}
+            years={years}
+          ></TagButton>
+        ))}
+      </div>
+      <div className="flex flex-wrap">
+        <span className="locationTitle whitespace-normal mr-1">Years: </span>
+        {years.map((tag) => (
+          <TagButton
+            tag={tag}
+            allProjects={props.allProjects}
+            selectedProjects={props.selectedProjects}
+            setSelectedProjects={props.setSelectedProjects}
+            selectedTags={props.selectedTags}
+            setSelectedTags={props.setSelectedTags}
+            locations={locations}
+            topics={topics}
+            years={years}
           ></TagButton>
         ))}
       </div>
@@ -47,6 +66,7 @@ const FilterBar = (props) => {
             setSelectedTags={props.setSelectedTags}
             locations={locations}
             topics={topics}
+            years={years}
           ></TagButton>
         ))}
       </div>
@@ -54,4 +74,4 @@ const FilterBar = (props) => {
   );
 };
 
-export default FilterBar;
+export default FilterBarSide;

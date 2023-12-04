@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import FilterBar from '../components/FilterBar';
 import BackButton from '../components/backButton';
-import FindMe from '../components/FindMe';
+// import FindMe from '../components/FindMe';
 
 export default function About(props) {
   const allProjects = posts.posts;

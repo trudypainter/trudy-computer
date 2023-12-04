@@ -6,7 +6,7 @@ const TagButton = (props) => {
   //   console.log(props);
 
   let tagClass =
-    'border  whitespace-nowrap border-black  rounded-full px-2 radius-32 mr-1 mb-1 hover:cursor-pointer ';
+    'whitespace-nowrap rounded-md px-2  bg-gray-100 mr-1 mb-1 hover:cursor-pointer';
 
   const getMatchingProj = (tagList) => {
     let projList = [];
@@ -19,6 +19,10 @@ const TagButton = (props) => {
         if (tagList.includes(projTag)) {
           projList = [...projList, projObj];
         }
+      }
+
+      if (tagList.includes(projObj.year)) {
+        projList = [...projList, projObj];
       }
     }
     return [...new Set(projList)];
@@ -52,12 +56,12 @@ const TagButton = (props) => {
     <span
       className={
         selected
-          ? tagClass + ' bg-[#FAFE4B]'
-          : tagClass + 'bg-white hover:bg-gray-100'
+          ? tagClass + ' bg-gray-300'
+          : tagClass + 'bg-gray-100 hover:bg-gray-200 hover:cursor-pointer'
       }
       onClick={tagClicked}
     >
-      {props.tag} {selected && '✕'}
+      {props.tag} {selected && <span className="text-xs">✕ </span>}
     </span>
   );
 };

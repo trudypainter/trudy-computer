@@ -2,8 +2,10 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function FindMe() {
+  const textColor = 'text-gray-500 hover:underline';
+
   return (
-    <div className="relative   w-[250px] h-[250px] m-auto mt-24">
+    <div className="relative mt-8  text-base w-[250px] h-[250px] ml-48 phone:mx-auto">
       {/* SVG of a four quadrant graph with arrows on the axis */}
 
       <svg
@@ -20,7 +22,7 @@ export default function FindMe() {
           x2="125"
           y2="250"
           stroke="black"
-          strokeWidth="2"
+          strokeWidth="1"
         />
         <line
           x1="0"
@@ -28,12 +30,12 @@ export default function FindMe() {
           x2="250"
           y2="125"
           stroke="black"
-          strokeWidth="2"
+          strokeWidth="1"
         />
       </svg>
 
       <a
-        className=" absolute top-[2px] left-[22px] text-blue-600 hover:no-text-blue-600"
+        className={`absolute top-[2px] left-[22px] ${textColor} hover:no-${textColor}`}
         target="blank"
         href="https://www.are.na/trudy-painter"
       >
@@ -41,7 +43,7 @@ export default function FindMe() {
       </a>
 
       <a
-        className="absolute top-[138px] right-[150px]   text-blue-600 hover:no-text-blue-600"
+        className={`absolute top-[138px] right-[150px] ${textColor} hover:no-${textColor}`}
         target="blank"
         href="https://open.spotify.com/user/trudypaintet?si=ZlW6diDKSl61x9oKhit5BA"
       >
@@ -49,7 +51,7 @@ export default function FindMe() {
       </a>
 
       <a
-        className="absolute top-[50px] right-[134px]   text-blue-600 hover:no-text-blue-600"
+        className={`absolute top-[50px] right-[134px] ${textColor} hover:no-${textColor}`}
         target="blank"
         href="https://github.com/trudypainter"
       >
@@ -57,7 +59,7 @@ export default function FindMe() {
       </a>
 
       <a
-        className="absolute top-[100px] left-[2px]  text-blue-600 hover:no-text-blue-600"
+        className={`absolute top-[100px] left-[2px] ${textColor} hover:no-${textColor}`}
         target="blank"
         href="https://vsco.co/bionicpinkytoe/gallery"
       >
@@ -65,7 +67,7 @@ export default function FindMe() {
       </a>
 
       <a
-        className="absolute bottom-[90px] right-[22px]   text-blue-600 hover:no-text-blue-600"
+        className={`absolute bottom-[90px] right-[22px] ${textColor} hover:no-${textColor}`}
         target="blank"
         href="https://www.linkedin.com/in/trudy-painter/"
       >
@@ -73,14 +75,14 @@ export default function FindMe() {
       </a>
 
       <a
-        className="absolute top-[100px] right-[4px]  text-blue-600 "
+        className={`absolute top-[80px] right-[4px] ${textColor}`}
         target="blank"
         href="TrudyPainter_Resume.pdf"
       >
         Resume
       </a>
       <a
-        className="absolute bottom-[10px] right-[4px]  text-blue-600 "
+        className={`absolute bottom-[10px] right-[4px] ${textColor}`}
         target="_blank"
         href="https://docs.google.com/spreadsheets/d/1pBokIjBV7lxDYNxqqxfLrNb7h3h4GuhWSbrrTGd9Fho/edit#gid=0"
       >
@@ -90,7 +92,7 @@ export default function FindMe() {
       <div className="absolute px-2 bg-white right-[250px]  top-[112px]">
         Personal
       </div>
-      <div className="absolute px-2 bg-white left-[250px]  top-[112px]">
+      <div className="absolute px-2 bg-white left-[240px]  top-[112px]">
         Professional
       </div>
       <div className="absolute w-full text-center bg-white py-2  bottom-[250px]">

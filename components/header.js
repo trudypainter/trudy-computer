@@ -1,89 +1,73 @@
 import Link from 'next/link';
-import { Bio } from './unused/bioWithDropDown';
-import { MatterScene } from './unused/comp';
-import { useState, useEffect } from 'react';
+import FindMe from './findme';
 
 export function Header() {
-  let bgGradient = 'bg-gradient-to-b from-[#78A7E5] to-[#93C3FD]';
-
-  let colorList = ['#FEFF1F', '#FC5D42', '#FF3FB3', '#28ABE2', '7E51F5'];
-
-  const [nameColor, setNameColor] = useState('white');
-  const [moreColor, setMoreColor] = useState('white');
-
-  // on hover, change the nameColor to a random color from the colorList
-  const handleNameHover = () => {
-    // decrease index of color by 1
-    let nameColorIndex = colorList.indexOf(nameColor) - 1;
-
-    // if the index is less than 0, reset to the last index of the colorList
-    if (nameColorIndex < 0) {
-      nameColorIndex = colorList.length - 1;
-    }
-    let randomColor = colorList[nameColorIndex];
-
-    setNameColor(randomColor);
-  };
-
-  // on hover, change the moreColor to a random color from the colorList
-  const handleMoreHover = () => {
-    // increase index of color by 1
-    let moreColorIndex = colorList.indexOf(moreColor) + 1;
-    // if the index is greater than the length of the colorList, reset to 0
-    if (moreColorIndex > colorList.length - 1) {
-      moreColorIndex = 0;
-    }
-    let randomColor = colorList[moreColorIndex];
-
-    setMoreColor(randomColor);
-  };
-
   return (
-    <div
-      class="px-8 py-16  bg-lightergreen
-      border-black -md:border-b "
-    >
-      <div className="   hover:cursor-default">
-        <div>
-          <p className="text-2xl my-4 lg:max-w-[50vw]">
-            <span
-              onMouseEnter={() => handleNameHover()}
-              style={{
-                backgroundColor: nameColor,
-              }}
-              className={` px-2 py-1 hover:cursor-pointer`}
-            >
-              Trudy Painter
-            </span>{' '}
-            is a software developer at{' '}
-            <a
-              className="underline"
-              href="https://experiments.withgoogle.com/"
-              target="_blank"
-            >
-              Google Creative Lab
-            </a>{' '}
-            in New York City and recent graduate of MIT.
-          </p>
+    <div className="text-3xl p-4 ">
+      <span className="bg-[yellow] px-[2px]">✣ Trudy Painter</span> is a
+      creative technologist at Google Creative Lab and recent graduate of MIT.{' '}
+      <br className="phone:hidden"></br>
+      She builds and designs AI tools to feel more like a copilot than an
+      autopilot.
+      <details className="text-xl ">
+        <summary className="hover:cursor-pointer">Read more...</summary>
+        <div className="w-full flex p-8 phone:px-0 phone:pt-2 phone:flex-col">
+          <div className="flex flex-col space-y-4 w-1/2 phone:w-full text-lg">
+            <div>
+              Hi, my name is Trudy. I work at{' '}
+              <a
+                href="https://experiments.withgoogle.com/"
+                className="underline"
+              >
+                Google Creative Lab
+              </a>{' '}
+              in New York City. I'm building AI experiments to make large
+              language models more approachable and accessible.
+            </div>
+            <div>
+              I'm also a recent graduate of MIT (2023). I double majored in{' '}
+              <a
+                href="https://www.eecs.mit.edu/research/computer-science/"
+                className="underline"
+              >
+                computer science
+              </a>{' '}
+              and{' '}
+              <a href="https://cmsw.mit.edu/" className="underline">
+                comparative media studies
+              </a>
+              . I was involved with the MIT Media Lab, specifically the{' '}
+              <a
+                href="https://www.media.mit.edu/groups/viral-communications/overview/"
+                className="underline"
+              >
+                Viral Communications Group
+              </a>
+              . I researched how to push the boundaries of interaction with
+              large language models. Examples of this type of work are{' '}
+              <a href="/projects/latent-lab" className="underline">
+                Latent Lab
+              </a>{' '}
+              and{' '}
+              <a href="/projects/meshup" className="underline">
+                Meshup
+              </a>
+              .
+            </div>
 
-          <p className="text-2xl my-4 mb-8 lg:max-w-[50vw]">
-            She builds AI tools that feel more like a copilot than an autopilot.
-          </p>
-        </div>
+            <div>
+              I mean it when I say I love to chat ❤ Reach out at{' '}
+              <a href="mailto:hello@trudy.computer" className="underline">
+                hello@trudy.computer
+              </a>
+            </div>
+          </div>
 
-        <div className="w-32 ">
-          <div
-            style={{
-              backgroundColor: moreColor,
-              borderColor: moreColor,
-            }}
-            onMouseEnter={() => handleMoreHover()}
-            className={`hover:cursor-pointer  px-2 py-1 flex items-center justify-center -sm:mx-auto`}
-          >
-            <Link href="/about">More About Me</Link>
+          <div className="pl-32 phone:w-full phone:mx-auto phone:px-0 phone:mt-8 bg-white">
+            <FindMe />
           </div>
         </div>
-      </div>
+      </details>
     </div>
   );
 }
