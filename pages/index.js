@@ -8,9 +8,6 @@ import { FeaturedPost } from '../components/FeaturedPost';
 import FilterBarSide from '../components/FilterBarSide';
 import { useState } from 'react';
 
-import Image from 'next/image';
-import FilterBar from '../components/FilterBar';
-
 export default function Home(props) {
   const allProjects = posts.posts;
   const [selectedProjects, setSelectedProjects] = useState(posts.posts);

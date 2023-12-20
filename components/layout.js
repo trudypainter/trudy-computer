@@ -49,7 +49,7 @@ export default function Blog(props) {
           </Head>
           <BackButton meta={meta} nextProject={nextProject} />
           <div
-            className="prose-lg mx-auto py-24 
+            className="md:prose-lg phone:prose-md  mx-auto py-24 
             -z-10 font-sans w-[1000px] leading-snug"
           >
             <MDXEmbedProvider>
