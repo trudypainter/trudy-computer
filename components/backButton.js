@@ -4,7 +4,7 @@ import Link from 'next/dist/client/link';
 export default function BackButton({ meta, nextProject }) {
   return (
     <div
-      className="fixed top-0 left-0 w-full h-16 bg-yellow z-10 
+      className="fixed top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
       border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
     >
       {/* DESKTOP */}
@@ -26,8 +26,17 @@ export default function BackButton({ meta, nextProject }) {
       </div>
 
       {/* PHONE */}
-      <div className=" hidden phone:visible flex justify-between w-full">
-        <div>Trudy Painter</div>
+      <div className="block md:hidden text-lg flex justify-between w-full p-4">
+        <Link href="/">Trudy Painter</Link>
+        <div>{meta.title}</div>
+      </div>
+      <div
+        className="md:hidden fixed bottom-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
+      border-t-[1px] border-black bg-[yellow] text-lg flex items-center justify-end p-2"
+      >
+        <Link className="hover:underline " href={nextProject.slug}>
+          {'Next: ' + nextProject.title + '→'}
+        </Link>
       </div>
     </div>
   );

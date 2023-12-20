@@ -49,8 +49,11 @@ export default function Blog(props) {
           </Head>
           <BackButton meta={meta} nextProject={nextProject} />
           <div
-            className="md:prose-lg phone:prose-md  mx-auto py-24 
-            -z-10 font-sans w-[1000px] leading-snug"
+            className="md:prose-lg   mx-auto py-24 
+            -z-10 font-sans w-[1000px] leading-snug
+            phone:w-full phone:mx-auto phone:prose-sm phone:px-4
+            "
+            style={{ lineHeight: '1.4' }}
           >
             <MDXEmbedProvider>
               {' '}
