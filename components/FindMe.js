@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function FindMe() {
-  const textColor = 'text-gray-500 hover:underline';
+  const textColor = 'black hover:underline';
 
   return (
     <div className="relative mt-8  text-base w-[250px] h-[250px] ml-48 phone:mx-auto">
@@ -27,7 +27,7 @@ export default function FindMe() {
         <line
           x1="0"
           y1="125"
-          x2="250"
+          x2="240"
           y2="125"
           stroke="black"
           strokeWidth="1"
@@ -89,16 +89,16 @@ export default function FindMe() {
         Full CV
       </a>
 
-      <div className="absolute px-2 bg-white right-[250px]  top-[112px]">
+      <div className="absolute px-2 bg-[yellow] right-[250px]  top-[112px]">
         Personal
       </div>
-      <div className="absolute px-2 bg-white left-[240px]  top-[112px]">
+      <div className="absolute px-2 bg-[yellow] left-[220px]  top-[112px]">
         Professional
       </div>
-      <div className="absolute w-full text-center bg-white py-2  bottom-[250px]">
+      <div className="absolute w-full text-center bg-[yellow] py-2  bottom-[250px]">
         Essential
       </div>
-      <div className="absolute w-full text-center bg-white py-2  top-[250px]">
+      <div className="absolute w-full text-center bg-[yellow] py-2  top-[250px]">
         Peripheral
       </div>
     </div>

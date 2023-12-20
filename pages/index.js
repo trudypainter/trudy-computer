@@ -18,12 +18,20 @@ export default function Home(props) {
 
   const borderDiv = 'border-b-[1px] border-gray-400 py-1';
 
+  let featuredPosts = [];
+  console.log('ALL PROJECTS', allProjects);
+  allProjects.forEach((post) => {
+    if (post.featured) {
+      featuredPosts.push(post);
+    }
+  });
+
   // UNICODE FLOWERS ❋ ✣ ✤
 
   return (
     <>
       <div
-        className="absolute inset-0 w-screen overflow-x-hidden font-serif 
+        className="absolute inset-0 w-screen overflow-x-hidden font-sans 
       phone:p-0 phone:m-0
       "
       >
@@ -34,18 +42,18 @@ export default function Home(props) {
           my-24 
           phone:invisible phone:h-0 phone:m-0 phone:p-0"
         >
-          <FeaturedPost post={allProjects[0]} borderDiv={borderDiv} />
-          <FeaturedPost post={allProjects[1]} borderDiv={borderDiv} />
-          <FeaturedPost post={allProjects[2]} borderDiv={borderDiv} />
+          {featuredPosts.map((post) => (
+            <FeaturedPost post={post} borderDiv={borderDiv} />
+          ))}
         </div>
 
         <div
-          className="flex space-x-4 sticky top-0 mb-48 
-        phone:space-x-0"
+          className="flex space-x-4 sticky top-0 mb-48 mx-auto 
+        phone:space-x-0 justify-center"
         >
           <div className="flex flex-col phone:invisible phone:h-0 phone:w-0">
             <div className="flex flex-col w-full space-x-4 sticky top-0 bg-white">
-              <div className={`${borderDiv} ml-4 w-[300px] flex-shrink-0`}>
+              <div className={`${borderDiv} ml-4 w-[250px] flex-shrink-0`}>
                 Filter By
               </div>
 
@@ -77,6 +85,8 @@ export default function Home(props) {
               <ArchivePost post={p} borderDiv={borderDiv} />
             ))}
           </div>
+
+          <div className="w-[250px] phone:hidden"></div>
         </div>
 
         <Footer />

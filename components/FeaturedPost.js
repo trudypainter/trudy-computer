@@ -4,10 +4,12 @@ export function FeaturedPost(props) {
 
   return (
     <div key={p.slug} className={`flex h-[280px] w-full space-x-4`}>
-      <img
-        className="h-full w-[530px] object-cover flex-shrink-0 border-[1px] border-gray-200"
-        src={p.image}
-      ></img>
+      <a href={p.slug} className="w-[530px] flex-shrink-0">
+        <img
+          className="h-full w-[530px] object-cover border-[1px] border-gray-200"
+          src={p.image}
+        ></img>
+      </a>
 
       <div className="flex-grow ">
         <div className="flex justify-between">

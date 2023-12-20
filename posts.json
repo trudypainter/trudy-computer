@@ -2,22 +2,25 @@
     "posts": [
         {
             "title": "LATENT LAB",
-            "year": "2022",
+            "year": "2023",
             "location": "MIT Media Lab",
             "description": "A fluid visual tool to explore a knowledge base, powered by an LLM. Research paper published at ICCC 2023.",
             "image": "latent-lab/latentlabdemo.gif",
             "tags": "fullstack, machine learning, react, docker, vercel, archive, d3",
             "priority": "9",
+            "featured": "true",
+            "link": "https://www.latentlab.ai/",
             "slug": "/projects/latent-lab"
         },
         {
             "title": "LLM AXIS",
-            "year": "2022",
+            "year": "2023",
             "location": "Personal Project",
             "description": "Customizable word organization graph using GPT4",
             "tags": "fullstack, react, vercel, machine learning",
             "image": "/llm-axis/llm-cover.gif",
             "priority": "8",
+            "featured": "true",
             "slug": "/projects/llm-axis"
         },
         {
@@ -28,6 +31,7 @@
             "image": "meshup/1.jpg",
             "tags": "fullstack, web sockets, machine learning, docker, flask, react",
             "priority": "8",
+            "featured": "true",
             "slug": "/projects/meshup"
         },
         {
@@ -36,8 +40,9 @@
             "location": "MIT Class",
             "description": "Community web app to collect and annotate artworks using the Harvard Art API. Awarded Excellent Project in MIT's Software Studio Class.",
             "tags": "fullstack, vue, vercel, sql",
-            "image": "/curatorcentral/1.gif",
+            "image": "/curatorcentral/cover.png",
             "priority": "7",
+            "link": "https://curatorcentral.vercel.app/#/",
             "slug": "/projects/curatorcentral"
         },
         {
@@ -45,7 +50,7 @@
             "year": "2022",
             "location": "Personal Project",
             "description": "Spotify library explorer by BPM, built for my DJ class",
-            "image": "spotify-bpm/1.jpg",
+            "image": "spotify-bpm/cover.png",
             "tags": "fullstack, react, spotify api, flask, heroku",
             "priority": "7",
             "slug": "/projects/spotify-bpm"
@@ -55,9 +60,10 @@
             "year": "2022",
             "location": "Personal Project",
             "description": "Every single song I\u2019ve listened to, charted by time of day",
-            "image": "spotfy-visualizer/1.jpg",
+            "image": "spotfy-visualizer/cover.png",
             "tags": "fullstack, archive, react, flask, sql, heroku, spotify api",
             "priority": "7",
+            "link": "http://www.trudy.tube",
             "slug": "/projects/spotfy-visualizer"
         },
         {
@@ -68,6 +74,7 @@
             "image": "arttalk/cover.png",
             "tags": "fullstack, vercel, react, machine learning, sql, next, planet scale",
             "priority": "7",
+            "link": "https://arttalk.vercel.app/",
             "slug": "/projects/arttalk"
         },
         {
@@ -76,7 +83,7 @@
             "location": "MIT Class",
             "description": "Interactive data visualization of where MIT students listen to songs on campus.",
             "tags": "p5.js, spotify api",
-            "image": "/mitmusicmap/map.gif",
+            "image": "/mitmusicmap/cover.png",
             "priority": "6",
             "slug": "/projects/mitmusicmap"
         },
@@ -85,7 +92,7 @@
             "year": "2022",
             "location": "MIT Class",
             "description": "Friendly botnet designed to inflate web traffic around climate change",
-            "image": "altruistic-botnet/1.jpg",
+            "image": "altruistic-botnet/cover.png",
             "tags": "bot, p5.js",
             "priority": "5",
             "slug": "/projects/altruistic-botnet"
@@ -105,7 +112,7 @@
             "year": "2021",
             "location": "MIT Class",
             "description": "Social network of Spotify Tamagotchi on Arduino",
-            "image": "spotify-monster/3.jpg",
+            "image": "spotify-monster/cover.png",
             "tags": "fullstack, spotify api",
             "priority": "4",
             "slug": "/projects/spotify-monster"
@@ -115,7 +122,7 @@
             "year": "2022",
             "location": "Personal Project",
             "description": "Fleeting human interactions in new Google Chrome tabs",
-            "image": "chrome-social/1.jpg",
+            "image": "chrome-social/cover.png",
             "tags": "fullstack, web sockets, chrome extension, flask, sql",
             "priority": "3",
             "slug": "/projects/chrome-social"
@@ -125,7 +132,7 @@
             "year": "2020",
             "location": "Personal Project",
             "description": "Generate printable zines from a VSCO using Bindery JS",
-            "image": "vsco-zine/1.jpg",
+            "image": "vsco-zine/cover.png",
             "tags": "fullstack, flask, heroku",
             "priority": "2",
             "slug": "/projects/vsco-zine"
@@ -138,6 +145,7 @@
             "image": "memoir-twitter-bot/1.jpg",
             "tags": "bot",
             "priority": "2",
+            "link": "https://twitter.com/memoirmaker",
             "slug": "/projects/memoir-twitter-bot"
         },
         {
@@ -165,7 +173,7 @@
             "year": "2021",
             "location": "MIT Class",
             "description": "Final project for React web development class",
-            "image": "breadcrumb/1.jpg",
+            "image": "breadcrumb/cover.png",
             "tags": "fullstack, react, google cloud platform",
             "priority": "2",
             "slug": "/projects/breadcrumb"
@@ -178,6 +186,7 @@
             "image": "pokemon-archive/1.jpg",
             "tags": "archive",
             "priority": "1",
+            "link": "https://www.are.na/trudy-painter/every-pokemon-card-uz5ifttjceo",
             "slug": "/projects/pokemon-archive"
         },
         {
