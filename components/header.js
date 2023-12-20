@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import FindMe from '../components/findMe';
+import FindMe from '../components/FindMe';
 
 export function Header() {
   return (
