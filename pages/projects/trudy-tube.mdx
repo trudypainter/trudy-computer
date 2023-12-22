@@ -9,40 +9,207 @@ priority: 16
 link: http://www.trudy.tube
 ---
 
-# [www.trudy.tube](http://www.trudy.tube) 🎧
+<Hero>
+  <div>
+    <Callout
+      link="http://www.trudy.tube"
+      text="Launch Site"
+    />
+  </div>
 
-I was frustrated that I couldn’t see every song I listened to on Spotify. So, as a personal project, I made a Spotify listening archiver to…
+I was frustrated that I couldn’t see every song I listened to on Spotify.
+So, as a personal project, I made a Spotify listening archiver to
+collect every single song I listen to and generate interactive listening charts,
+plotted by time of day.
 
-1.  Collect every single song I listen to and
+![](/trudy-tube/ttv3.gif)
 
-2.  Generate interactive listening charts, plotted by time of day.
+_Note: This project has been through MANY iterations. It's currrently on its 3rd version.
+In this writeup, I use documentation from past versions to build up to the current version._
 
-![](/spotfy-visualizer/2.jpg)
+</Hero>
 
-## version 1.0
+<Line />
 
-In 2020, I made a [mood tracker for my Spotify listening behavior](http://www.trudy.computer/spotify-mood). I learned a lot of valuable skills about APIs, data organizing, and visualizations.
+<TwoCol>
+**Version 1.0**
 
-However, there were a few things I thought could be improved from the old site.
+In the summer of 2020, I made a Spotify tracker to collect my listening data and visualize it by mood.
+I loved being able to access valence, danceability, and energy in the Spotify API.
+I wanted to see if there were any patterns in my listening behavior.
 
-- The site was not reliable. I collected songs using a scheduled task on my physical MacBook. So, if I had my computer turned off or was not connected to the internet, the data wouldn't be collected. The data was also stored in CSV files in Github. This is a crafty, free solution. However, this isn't best practice for storing lots of large data.
+<Line />
 
-- The site was made using plain HTML/JS/CSS. This implementation was fine for this specific project, but I wanted to practice making more modular sites for the next project (React)
+<TwoCol>
+**System Design**
 
-- The mood graph was non-sensical. I thought the mood indices provided by the Spotify API would be more insightful. But, the graphs didn't make much sense.
+I used a SUPER hacky solution to collect the data.
+I used a scheduled task on my physical MacBook to run a Python script every 5 minutes.
+The script would collect the song I was listening to and the time I listened to it.
+Then, it would save the data in a CSV file in Github.
 
-## version 2.0
+</TwoCol>
 
-This time, I wanted to make a listening tracker that was reliable, modular, and insightful.
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/spotify-mood-tracker/spotifymood.svg?raw=true)
 
-So, this listening tracker is a React app with a Flask backend (hosted on Heroku). And the listening data is stored in an SQL database.
+<Line />
 
-The data is also all plotted by time of day. Users can hover on a circle to play a song, click the circle to open it in Spotify, and scroll below to see all recorded songs.
+<TwoCol>
+**Tech Stack**
 
-### [⭐️ Check out www.trudy.tube 🐸](http://www.trudy.tube)
+**Frontend**: React  
+**Backend**: Flask  
+**Database**: SQL  
+**Deployment**: Heroku  
+**API**: Spotify API  
+**Project Type**: Fullstack
 
-Below is a demo and diagram of the new site.
+**Github Link**: [https://github.com/trudypainter/spotify-mood](https://github.com/trudypainter/spotify-mood)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Shortcomings**
+
+<TwoCol>
+**Reliability**
+
+The site was not reliable. I collected songs using a scheduled task on my physical MacBook. So, if I had my computer turned off or was not connected to the internet, the data wouldn't be collected. The data was also stored in CSV files in Github. This is a crafty, free solution. However, this isn't best practice for storing lots of large data.
+
+</TwoCol>
+
+<TwoCol>
+**Plain HTML**
+
+The site was made using plain HTML/JS/CSS.
+This implementation was fine for this specific project,
+but I wanted to practice making more modular sites for the next project (React).
+
+</TwoCol>
+
+<TwoCol>
+**Nonsensical**
+
+The mood graph was non-sensical. I thought the mood indices provided by the Spotify API would be more insightful. But, the graphs didn't make much sense.
+
+</TwoCol>
+</TwoCol>
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+
+**Version 2.0**
+
+For the second iteration, I focused on making a listening tracker that was
+reliable, modular, and insightful.
+
+In this version, the data is also all plotted by time of day (instead of mood).
+Visitors can hover on a circle in the graph to play that song.
+When a user drags their mouse over the graph, they can recreate a sort of "audio picture"
+of my day.
+
+![](/trudy-tube/2.jpg)
+
+<Line />
+
+<TwoCol>
+**Sytem Design**
+
+The system design doodle for this project is below. I focused on planning out the React
+components since I was working with so much data.
+
+</TwoCol>
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/listening-explorer/spotifyvisualizer.png?raw=true)
+
+<Line />
+
+<TwoCol>
+**Video Demo**
 
 <Vimeo vimeoId="661674779" />
 
-![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/listening-explorer/spotifyvisualizer.png?raw=true)
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Tech Stack**
+
+**Frontend**: React  
+**Backend**: Flask  
+**Deployment**: Heroku  
+**Database**: SQL
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Shortcomings**
+
+<TwoCol>
+**Expensive**
+
+Heroku changed their pricing model and
+I found myself constantly buying add-ons due to the way
+I set up my project with scheduled tasks and a SQL database.
+For the next iteration, I wanted to transition to a free hosting version.
+
+</TwoCol>
+
+<TwoCol>
+**Clunky**
+
+In a nerdy way, I would mostly show this project to people
+out in the real world, on my phone. The site was clunky to use on mobile. For
+the next iteration, I wanted to focus on making this project more enjoyable on
+mobile. I wanted to be able to scroll instead of click to see new days.
+
+</TwoCol>
+
+</TwoCol>
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Version 3.0 (current)**
+
+And now, the current version!
+
+![](/trudy-tube/ttv3.gif)
+
+<Line />
+
+<TwoCol>
+**Frontend**
+
+For site visitors, all data can be see with a scroll.
+Which means this is optimized for mobile.
+So when I make a new friend and want to share my music taste, I don't have to hover
+over the person and instruct them on how to view more data.
+
+</TwoCol>
+
+<TwoCol>
+**Backend**
+
+And for my wallet, I found a little hobby tier corner in the
+cloud to host + store all my stuff for free.
+
+I switched to Vercel to deploy the site which means I rebuilt the
+entire backend data collection
+pipeline using Next.js.
+
+I switched to PlanetScale to host the SQL database. They have a generous
+hobby tier that is free for small projects and fit the needs of trudy.tube.
+
+</TwoCol>
+
+<Line />
+
+</TwoCol>
