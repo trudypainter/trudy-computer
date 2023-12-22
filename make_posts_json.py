@@ -28,7 +28,7 @@ for filename in filenames:
 
 
 
-json_object = json.dumps({"posts" : sorted(list_of_posts, key=lambda d: d['priority'], reverse=True) }, indent=4)
+json_object = json.dumps({"posts" : sorted(list_of_posts, key=lambda d: int(d['priority']), reverse=True) }, indent=4)
 with open("posts.json", "w") as outfile:
     outfile.write(json_object)
 

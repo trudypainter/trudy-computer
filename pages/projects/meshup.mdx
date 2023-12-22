@@ -5,46 +5,146 @@ location: MIT Media Lab
 description: Collaborative, accelerated idea generation tool using a machine learning model trained on images of cars
 image: meshup/1.jpg
 tags: fullstack, web sockets, machine learning, docker, flask, react
-priority: 8
+priority: 18
 featured: true
 ---
 
-# What’s the combination of a red sports car and a blue truck?
+<Hero>
+  <div>
+    <Callout
+      link="https://www.media.mit.edu/projects/tools-to-synthesize-with/overview/"
+      text="MIT Project Writeup"
+    />
+  </div>
+  <div>
+    Meshup is a tool I created with Kevin Dunnell at the MIT Media Lab’s Viral
+    Communications Group to accelerate synthesizing complex ideas. We trained a
+    GAN model on images of cars, creating a machine learning model that
+    understood images of cars and could generate new images of cars.
 
-It’s a simple question you and I both understand. But how do we reach a shared idea of this complex combination?
+    ![](/meshup/3.jpg)
+
+  </div>
+</Hero>
+
+<Line />
+
+<TwoCol>
+**Motivation**
+
+_What’s the combination of a red sports car and a blue truck?_
 
 ![](/meshup/2.jpg)
 
-# Meshup
+It's a simple question you and I both understand. But how do we reach a shared
+understanding of our answer.
 
-[Meshup](http://18.27.79.107:5000/) is a tool I created with [Kevin Dunnell](https://www.media.mit.edu/people/dunnell/overview/) at the MIT Media Lab’s [Viral Communications Group](https://www.media.mit.edu/groups/viral-communications/overview/) to accelerate synthesizing complex ideas.
+Drawing + 3D modeling cars are time consuming processes. Meshup is an attempt
+to use generative AI to accelerate visualizing a shared idea.
 
-![](/meshup/3.jpg)
+</TwoCol>
 
-A general adversarial network (GAN) is a type of machine learning model that can generate new images. We trained a GAN model on images of cars → so we had a machine learning model that understood images of cars and could in turn generate new images of cars.
+<Line />
 
-We then created an interface to explore all the possible outputs from the model, given influencing cars. When a user clicks on a car, the synthesized image output in the center is nudged towards the influencing car.
+<TwoCol>
+**Project Overview**
 
-### My contributions
+Meshup is a tool designed to facilitate collaborative, accelerated idea generation.
+It leverages a machine learning model, specifically a Generative Adversarial Network (GAN),
+trained on a large dataset of car images. The result is a model capable of generating realistic
+images of cars that don't actually exist yet.
 
-In the fall of 2021, I worked as a fullstack developer on this project. Below are my technical contributions.
+The interface allows users to upload images of existing cars,
+which are then projected into the latent space of the generative model.
+This latent space is a low-dimensional space where car images can be
+represented as a vector of numbers, essentially coordinates where similar looking cars exist.
 
-- I learned how to interface with a machine learning model and write APIs to access it from the web. I used Docker to deploy this machine learning model and corresponding web app.
+These uploaded images appear in the user interface as targets.
+Team members can select these targets to "steer" the output design
+towards a car with similar characteristics. As the team iteratively
+chooses different targets, the output becomes a synthesis of these selections.
+The influence of each target on the synthesized design can be seen from the
+width of the line connecting the target to the output - a wider line corresponds
+to a stronger influence.
 
-- I refactored the original frontend (written in plain HTML + JS) to use React (more modular).
+This tool allows for the quick generation of a starting point for design,
+serving as a working model for the entire team to visualize and immediately
+share an understanding around. The goal is not for the computer to do the creating,
+but rather to augment the ability of humans by offering inspiration and a starting
+point for further human refinement.
 
-- I added user image upload functionality. Images had to be scrubbed and parsed by the machine learning model before being used by the web app
+</TwoCol>
 
-- I added realtime, multi-user functionality. I coordinated loading new images and generating new outputs across multiple user sessions using web sockets.
+<Line />
+
+<TwoCol>
+**Contributions**
+
+In the fall of 2021, I worked as a fullstack developer on this project alongisde Kevin Dunnell,
+my PhD student supervisor. This was our first time working together, and
+I focused on polishing the prototype tool.
+
+<TwoCol>
+**Server Design**
+
+I learned how to interface with a machine learning model and write
+APIs to access it from the web. I used Docker+Flask to deploy this machine learning
+model and corresponding web app.
+
+</TwoCol>
+
+<TwoCol>
+**Frontend Refactoring**
+
+The original prototype was written in basic HTML and JS. To add more complex features like image upload
+and real time collaboration, the frontend needed to be refeactored. I used React to modularize
+the frontend to scale up more complex features.
+
+This project was the first time I used React!
+
+</TwoCol>
+
+<TwoCol>
+**Image to Embedding**
+
+I added user image upload functionality. Images had to be scrubbed
+and parsed by the machine learning model before being used by the web app.
+I built the pipeline to save images and their respective embeddings.
+
+</TwoCol>
+
+<TwoCol>
+**Realtime Web Sockets**
+
+I added realtime, multi-user functionality. I coordinated loading new images and generating
+new outputs across multiple user sessions using web sockets.
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Video Demo**
 
 Below is demo of the multi-user prototype.
 
+This demo is cool because I'm using two separate browsers to generate
+a shared output in real time.
+
 <Vimeo vimeoId="713495315" />
 
-Personal note: I thought this project was awesome. It pointed to exciting elements of getting humans closer to the feedback loop of machine learning and artificial intelligence.
+</TwoCol>
 
-My supervisor [Kevin Dunnell](https://www.media.mit.edu/people/dunnell/overview/) and I were fascinated by modeling + exploring the latent space (all the possible generative outputs) of machine learning models and continued research with the [Latent Lab](http://www.trudy.computer/latent-lab) project.
+<Line />
 
-Another Meshup writeup can be found on the MIT Media Lab website: [https://www.media.mit.edu/projects/tools-to-synthesize-with/overview/](https://www.media.mit.edu/projects/tools-to-synthesize-with/overview/)
+<TwoCol>
+**Personal Note**
 
-⭐️ Access the Meshup website here: [http://18.27.79.107:5000/](http://18.27.79.107:5000/)
+I thought this project was awesome. It pointed to exciting elements of
+getting humans closer to the feedback loop of collaborative artificial intelligence.
+
+My supervisor Kevin Dunnell and I were fascinated by modeling + exploring the latent space (all the possible generative outputs) of machine learning models and continued research with the Latent Lab project.
+
+</TwoCol>

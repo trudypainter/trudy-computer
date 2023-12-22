@@ -20,8 +20,8 @@ export default function Blog(props) {
     (post) => post.title === meta.title
   ).priority;
   let nextProject = posts.posts.reduce((next, post) => {
-    return post.priority < currentPriority &&
-      (!next || post.priority > next.priority)
+    return Number(post.priority) < Number(currentPriority) &&
+      (!next || Number(post.priority) > Number(next.priority))
       ? post
       : next;
   }, null);

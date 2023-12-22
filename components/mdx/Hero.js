@@ -12,7 +12,11 @@ const Hero = ({ children }) => (
     >
       {children[0]}
     </div>
-    <div className="p-0 w-[80%] phone:w-full phone:pl-4">{children[1]}</div>
+    <div className="p-0 w-[80%] phone:w-full phone:pl-0">
+      {children.slice(1).map((child, index) => (
+        <div key={index}>{child}</div>
+      ))}
+    </div>
   </div>
 );
 

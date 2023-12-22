@@ -5,18 +5,36 @@ location: MIT Class
 description: Community web app to collect and annotate artworks using the Harvard Art API. Awarded Excellent Project in MIT's Software Studio Class.
 tags: fullstack, vue, vercel, sql
 image: /curatorcentral/cover.png
-priority: 7
+priority: 17
 link: https://curatorcentral.vercel.app/#/
 ---
 
-[Curator Central](https://curatorcentral.vercel.app/#/) was my final group project for [MIT's Software Studio Class](https://61040-fa22.github.io/).
-I worked with [Andrew Stoddard](https://61040-fa22.github.io/portfolio-Apstoddard/),
-[Maria Ascanio](https://61040-fa22.github.io/portfolio-mascanioalino/), and
-[Stephanie Howe](https://61040-fa22.github.io/portfolio-spkhowe/).
+<Hero>
+  <div>
+    <Callout
+      link="https://curatorcentral.vercel.app/#/"
+      text="Try Curator Central"
+    />
+    <Callout
+      link="https://github.com/mascanioalino/MAST"
+      text="Github Repository"
+    />
+  </div>
+  <div>
+    Curator Central was my final group project for MIT's Software Studio Class.
+    I worked with Andrew Stoddard, Maria Ascanio, and Stephanie Howe. Curator
+    Central is a community platform to connect more deeply with museum works,
+    using the Harvard Art API to enhance artworks in Harvard Art Museum’s
+    galleries.
+  </div>
+</Hero>
 
-Below is our project pitch and demo. You can find our code in this [repository](https://github.com/mascanioalino/MAST).
+![](/curatorcentral/1.gif)
 
-![](/curatorcentral/2.png)
+<Line />
+
+<TwoCol>
+**Project Pitch**
 
 Museums are in need of our help. Many people feel that museums are
 antiquated and aren’t geared towards younger generations.
@@ -27,23 +45,77 @@ cultural center, museums empower visitors to connect to their
 broader communities. Museums need tools to facilitate conversations
 around exhibits and promote distribution of visitor input.
 
-[Curator Central](https://curatorcentral.vercel.app/#/) is the community platform to connect more deeply with
-museum works. Curator Central uses the [Harvard Art API](https://harvardartmuseums.org/collections/api) to enhance artworks
-in Harvard Art Museum’s galleries.
+![](/curatorcentral/2.png)
 
----
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Recogntion**
 
 My group was selected for an Excellent Project Award at the end of the class. We were recognized for our
 fluid implementations of:
 
-1. Scanning QR codes to collect artworks
-   ![](/curatorcentral/qr.png)
+01\. Scanning QR codes to collect artworks and
 
-2. Enabling users to leave threaded comments _directly_ on an artwork
-   ![](/curatorcentral/annotations.png)
+02\. Enabling users to leave threaded comments _directly_ on an artwork.
+
+<Line />
+
+<TwoCol>
+**01. Scanning**
+
+In Curator Central, scanning is facilitated through QR codes
+associated with each artwork. Visitors at the museum can scan these QR
+codes using their mobile devices. After scanning, the app adds the artwork to the user's personal collection within the platform.
+This allows users to track the art they were drawn to and learn more the
+artwork after leaving the museum,
+
+![](/curatorcentral/qr.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**02. Commenting**
+
+The commenting process in Curator Central is uniquely interactive.
+Users can tap on a specific location on the artwork
+image on their personal device to place their comment.
+This allows users to comment on a specific part of the artwork,
+facilitating more focused discussions.
+
+Users can have these discussions with each other through "threaded"
+comments. Multiple users can add their thoughts to a specific part of
+the artwork.
+
+![](/curatorcentral/annotations.png)
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Tech Stack**
+
+Frontend: Vue
+
+Backend: Express
+
+Database: MongoDB
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Video Demo**
 
 Below is our video demo. We had fun with it.
 
-![](/curatorcentral/1.gif)
-
 <Vimeo vimeoId="780726140" />
+</TwoCol>
