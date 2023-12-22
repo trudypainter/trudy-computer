@@ -5,24 +5,155 @@ location: MIT Class
 description: Interactive data visualization of where MIT students listen to songs on campus.
 tags: p5.js, spotify api
 image: /mitmusicmap/cover.png
-priority: 6
+priority: 14
+link: https://trudypainter.github.io/mit-music-map/
 ---
 
-[MIT Music Map](https://trudypainter.github.io/mit-music-map/) was my final group project for [CMS.405 (Visual Design)](https://cms405.github.io/).
-I worked with Hanu Park and Rachel Chae.
-
-My group designed and implemented an interactive data visualization of where MIT students listen to songs on campus
+<Hero>
+  <div>
+    <Callout
+      link="https://trudypainter.github.io/mit-music-map/"
+      text="Launch Project"
+    />
+    <Callout
+      link="https://github.com/trudypainter/mit-music-map"
+      text="Github Repository"
+    />
+  </div>
+  <div>
+    MIT Music Map was my final group project for CMS.405 (Visual Design). I
+    worked with Hanu Park and Rachel Chae. We designed and implemented an
+    interactive data visualization of where MIT students listen to songs on
+    campus.
+  </div>
 
 ![](/mitmusicmap/map.gif)
 
-My primary role in the group was as a software developer. I adapted code from Dan Shiffman's
+</Hero>
+
+<Line />
+
+<TwoCol>
+**Project Overview**
+
+For this project, we were tasked with creating an interactive data visualization. We wanted
+to explore the question:
+
+> _How does the location affect the type of song someone listens to?_
+
+We sent out a survey that over 100 students responded to. The survey asked students
+to list a recent song they listened to in one of the following locations:
+
+Z Center (athletic center)  
+Infinite Corridor (main hallway)  
+Hayden Library (main library)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Visualization Auras**
+
+My group was inspired by the "Kiki and Bouba" experiment, which showed that people
+associate certain words with certain shapes. We wanted to see if we could
+visualize the type of songs listened to in an area using "kiki and bouba"-esque
+auras.
+
+<Line />
+
+<TwoCol>
+**Data**
+
+Below is the data about the songs listened to at each location. We used
+the Spotify API to get the song data like mood, energy, and danceability.
+
+![](/mitmusicmap/graph.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Key**
+
+Once we had the semantic data about the songs at each location,
+we designed a key for a visual system that would represent the data.
+
+![](/mitmusicmap/key.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Final Auras**
+
+Using the key, these are the final visualizations for each location.
+
+![](/mitmusicmap/auras.png)
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Interaction**
+
+The auras provided a macro view of the data, but we wanted to provide a way for
+users to explore the data on a more granular level.
+
+We decided to use a flocking algorithm where each song is represented by a
+gray circle. The songs are attracted to the location they were listened to at,
+creating a "flock" of songs at each location.
+
+Users can hover over a song to see the song's name + artist. Clicking on a song
+reveals a popup with more information.
+
+<TwoCol>
+**Flocking**
+
+To make the flocking algorithm,
+I adapted code from Dan Shiffman's
 [Autonomous Agents Chapter](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YHt0dtyf4uiw8tKOxQLvlW)
 from [_The Nature of Code_](https://natureofcode.com/book/chapter-6-autonomous-agents/).
 
-Below is a diagram of the logic behind the autonmous vehicles in the MIT Music Map.
+Below is a diagram of the logic behind the autonomous vehicles in the MIT Music Map.
 
 ![](/mitmusicmap/steeringprog.png)
 
-I wrote the code for this website using p5.js. You can find it in [this repository](https://github.com/trudypainter/mit-music-map).
+</TwoCol>
 
-Access [MIT Music Map](https://trudypainter.github.io/mit-music-map/).
+<TwoCol>
+**Hovering**
+
+When a user hovers their mouse over a song, the song is highlighted and the
+song's name + artist is displayed.
+
+![](/mitmusicmap/hover.png)
+
+</TwoCol>
+
+<TwoCol>
+**Clicking**
+
+When a user clicks on a song, a popup appears with more information about the song.
+
+![](/mitmusicmap/click.png)
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Tech Stack**
+
+**Frontend**: Plain HTML  
+**Graphics**: p5.js  
+**Hosting**: Github
+
+</TwoCol>
