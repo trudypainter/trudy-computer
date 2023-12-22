@@ -5,47 +5,39 @@ location: MIT Class
 description: Multimodal pointing and speaking to comment on artworks for MIT class Intelligent Multimodal User Interfaces
 image: arttalk/cover.png
 tags: fullstack, vercel, react, machine learning, sql, next, planet scale
-priority: 7
+priority: 15
 link: https://arttalk.vercel.app/
 ---
 
-<div
-  style={{
-    position: 'relative',
-    paddingBottom: '62.5%',
-    marginBottom: '40px',
-    height: '0',
-  }}
->
-  <iframe
-    src="https://www.loom.com/embed/9e46279186b3423680bb8d954e4eac0f?sid=c45231ae-1bba-4173-9ce6-28f3c8bb4e21"
-    frameborder="0"
-    webkitallowfullscreen
-    mozallowfullscreen
-    allowfullscreen
-    style={{
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      width: '100%',
-      height: '100%',
-    }}
-  ></iframe>
-</div>
-
-# ArtTalk: Multimodal Interactions in Museums and Galleries
-
-In my final semester at MIT, I took the graduate-level class Intelligent Multimodal User Interfaces.
-The goal of the class was to build multi-input systems that could be used in real world applications.
-My group and I were interested in bringing new life into how we interact with art in museums and galleries.
-
-I worked with [Andrew Stoddard](http://www.apstodd.com/) and [Maria Ascanio](https://www.linkedin.com/in/mariaascanioalino/) to build ArtTalk.
+<Hero>
+  <div>
+    <Callout
+      link="https://arttalk.vercel.app/"
+      text="Try ArtTalk"
+    />
+    <Callout
+      link="https://github.com/trudypainter/arttalk"
+      text="Github Repository"
+    />
+    <Callout
+      link="/arttalk/arttalk_paper.pdf"
+      text="Technical Writeup"
+    />
+  </div>
+  <div>
+    ArtTalk is a project I developed with [Andrew Stoddard](http://www.apstodd.com/) and [Maria Ascanio](https://www.linkedin.com/in/mariaascanioalino/) for the Intelligent Multimodal User Interfaces class at MIT. Our goal was to reimagine the way we interact with art in museums and galleries. With ArtTalk, visitors can point at a detail and share their comment aloud, creating a more interactive and engaging art viewing experience.
+  </div>
 
 ![](/arttalk/cover.png)
 
-## Motivations
+</Hero>
 
-Andrew and I had both take the MIT class [Extending the Museum](https://cms636.github.io/).
+<Line />
+
+<TwoCol>
+**Motivations**
+
+Andrew and I had both taken the MIT class [Extending the Museum](https://cms636.github.io/).
 During the class, we visited lots of museums and noticed something. Visitors walked from one exhibit to another,
 silently admiring the art but hardly having a conversation about it.
 We wondered, "What if we could change that? What if we could make these gallery spaces more interactive?"
@@ -57,59 +49,111 @@ letting you pin your thoughts directly on the art piece.
 
 There's no need for any extra gadgets - your voice and your gestures are the magic wands.
 
-## User Experience
+</TwoCol>
 
-Below is an early diagram of our user journey.
+<Line />
 
-![](/arttalk/1.png)
+<TwoCol>
+**User Flow**
+
+Below is an early diagram of our user journey. We wanted to make sure that
+the user flow had ample feedback from the system since no screen is involved.
+The feedback is primarily auditory, with the system reading aloud the user's comments
+and the comments of other visitors.
+
+<Line />
+
+<TwoCol>
+**Approach**
 
 A user can walk up to an art piece and the ArtTalk system will register that they are starting a new interaction.
 
-![](/arttalk/1.5.png)
+![](/arttalk/1.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Engage**
 
 A user can engage with the system by pointing at different parts of the painting with their hand.
 
+![](/arttalk/1.5.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Past Comments**
+
+Once a user has locked their pointing position in place,
+the system will read aloud past comments from other visitors.
+
 ![](/arttalk/2.png)
 
-Once a user has locked their pointing position in place, the system will read aloud past comments from other visitors.
+</TwoCol>
 
-![](/arttalk/3.png)
+<Line />
+
+<TwoCol>
+**Prompt**
 
 ArtTalk then prompts the user to leave their own thoughts about the painting.
 
-![](/arttalk/4.png)
+![](/arttalk/3.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Comment**
+
+The user then speaks their comment aloud.
 
 To wrap up the interaction, the system will read aloud the user's comment and confirm that their comment has been recorded.
+![](/arttalk/4.png)
 
-## Technical Details
+</TwoCol>
+</TwoCol>
 
-ArtTalk is built using the following technologies. For more information about the technical details, reference our [final paper writeup](/arttalk/arttalk_paper.pdf).
+<Line />
 
-- [Next.js](https://nextjs.org/) → React framework for web applications
-- [Tailwind CSS](https://tailwindcss.com/) → CSS framework for styling
-- [Prisma](https://www.prisma.io/) → Database ORM
-- [PostgreSQL](https://www.postgresql.org/) → Database
-- [Google Mediapipe](https://google.github.io/mediapipe/) → Hand landmark detection and gesture recognition
-- [Vercel](https://vercel.com/) → Web hosting
-- [Webkit Speech Recognition and Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) → Speech recognition
+<TwoCol>
+**System Diagram**
 
-<Callout>
-  <span style={{ display: 'flex' }}>
-    <span style={{ margin: '10px' }}>💾</span>
-    <a href="https://github.com/trudypainter/arttalk">
-      ArtTalk Github repository
-    </a>
-  </span>
-</Callout>
-<Callout>
-  <span style={{ display: 'flex' }}>
-    <span style={{ margin: '10px' }}>🔗</span>
-    <a href="https://arttalk.vercel.app/">ArtTalk live demo</a>
-  </span>
-</Callout>
-<Callout>
-  <span style={{ display: 'flex' }}>
-    <span style={{ margin: '10px' }}>📄</span>
-    <a href="/arttalk/arttalk_paper.pdf">ArtTalk final paper</a>
-  </span>
-</Callout>
+The user flow should feel seamless and natural.
+To achieve this, we used a robust state machine to manage
+the user's interaction with the system.
+
+![](/arttalk/state.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Technical Details**
+
+**Frontend**: [Next.js](https://nextjs.org/)  
+**Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+**Database ORM**: [Prisma](https://www.prisma.io/)  
+**Database**: [PostgreSQL](https://www.postgresql.org/)  
+**Hand Landmark Detection and Gesture Recognition**: [Google Mediapipe](https://google.github.io/mediapipe/)  
+**Web Hosting**: [Vercel](https://vercel.com/)  
+**Speech Recognition**: [Webkit Speech Recognition and Synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Sources**
+
+ArtTalk Github repository: https://github.com/trudypainter/arttalk  
+ArtTalk live demo: https://arttalk.vercel.app/  
+ArtTalk final paper: /arttalk/arttalk_paper.pdf
+
+</TwoCol>

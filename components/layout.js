@@ -40,7 +40,6 @@ export default function Blog(props) {
         <>
           <Head>
             <title>Trudy Painter</title>
-            <description>{meta.title}</description>
             <link rel="icon" href="favicon.ico" />
             <meta
               name="viewport"

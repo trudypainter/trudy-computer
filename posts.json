@@ -50,7 +50,7 @@
             "year": "2022",
             "location": "Personal Project",
             "description": "Every single song I\u2019ve listened to, charted by time of day",
-            "image": "spotfy-visualizer/cover.png",
+            "image": "trudy-tube/cover.png",
             "tags": "fullstack, archive, react, flask, sql, heroku, spotify api",
             "priority": "16",
             "link": "http://www.trudy.tube",
@@ -65,6 +65,17 @@
             "tags": "fullstack, react, spotify api, flask, heroku",
             "priority": "15",
             "slug": "/projects/spotify-bpm"
+        },
+        {
+            "title": "ARTTALK",
+            "year": "2023",
+            "location": "MIT Class",
+            "description": "Multimodal pointing and speaking to comment on artworks for MIT class Intelligent Multimodal User Interfaces",
+            "image": "arttalk/cover.png",
+            "tags": "fullstack, vercel, react, machine learning, sql, next, planet scale",
+            "priority": "15",
+            "link": "https://arttalk.vercel.app/",
+            "slug": "/projects/arttalk"
         },
         {
             "title": "ALTRUISTIC BOTNET",
@@ -86,17 +97,6 @@
             "priority": "13",
             "link": "https://trudypainter.github.io/mit-music-map/",
             "slug": "/projects/mitmusicmap"
-        },
-        {
-            "title": "ARTTALK",
-            "year": "2023",
-            "location": "MIT Class",
-            "description": "Multimodal pointing and speaking to comment on artworks for MIT class Intelligent Multimodal User Interfaces",
-            "image": "arttalk/cover.png",
-            "tags": "fullstack, vercel, react, machine learning, sql, next, planet scale",
-            "priority": "7",
-            "link": "https://arttalk.vercel.app/",
-            "slug": "/projects/arttalk"
         },
         {
             "title": "TRUDY.COMPUTER",
