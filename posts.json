@@ -63,8 +63,29 @@
             "description": "Spotify library explorer by BPM, built for my DJ class",
             "image": "spotify-bpm/cover.png",
             "tags": "fullstack, react, spotify api, flask, heroku",
-            "priority": "7",
+            "priority": "15",
             "slug": "/projects/spotify-bpm"
+        },
+        {
+            "title": "ALTRUISTIC BOTNET",
+            "year": "2022",
+            "location": "MIT Class",
+            "description": "Friendly botnet designed to inflate web traffic around climate change",
+            "image": "altruistic-botnet/cover.png",
+            "tags": "bot, p5.js",
+            "priority": "14",
+            "slug": "/projects/altruistic-botnet"
+        },
+        {
+            "title": "MIT MUSIC MAP",
+            "year": "2022",
+            "location": "MIT Class",
+            "description": "Interactive data visualization of where MIT students listen to songs on campus.",
+            "tags": "p5.js, spotify api",
+            "image": "/mitmusicmap/cover.png",
+            "priority": "13",
+            "link": "https://trudypainter.github.io/mit-music-map/",
+            "slug": "/projects/mitmusicmap"
         },
         {
             "title": "ARTTALK",
@@ -76,26 +97,6 @@
             "priority": "7",
             "link": "https://arttalk.vercel.app/",
             "slug": "/projects/arttalk"
-        },
-        {
-            "title": "MIT MUSIC MAP",
-            "year": "2022",
-            "location": "MIT Class",
-            "description": "Interactive data visualization of where MIT students listen to songs on campus.",
-            "tags": "p5.js, spotify api",
-            "image": "/mitmusicmap/cover.png",
-            "priority": "6",
-            "slug": "/projects/mitmusicmap"
-        },
-        {
-            "title": "ALTRUISTIC BOTNET",
-            "year": "2022",
-            "location": "MIT Class",
-            "description": "Friendly botnet designed to inflate web traffic around climate change",
-            "image": "altruistic-botnet/cover.png",
-            "tags": "bot, p5.js",
-            "priority": "5",
-            "slug": "/projects/altruistic-botnet"
         },
         {
             "title": "TRUDY.COMPUTER",
