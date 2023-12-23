@@ -99,34 +99,14 @@
             "slug": "/projects/mitmusicmap"
         },
         {
-            "title": "TRUDY.COMPUTER",
-            "year": "2022",
-            "location": "Personal Project",
-            "description": "How I built my personal website using Vercel and Next.js",
-            "image": "https://d2w9rnfcy7mm78.cloudfront.net/19472243/original_b54dd892c42651489e6895286183352b.jpg?1671376656?bc=0",
-            "tags": "fullstack, react, next, vercel, sql, planet scale",
-            "priority": "5",
-            "slug": "/projects/trudy-computer"
-        },
-        {
             "title": "SPOTIFY MONSTER",
             "year": "2021",
             "location": "MIT Class",
             "description": "Social network of Spotify Tamagotchi on Arduino",
             "image": "spotify-monster/cover.png",
             "tags": "fullstack, spotify api",
-            "priority": "4",
+            "priority": "12",
             "slug": "/projects/spotify-monster"
-        },
-        {
-            "title": "CHROME SOCIAL",
-            "year": "2022",
-            "location": "Personal Project",
-            "description": "Fleeting human interactions in new Google Chrome tabs",
-            "image": "chrome-social/cover.png",
-            "tags": "fullstack, web sockets, chrome extension, flask, sql",
-            "priority": "3",
-            "slug": "/projects/chrome-social"
         },
         {
             "title": "VSCO ZINE GENERATOR",
@@ -135,8 +115,40 @@
             "description": "Generate printable zines from a VSCO using Bindery JS",
             "image": "vsco-zine/cover.png",
             "tags": "fullstack, flask, heroku",
-            "priority": "2",
+            "priority": "11",
             "slug": "/projects/vsco-zine"
+        },
+        {
+            "title": "CHROME SOCIAL",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "Fleeting human interactions in new Google Chrome tabs",
+            "image": "chrome-social/cover.png",
+            "tags": "fullstack, web sockets, chrome extension, flask, sql",
+            "priority": "11",
+            "link": "https://github.com/trudypainter/chrome-social",
+            "slug": "/projects/chrome-social"
+        },
+        {
+            "title": "POKEMON ARCHIVE",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Web crawler and archive for Pokemon cards",
+            "image": "pokemon-archive/1.jpg",
+            "tags": "archive",
+            "priority": "8",
+            "link": "https://www.are.na/trudy-painter/every-pokemon-card-uz5ifttjceo",
+            "slug": "/projects/pokemon-archive"
+        },
+        {
+            "title": "TRUDY.COMPUTER",
+            "year": "2022",
+            "location": "Personal Project",
+            "description": "How I built my personal website using Vercel and Next.js",
+            "image": "https://d2w9rnfcy7mm78.cloudfront.net/19472243/original_b54dd892c42651489e6895286183352b.jpg?1671376656?bc=0",
+            "tags": "fullstack, react, next, vercel, sql, planet scale",
+            "priority": "5",
+            "slug": "/projects/trudy-computer"
         },
         {
             "title": "MEMOIR TWITTER BOT",
@@ -168,37 +180,6 @@
             "tags": "machine learning",
             "priority": "2",
             "slug": "/projects/personal-narrative"
-        },
-        {
-            "title": "BREADCRUMB",
-            "year": "2021",
-            "location": "MIT Class",
-            "description": "Final project for React web development class",
-            "image": "breadcrumb/cover.png",
-            "tags": "fullstack, react, google cloud platform",
-            "priority": "2",
-            "slug": "/projects/breadcrumb"
-        },
-        {
-            "title": "POKEMON ARCHIVE",
-            "year": "2020",
-            "location": "Personal Project",
-            "description": "Web crawler and archive for Pokemon cards",
-            "image": "pokemon-archive/1.jpg",
-            "tags": "archive",
-            "priority": "1",
-            "link": "https://www.are.na/trudy-painter/every-pokemon-card-uz5ifttjceo",
-            "slug": "/projects/pokemon-archive"
-        },
-        {
-            "title": "TRUDY.TUBE v1.0",
-            "year": "2020",
-            "location": "Personal Project",
-            "description": "Spotify listening collector + visualizer",
-            "image": "spotify-mood/1.jpg",
-            "tags": "fullstack, archive, heroku, flask, spotify api",
-            "priority": "1",
-            "slug": "/projects/spotify-mood"
         },
         {
             "title": "PARIS FASHION WEEK",
