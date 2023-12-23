@@ -151,17 +151,6 @@
             "slug": "/projects/trudy-computer"
         },
         {
-            "title": "MEMOIR TWITTER BOT",
-            "year": "2020",
-            "location": "Personal Project",
-            "description": "Memoir generator twitter bot",
-            "image": "memoir-twitter-bot/1.jpg",
-            "tags": "bot",
-            "priority": "2",
-            "link": "https://twitter.com/memoirmaker",
-            "slug": "/projects/memoir-twitter-bot"
-        },
-        {
             "title": "REAL TALK RADIO",
             "year": "2020",
             "location": "MIT Media Lab",
@@ -182,6 +171,17 @@
             "slug": "/projects/personal-narrative"
         },
         {
+            "title": "MEMOIR TWITTER BOT",
+            "year": "2020",
+            "location": "Personal Project",
+            "description": "Memoir generator twitter bot",
+            "image": "memoir-twitter-bot/1.jpg",
+            "tags": "bot",
+            "priority": "1",
+            "link": "https://twitter.com/memoirmaker",
+            "slug": "/projects/memoir-twitter-bot"
+        },
+        {
             "title": "PARIS FASHION WEEK",
             "year": "2021",
             "location": "Personal Project",
@@ -189,6 +189,7 @@
             "image": "mrss21/1.jpg",
             "tags": "misc",
             "priority": "1",
+            "link": "https://www.youtube.com/watch?v=hnZM9NJzuTM",
             "slug": "/projects/mrss21"
         }
     ]

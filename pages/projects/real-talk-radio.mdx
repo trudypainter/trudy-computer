@@ -8,25 +8,116 @@ tags: fullstack, archive, flask, heroku
 priority: 2
 ---
 
-# REAL TALK RADIO 
+<Hero>
+  <div>
+    <Callout
+      link="https://vimeo.com/554488451"
+      text="Watch the Demo"
+    />
+     <Callout
+      link="https://www.media.mit.edu/projects/real-talk-radio/overview/"
+      text="MIT Writeup"
+    />
+  </div>
+  
+  <div>
+    For the summer of 2020, I worked on Real Talk Radio under 
+    Ekene Ijeoma with the Poetic Justice Group at the MIT Media Lab. 
+    
+    Real Talk Radio is a continuous broadcasting system. 
+    It contains spoken word song introductions in Black music 
+    from hip hop to jazz as a form of Black thought and knowledge.
 
-For the summer of 2020, I worked on Real Talk Radio under Ekene Ijeoma with the Poetic Justice Group at the MIT Media Lab. 
+     ![](/real-talk-radio/rtrwide.png)
 
-Real Talk Radio is a continuous broadcasting system. It contains spoken word song introductions in Black music from hip hop to jazz as a form of Black thought and knowledge. These introductions often include personal musings filled with inspiration, insight, and spirituality. 
+  </div>
+   
+</Hero>
 
-I worked as a music researcher and web developer for this project. I... 
+<Line />
 
- 
+<TwoCol>
+**Project Overview**
 
- 
+Real Talk Radio is a series of software-generated live-streamed sound and video works.
+It is composed of a never-ending mix of spoken-word intros,
+outros, interludes, and skits from hip-hop songs alongside
+shout-outs from Black creatives.
 
- 
+As a vocal portrait and sonic meditation, it explores multi-genre and multigenerational
+Black thought and expression in the US.
 
-Below is a diagram of the system. 
+The first edition of Real Talk Radio features the top 100 musicians with the
+most popular spoken-word song segments. All editions are free and accessible to
+the public 24/7, both over the phone and online.
 
-![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/real-talk-radio/rtroverview.jpg?raw=true) 
+This project is a part of the Poetic Justice Group at the MIT Media Lab and is
+currently in development.
 
-This project has not been released to the public yet. However, you can watch a demo here. 
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+
+**My Contributions**
+
+I was a fullstack web developer for Real Talk radio
+and built the first version of the system.
+
+Since this was a primarily curatorial project,
+there needed to be a flexible way to browse and edit the snippets
+to be included in the livestream.
+
+<TwoCol>
+**Google Sheets Backend**
+
+I used a crafty approach to build the first version.
+I used Google Sheets as a database, which allowed for
+easy manipulation and browsing of data.
+
+This approach was free and quick to spin up. The curators
+were also familiar with using Sheets. However, later on
+Sheets was difficult to query data from for the
+frontend livestream. The backend had to be rebuilt after
+my summer internship.
+
+</TwoCol>
+
+<TwoCol>
+**Song Scraping**
+
+To populate the database with songs for curators to select, I wrote a
+Python script to scrape
+the web for top songs, segmented by spoken interludes (using lyric scraping).
+
+This script automatically uploaded all the songs to a Google Sheet where
+the curator could easily manipulate all of the data. This approach
+jumpstarted the curation process and made it easier for the curator
+to make decisions about what content to include in the live stream.
+
+</TwoCol>
+
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/real-talk-radio/rtroverview.jpg?raw=true)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Video Demo**
 
 <Vimeo vimeoId="554488451" />
 
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Tech Stack**
+
+**Frontend**: React  
+**Backend**: Flask  
+**Hosting**: Heroku
+
+</TwoCol>
