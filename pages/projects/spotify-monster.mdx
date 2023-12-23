@@ -5,30 +5,215 @@ location: MIT Class
 description: Social network of Spotify Tamagotchi on Arduino
 image: spotify-monster/cover.png
 tags: fullstack, spotify api
-priority: 4
+priority: 12
 ---
 
-# SPOTIFY MONSTER
+<Hero>
+  <div>
+    <Callout
+      link="https://www.youtube.com/embed/OLjwTaYY8Ik"
+      text="Watch Project Video"
+    />
+    <Callout
+      link="https://github.com/trudypainter/trudy-computer-react/blob/main/projects/spotify-monster/FINAL_WRITEUP/final_writeup.html"
+      text="Full Technical Writeup"
+    />
+  </div>
 
-In the spring of my sophomore year, I took MIT's embedded systems class. For the final project, my group and I created a network of Tamagotchi-like creatures that were fed based off Spotify listening history. We used a Python web server, SQL database, Arduino with C++, and the Spotify API. We also created a web interface to view other monsters and compatibility scores between users.
+    In the spring of my sophomore year, I took MIT's embedded systems class.
+    For the final project, my group and I created a network of Tamagotchi-like
+    creatures that were fed based off Spotify listening history.
 
-### Single User Mode
+    We used a Python web server, SQL database, Arduino with C++, and the Spotify API.
+    We also created a web interface to view other monsters and compatibility
+    scores between users.
 
-A user can view music listening stats and play with their monster.
+![](/spotify-monster/cover.png)
+
+</Hero>
+
+<Line />
+
+<TwoCol>
+**Introduction**
+
+The Spotify Monster is a social network of Tamagotchi-like creatures
+that are fed based off Spotify listening history.
+
+The more music you listen to, the more your monster will grow.
+And as the monster grows, it will reflect the type of music you listen to.
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Monster Design**
+
+The monster's appearance is based off the user's music taste.
+The design elements include body color, mood, age height, and trophy accessories.
+
+<Line />
+
+<TwoCol>
+**Body Color**
+
+The monster's body color corresponds to the user's top listened to genre. The color codes are as follows:
+
+**Pop**: pink  
+**Country**: orange  
+**Rap**: purple  
+**Instrumental**: yellow  
+**Electronic**: green  
+**Rock/Alt**: red
+
+  </TwoCol>
+
+<Line />
+
+<TwoCol>
+**Mood**
+
+Based off a user's listened to songs' valence, energy, and danceability,
+we compute a mood score. This then correlates to 3 different facial
+expressions for the monster: [0] sad, [1] neutral, or [2] happy.
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Age Stage**
+
+When a user first starts listening, their monster is a baby.
+As they listen to more songs, their monster will grow legs, arms,
+height, and trophy accessories.
+
+After 50 songs, the monster grows legs.
+
+After 100 songs, the monster grows arms.
+
+After 150 songs, the monster can start growing in height.
+
+_We didn't want to put a ceiling on how much the monster could develop.
+So, after a user listens to 150 songs, they earn an extra pixel of height._
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+
+**Trophy Accessories**
+
+After listening to 500 songs in a certain genre,
+a user can unlock a monster accessory for that genre. The accessories are as follows:
+
+**Pop**: microphone  
+**Country**: cowboy hat  
+**Rap**: gold chain  
+**Instrumental**: music stand  
+**Techno**: DJ turntable  
+**Rock/Alt**: electric guitar
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Example Monster**
+
+Below is a tall monster with a netural mood, arms, and legs.
+It also has a headphone, cowboy hat, and microphone accessory.
+
+![](/spotify-monster/example_trophies.jpg)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Chicken Scratch**
+
+Below are some preliminary doodles of the monster design.
+
+![](/spotify-monster/monsteroverview.jpg)
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**System Modes**
+
+<TwoCol>
+**Single User Mode**
+
+A user can view music listening stats and
+play with their monster.
+
+You can make your monster dance and jump.
 
 ![](/spotify-monster/2.jpg)
 
-### Multi User Mode
+</TwoCol>
 
-Two monsters can interact with each other across Arduinos.
+<Line />
+
+<TwoCol>
+**Multi User Mode**
+
+Two monsters can interact with
+each other across Arduinos.
+
+If the users' listening history is highly compatible,
+the Arduinos will dance with each other on the screen.
+
+In the case below, they give a "thumbs up" to each other, inidicating
+they are moderately compatible.
 
 ![](/spotify-monster/3.jpg)
 
-### Web Interface
+</TwoCol>
 
-Users can view other monsters in the network. Compatibility scores and recommended songs are generated between users.
+<Line />
+
+<TwoCol>
+**Web Interface**
+
+On the web interface, users can view all the monsters in the network.
+Compatibility scores and recommended songs are generated between users.
+
+The compatibility score is generated using a sigmoid function
+based on how similar the users' music tastes are.
 
 ![](/spotify-monster/4.jpg)
+
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**System Specs**
+
+Below is the system diagram for the project.
+
+The Arduino is connected to a speaker and a screen.
+The Arduino communicates with the Python web server for rendering calls.
+The web server communicates with the SQL database, Spotify API, and voice recognition endpoint.
+
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/spotify-monster/FINAL_WRITEUP/images/overview.jpeg?raw=true)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Project Video**
 
 <iframe
   width="560"
@@ -38,6 +223,6 @@ Users can view other monsters in the network. Compatibility scores and recommend
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
-></iframe>{' '}
+></iframe>
 
-![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/spotify-monster/FINAL_WRITEUP/images/overview.jpeg?raw=true)
+</TwoCol>
