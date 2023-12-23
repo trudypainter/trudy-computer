@@ -5,16 +5,29 @@ location: Personal Project
 description: Fleeting human interactions in new Google Chrome tabs
 image: chrome-social/cover.png
 tags: fullstack, web sockets, chrome extension, flask, sql
-priority: 3
+priority: 11
+link: https://github.com/trudypainter/chrome-social
 ---
 
-# CHROME SOCIAL
-
-NOTE: This project was more thought experiment than full blown software development
+<Hero>
+  <div>
+    <Callout
+      link="https://github.com/trudypainter/chrome-social"
+      text="Github Repository"
+    />
+  </div>
+  <div>
+    Chrome Social is a thought experiment turned into a project, aiming to replicate quick, serendipitous interactions online. Using Google Chrome extensions, Websockets, and P5js, I created a new tab Chrome extension where users can see other users' mouse movements in real time. The interactions are limited and fleeting, just like running into someone between classes.
+  </div>
 
 ![](/chrome-social/2.jpg)
 
-### Intention
+</Hero>
+
+<Line />
+
+<TwoCol>
+**Intention**
 
 I spent all of my sophomore year at MIT taking virtual classes. When I went back to campus my junior year, I noticed that my favorite part of going to class was running into people and saying hello.
 
@@ -24,20 +37,72 @@ I didn't want to make a new platform that people had to go to (ie a new app or w
 
 What's a digital platform we all use that can be modified for social interactions?
 
-BOOM! Google Chrome 😎
+> BOOM! Google Chrome 😎
 
 A lot of my friends and I use Apple products, but Apple doesn't let you alter their software. However, most of my friends and I DO use Google Chrome (which DOES let you modify their software). So, I made a new tab Chrome extension where you can see other users' mouse movements in real time. The interactions are limited and fleeting, just like running into someone between classes.
 
-### Design
+</TwoCol>
 
-I made this using [Google Chrome extensions](https://developer.chrome.com/docs/extensions/), [Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers), and [P5js](https://p5js.org/). User data is also stored in a Heroku server using SQL.
+<Line />
 
-I ran into websocket/server bugs and stopped development after it was taking up too much time. I learned what I wanted about web sockets and chrome extensions.
+<TwoCol>
+**Design**
 
-Below is a demo (where the site breaks oops) and a system diagram.
+I made this using [Google Chrome extensions](https://developer.chrome.com/docs/extensions/), 
+[Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers), and 
+[P5js](https://p5js.org/). User data is also stored in a Heroku server using SQL.
 
-<Vimeo vimeoId="661990464" />
+I used P5js to draw the mouse movements and ripples on the screen.
+I used websockets to send the mouse data to the server and back to the other users.
+I used a Chrome extension to inject the P5js code into the new tab.
+
+<Line />
+
+<TwoCol>
+**Screenshot**
+
+In the screenshot below, my friends Maya and Andrew are both on the new tab.
+
+When one of us clicks our mouse, the ripples are visible to everyone else.
+
+When one of us moves our mouse, the cursor location is visible to everyone else.
+
+![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/chrome-social/chromesocial.jpg?raw=true)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Deprecated...**
+
+I ran into websocket/server bugs and stopped development after
+it was taking up too much time. I learned what I wanted about web sockets and chrome extensions.
 
 ![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/chrome-social/overview.jpeg?raw=true)
 
-![](https://github.com/trudypainter/trudy-computer-react/blob/main/projects/chrome-social/chromesocial.jpg?raw=true)
+</TwoCol>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Video Demo**
+
+<Vimeo vimeoId="661990464" />
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Tech Stack**
+
+**Framework**: Google Chrome extension  
+**Frontend**: p5js  
+**Backend**: Flask, Websockets  
+**Database**: SQL  
+**Hosting**: Heroku
+
+</TwoCol>
