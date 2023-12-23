@@ -40,19 +40,19 @@ export default function Home(props) {
         >
           {/* DESKTOP */}
           <div
-            className="w-[1000px] flex justify-between 
+            className="w-[1000px] flex justify-between items-center
         mx-auto space-x-8 phone:hidden"
           >
             <Link className="w-[20%] phone:w-fit" href="/">
               Trudy Painter
             </Link>
-            <div className="w-[80%] flex justify-between"></div>
+            <div className="w-fit text-base flex justify-between">About</div>
           </div>
 
           {/* PHONE */}
           <div className="block md:hidden text-lg flex justify-between w-full p-4">
             <Link href="/">Trudy Painter</Link>
-            <div></div>
+            <div>About</div>
           </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function Home(props) {
 
         <div
           className="flex space-x-4 mb-12 mx-auto 
-        phone:space-x-0 justify-center w-[1000px] "
+        phone:space-x-0 justify-center w-[1000px] phone:w-full"
         >
           <div className="flex flex-col phone:invisible phone:h-0 phone:w-0">
             <div className="flex flex-col w-full space-x-0 sticky top-16 bg-white">
