@@ -7,6 +7,7 @@ import { ArchivePost } from '../components/ArchivePost';
 import { FeaturedPost } from '../components/FeaturedPost';
 import FilterBarSide from '../components/FilterBarSide';
 import { useState } from 'react';
+import FeaturedSection from '../components/featuredSection';
 
 export default function Home(props) {
   const allProjects = posts.posts;
@@ -32,25 +33,38 @@ export default function Home(props) {
       phone:p-0 phone:m-0
       "
       >
-        <Header />
-
+        {/* <Header /> */}
         <div
-          className="flex flex-col max-w-[900px] mx-auto space-y-16  
-          my-24 
-          phone:invisible phone:h-0 phone:m-0 phone:p-0"
+          className="sticky top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
+      border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
         >
-          {featuredPosts.map((post) => (
-            <FeaturedPost post={post} borderDiv={borderDiv} />
-          ))}
+          {/* DESKTOP */}
+          <div
+            className="w-[1000px] flex justify-between 
+        mx-auto space-x-8 phone:hidden"
+          >
+            <Link className="w-[20%] phone:w-fit" href="/">
+              Trudy Painter
+            </Link>
+            <div className="w-[80%] flex justify-between"></div>
+          </div>
+
+          {/* PHONE */}
+          <div className="block md:hidden text-lg flex justify-between w-full p-4">
+            <Link href="/">Trudy Painter</Link>
+            <div></div>
+          </div>
         </div>
 
+        {/* <FeaturedSection featuredPosts={featuredPosts} borderDiv={borderDiv} /> */}
+
         <div
-          className="flex space-x-4 sticky top-0 mb-48 mx-auto 
-        phone:space-x-0 justify-center"
+          className="flex space-x-4 mb-12 mx-auto 
+        phone:space-x-0 justify-center w-[1000px] "
         >
           <div className="flex flex-col phone:invisible phone:h-0 phone:w-0">
-            <div className="flex flex-col w-full space-x-4 sticky top-0 bg-white">
-              <div className={`${borderDiv} ml-4 w-[250px] flex-shrink-0`}>
+            <div className="flex flex-col w-full space-x-0 sticky top-16 bg-white">
+              <div className={`${borderDiv} ml-0 w-[200px] flex-shrink-0`}>
                 Filter By
               </div>
 
@@ -65,12 +79,12 @@ export default function Home(props) {
           </div>
 
           <div
-            className="flex flex-col max-w-[900px] space-y-2 
+            className="flex flex-col w-[80%] space-y-2 
             phone:w-full
           "
           >
             <div
-              className="flex w-full space-x-4 sticky top-0 bg-white 
+              className="flex w-full space-x-4 sticky top-16 bg-white 
             phone:invisible phone:h-0 phone:w-0 phone:p-0 phone:m-0 phone:space-x-0
             "
             >
@@ -82,8 +96,6 @@ export default function Home(props) {
               <ArchivePost post={p} borderDiv={borderDiv} />
             ))}
           </div>
-
-          <div className="w-[250px] phone:hidden"></div>
         </div>
 
         <Footer />

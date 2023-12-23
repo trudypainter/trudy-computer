@@ -18,7 +18,7 @@ const FilterBarSide = (props) => {
   return (
     <div
       className="-md:invisible -md:h-0 -md:p-0 
-      visible w-[220px] mt-4 flex flex-col space-y-4"
+      visible w-[200px] mt-4 mx-0 flex flex-col space-y-4 "
       id="filterBar"
     >
       <div className="flex  flex-wrap">

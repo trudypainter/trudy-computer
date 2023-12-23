@@ -161,16 +161,6 @@
             "slug": "/projects/real-talk-radio"
         },
         {
-            "title": "PERSONAL NARRATIVE PREDICTOR",
-            "year": "2020",
-            "location": "MIT Media Lab",
-            "description": "Machine learning model for parsing informal stories",
-            "image": "personal-narrative/1.jpg",
-            "tags": "machine learning",
-            "priority": "2",
-            "slug": "/projects/personal-narrative"
-        },
-        {
             "title": "MEMOIR TWITTER BOT",
             "year": "2020",
             "location": "Personal Project",
