@@ -8,13 +8,17 @@ import { FeaturedPost } from '../components/FeaturedPost';
 import FilterBarSide from '../components/FilterBarSide';
 import { useState } from 'react';
 import FeaturedSection from '../components/featuredSection';
+import { useEffect, useRef } from 'react';
+import HomeMenu from '../components/HomeMenu';
 
 export default function Home(props) {
   const allProjects = posts.posts;
   const [selectedProjects, setSelectedProjects] = useState(posts.posts);
   const [selectedTags, setSelectedTags] = useState([]);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   const borderDiv = 'border-b-[1px] border-gray-400 py-1';
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   let featuredPosts = [];
   console.log('ALL PROJECTS', allProjects);
@@ -24,7 +28,40 @@ export default function Home(props) {
     }
   });
 
-  // UNICODE FLOWERS ❋ ✣ ✤
+  const scrollRef = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (scrollRef.current) {
+        setScrollPosition(scrollRef.current.scrollTop);
+        console.log(scrollRef.current.scrollTop);
+
+        const halfScreen = (window.innerHeight * 3) / 4;
+        if (scrollRef.current.scrollTop > halfScreen - 64) {
+          setDisplayMenu(true);
+        } else {
+          setDisplayMenu(false);
+        }
+      }
+    }
+    // Add event listener for scroll events
+    if (scrollRef.current) {
+      scrollRef.current.addEventListener('scroll', handleScroll);
+    }
+
+    // Cleanup function
+    return () => {
+      if (scrollRef.current) {
+        scrollRef.current.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Set window height after component has mounted
+    setWindowHeight(window.innerHeight);
+  }, []); // Empty dependency array ensures this runs once after initial render
 
   return (
     <>
@@ -32,32 +69,22 @@ export default function Home(props) {
         className="absolute inset-0 w-screen overflow-x-hidden font-sans 
       phone:p-0 phone:m-0
       "
+        ref={scrollRef}
       >
-        {/* <Header /> */}
-        <div
-          className="sticky top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
-      border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
-        >
-          {/* DESKTOP */}
-          <div
-            className="w-[1000px] flex justify-between items-center
-        mx-auto space-x-8 phone:hidden"
-          >
-            <Link className="w-[20%] phone:w-fit" href="/">
-              Trudy Painter
-            </Link>
-            <div className="w-fit text-base flex justify-between">About</div>
-          </div>
+        <Header scrollPosition={scrollPosition} />
 
-          {/* PHONE */}
-          <div className="block md:hidden text-lg flex justify-between w-full p-4">
-            <Link href="/">Trudy Painter</Link>
-            <div>About</div>
-          </div>
-        </div>
+        {/* <div className="fixed top-0 left-0 z-10">
+          Scroll position: {scrollPosition} / {windowHeight}
+        </div> */}
 
-        {/* <FeaturedSection featuredPosts={featuredPosts} borderDiv={borderDiv} /> */}
+        {displayMenu && (
+          <HomeMenu
+            scrollPosition={scrollPosition}
+            windowHeight={windowHeight}
+          />
+        )}
 
+        <div className="bg-white h-32 phone:h-8"></div>
         <div
           className="flex space-x-4 mb-12 mx-auto 
         phone:space-x-0 justify-center w-[1000px] phone:w-full"

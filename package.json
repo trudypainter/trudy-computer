@@ -16,6 +16,7 @@
     "react-dom": "^17.0.2",
     "react-fast-marquee": "^1.3.5",
     "react-matter-js": "^1.0.5",
+    "react-p5": "^1.4.1",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {

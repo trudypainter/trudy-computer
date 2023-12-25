@@ -89,16 +89,16 @@ export default function FindMe() {
         Full CV
       </a>
 
-      <div className="absolute px-2 bg-[yellow] right-[250px]  top-[112px]">
+      <div className="absolute px-2 bg-[white] right-[250px]  top-[112px]">
         Personal
       </div>
-      <div className="absolute px-2 bg-[yellow] left-[220px]  top-[112px]">
+      <div className="absolute px-2 bg-[white] left-[220px]  top-[112px]">
         Professional
       </div>
-      <div className="absolute w-full text-center bg-[yellow] py-2  bottom-[250px]">
+      <div className="absolute w-full text-center bg-[white] py-2  bottom-[250px]">
         Essential
       </div>
-      <div className="absolute w-full text-center bg-[yellow] py-2  top-[250px]">
+      <div className="absolute w-full text-center bg-[white] py-2  top-[250px]">
         Peripheral
       </div>
     </div>
