@@ -59,17 +59,14 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
       </div>
 
       {/* PHONE */}
-      <div className="block md:hidden text-lg flex justify-between w-full p-4">
-        <Link href="/">Trudy Painter</Link>
-        <div>{meta && meta.title}</div>
-      </div>
       <div
-        className="md:hidden fixed bottom-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
-      border-t-[1px] border-black bg-[yellow] text-lg flex items-center justify-end p-2"
+        className="block md:hidden text-lg flex 
+      justify-between w-full p-4"
       >
-        <Link className="hover:underline " href={'/about'}>
+        <a href="/">Trudy Painter</a>
+        <a className="hover:underline " href={'/about'}>
           About
-        </Link>
+        </a>
       </div>
     </div>
   );

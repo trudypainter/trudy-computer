@@ -13,7 +13,7 @@ export default function About() {
            phone:space-y-8 phone:my-12
           "
       >
-        <div className="w-1/2">
+        <div className="w-1/2 phone:w-[300px]">
           <img
             className="w-[300px] h-[300px] object-cover"
             src="about/me.jpg"

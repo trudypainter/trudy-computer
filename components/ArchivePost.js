@@ -22,7 +22,7 @@ export function ArchivePost(props) {
       key={p.slug}
       className={`flex h-48 w-full space-x-4 
       phone:flex-col phone:space-x-0 phone:space-y-0 
-      phone:h-auto phone:w-full phone:p-2
+      phone:h-auto phone:w-full phone:p-4
     `}
     >
       <div

@@ -16,6 +16,7 @@ export default function Home(props) {
   const [selectedProjects, setSelectedProjects] = useState(posts.posts);
   const [selectedTags, setSelectedTags] = useState([]);
   const [windowHeight, setWindowHeight] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const borderDiv = 'border-b-[1px] border-gray-400 py-1';
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -38,10 +39,18 @@ export default function Home(props) {
         console.log(scrollRef.current.scrollTop);
 
         const halfScreen = (window.innerHeight * 3) / 4;
-        if (scrollRef.current.scrollTop > halfScreen - 64) {
-          setDisplayMenu(true);
+        if (window.innerWidth <= 768) {
+          if (scrollRef.current.scrollTop > halfScreen - 40) {
+            setDisplayMenu(true);
+          } else {
+            setDisplayMenu(false);
+          }
         } else {
-          setDisplayMenu(false);
+          if (scrollRef.current.scrollTop > halfScreen - 64) {
+            setDisplayMenu(true);
+          } else {
+            setDisplayMenu(false);
+          }
         }
       }
     }
@@ -61,6 +70,7 @@ export default function Home(props) {
   useEffect(() => {
     // Set window height after component has mounted
     setWindowHeight(window.innerHeight);
+    setWindowWidth(window.innerWidth);
   }, []); // Empty dependency array ensures this runs once after initial render
 
   return (
