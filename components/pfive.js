@@ -39,7 +39,7 @@ export default function P5Background({ height, windowWidth, scrollPosition }) {
   };
 
   return (
-    <div className="absolute top-0 left-0">
+    <div className="absolute top-0 left-0 z-20">
       {scrollPosition < height && <Sketch setup={setup} draw={draw} />}
     </div>
   );

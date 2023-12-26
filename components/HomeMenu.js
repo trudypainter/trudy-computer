@@ -30,7 +30,7 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
+      className="fixed top-0 left-0 w-full h-16 bg-yellow z-30 phone:h-10
       border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
     >
       {/* DESKTOP */}

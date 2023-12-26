@@ -38,11 +38,13 @@ export function Header({ scrollPosition }) {
         scrollPosition={scrollPosition}
       />
 
+      <div className="absolute top-0 left-0 w-full h-3/4 bg-[yellow] z-0"></div>
+
       <div
         className="text-2xl p-16 phone:p-8 phone:text-xl  
         border-b-[1px] border-black 
         flex flex-col justify-center h-3/4
-        absolute top-0 left-0 w-full z-10 "
+        absolute top-0 left-0 w-full z-30 "
       >
         <div className="max-w-[1000px] mx-auto">
           <div>

@@ -18,7 +18,7 @@ export default function Home(props) {
   const [windowHeight, setWindowHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const borderDiv = 'border-b-[1px] border-gray-400 py-1';
+  const borderDiv = 'border-b-[1px] border-gray-400 py-2';
   const [displayMenu, setDisplayMenu] = useState(false);
 
   let featuredPosts = [];

@@ -83,7 +83,7 @@ export default function About() {
           </div>
 
           <div>
-            I mean it when I say I love to chat ❤ Reach out at{' '}
+            I mean it when I say I love to chat. Reach out at{' '}
             <a href="mailto:hello@trudy.computer" className="underline">
               hello@trudy.computer
             </a>
