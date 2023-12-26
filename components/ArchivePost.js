@@ -40,10 +40,11 @@ export function ArchivePost(props) {
         {p.image && (
           <a href={p.slug}>
             <img
-              // src={p.image}
-              className="h-48 w-64  object-cover bg-gray-50
+              src={p.image}
+              loading="lazy"
+              className="h-full w-64 object-cover bg-gray-50
               phone:w-full phone:border-[1px] phone:border-gray-400 
-              phone:object-contain 
+              phone:object-cover phone:h-64
               "
             />
           </a>

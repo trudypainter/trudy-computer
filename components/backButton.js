@@ -2,6 +2,12 @@ import next from 'next';
 import Link from 'next/dist/client/link';
 
 export default function BackButton({ meta, nextProject }) {
+  let title = '';
+
+  if (nextProject) {
+    title = 'Next: ' + nextProject.title + '→';
+  }
+
   return (
     <div
       className="fixed top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
@@ -22,7 +28,7 @@ export default function BackButton({ meta, nextProject }) {
               className="hover:underline"
               href={nextProject ? nextProject.slug : '/'}
             >
-              <>{nextProject && 'Next: ' + nextProject.title + '→'}</>
+              {title}
             </Link>
           </div>
         </div>

@@ -40,11 +40,11 @@ export default function Blog(props) {
         <>
           <Head>
             <title>Trudy Painter</title>
-            <link rel="icon" href="favicon.ico" />
             <meta
               name="viewport"
-              content="width=device-width, initial-scale=1"
+              content="initial-scale=1.0, width=device-width"
             />
+            <link rel="shortcut icon" href="favicon.ico" />
           </Head>
           <BackButton meta={meta} nextProject={nextProject} />
           <div
