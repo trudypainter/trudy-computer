@@ -47,7 +47,7 @@ export default function BackButton({ meta, nextProject }) {
           className="hover:underline "
           href={nextProject ? nextProject.slug : '/'}
         >
-          <>{nextProject && 'Next: ' + nextProject.title + '→'}</>
+          {title}
         </Link>
       </div>
     </div>
