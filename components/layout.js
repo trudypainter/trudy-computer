@@ -11,7 +11,7 @@ import TwoCol from './mdx/TwoCol';
 import Line from './mdx/Line';
 import posts from '../posts.json';
 
-const components = { Callout, Hero, TwoCol, Line };
+const mdxComponents = { Callout, Hero, TwoCol, Line };
 
 export default function Blog(props) {
   const { meta, route, ...rest } = props;
@@ -33,6 +33,11 @@ export default function Blog(props) {
       return !next || post.priority > next.priority ? post : next;
     }, null);
   }
+
+  const components = {
+    ...mdxComponents,
+    a: (props) => <a {...props} style={{ textDecoration: 'underline' }} />,
+  };
 
   if (route.startsWith('/projects')) {
     return function Layout({ children }) {
