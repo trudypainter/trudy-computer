@@ -48,7 +48,10 @@ export function Header({ scrollPosition }) {
           <div>
             <span className="">Trudy Painter</span> is a creative technologist
             at Google Creative Lab and recent graduate of MIT. She builds and
-            designs AI tools to feel more like a copilot than an autopilot.
+            designs AI tools to feel more like a copilot than an autopilot.{' '}
+            <a className="underline" href="/about">
+              More
+            </a>
           </div>
         </div>
       </div>

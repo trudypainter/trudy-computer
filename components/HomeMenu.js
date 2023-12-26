@@ -35,7 +35,7 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
     >
       {/* DESKTOP */}
       <div
-        className={`w-[1000px] flex justify-between 
+        className={`w-[1000px] flex justify-between items-center 
         mx-auto  phone:hidden text-black 
         ${mapRange(
           (window.innerHeight * 3) / 4 - scrollPosition,
@@ -50,7 +50,10 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
           Trudy Painter
         </Link>
         <div className="w-[80%] flex justify-end">
-          <div className="text-base hover:underline  h-full flex flex-col items-center justify-between">
+          <div
+            className="text-base hover:underline  h-full flex 
+          flex-col items-center justify-between"
+          >
             <Link className="hover:underline" href={'/about'}>
               About
             </Link>
