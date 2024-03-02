@@ -135,10 +135,16 @@ export default function Home(props) {
               I've worked on some of the largest AI launches at Google,
               including Google's state of the art multimodal model, Gemini.
             </div>
-            <div className="max-w-[1000px] flex space-x-4 justify-between">
-              <FeaturedPost post={getProject('BARD SOCIAL STRATEGY')} />
-              <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
-              <FeaturedPost post={getProject('GEMINI 1.5 PRO LAUNCH')} />
+            <div className="max-w-[1000px] space-x-4 flex justify-center phone:flex-wrap">
+              <div className="phone:order-2 phone:w-[calc(50vw-36px)] phone:mt-4">
+                <FeaturedPost post={getProject('BARD SOCIAL STRATEGY')} />
+              </div>
+              <div className="phone:order-1 phone:w-full">
+                <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
+              </div>
+              <div className="phone:order-2 phone:w-[calc(50vw-36px)] phone:mt-4">
+                <FeaturedPost post={getProject('GEMINI 1.5 PRO LAUNCH')} />
+              </div>
             </div>
           </div>
           <div className="h-24 phone:h-4"></div>
