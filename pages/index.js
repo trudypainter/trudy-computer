@@ -102,7 +102,7 @@ export default function Home(props) {
             windowHeight={windowHeight}
             windowWidth={windowWidth}
           /> */}
-          <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 backdrop-blur-md"></div>
+          <div className="fixed top-0 left-0 w-screen h-screen bg-black backdrop-blur-md"></div>
           <div
             className="fixed top-0 left-0 w-screen phone:p-4
            h-1/2 flex justify-center items-center"
@@ -135,14 +135,14 @@ export default function Home(props) {
               I've worked on some of the largest AI launches at Google,
               including Google's state of the art multimodal model, Gemini.
             </div>
-            <div className="max-w-[1000px] space-x-4 flex justify-center phone:flex-wrap">
-              <div className="phone:order-2 phone:w-[calc(50vw-36px)] phone:mt-4">
+            <div className="max-w-[1000px] space-x-4 phone:space-x-0 flex justify-between phone:flex-wrap">
+              <div className="phone:order-2 phone:w-[calc(50vw-24px)] phone:mt-4">
                 <FeaturedPost post={getProject('BARD SOCIAL STRATEGY')} />
               </div>
               <div className="phone:order-1 phone:w-full">
                 <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
               </div>
-              <div className="phone:order-2 phone:w-[calc(50vw-36px)] phone:mt-4">
+              <div className="phone:order-2 phone:w-[calc(50vw-24px)] phone:mt-4">
                 <FeaturedPost post={getProject('GEMINI 1.5 PRO LAUNCH')} />
               </div>
             </div>
