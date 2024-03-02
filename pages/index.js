@@ -153,10 +153,9 @@ export default function Home(props) {
             <div className="text-2xl w-full">MIT MEDIA LAB</div>
             <div className="mt-1 mb-4">
               I graduated from MIT in 2023 with a double major in computer
-              science and comparative media studies. I was heavily involved with
-              the MIT Media Lab, specifically the Viral Communications group. I
-              researched how to push the boundaries of human / AI interaction
-              and published work on the topic.
+              science and comparative media studies. I also published research
+              on human + AI interaction with the MIT Media Lab, specifically the
+              Viral Communications group.
             </div>
             <div className="w-full">
               <FeaturedPost post={getProject('LATENT LAB')} />

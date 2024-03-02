@@ -60,7 +60,7 @@ export default function About() {
             <a href="https://cmsw.mit.edu/" className="underline">
               comparative media studies
             </a>
-            . I published human/AI collabroation research through the MIT Media
+            . I published human/AI collaboration research through the MIT Media
             Lab, specifically the{' '}
             <a
               href="https://www.media.mit.edu/groups/viral-communications/overview/"
