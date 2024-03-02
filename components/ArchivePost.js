@@ -18,8 +18,9 @@ export function ArchivePost(props) {
   }, []);
 
   return (
-    <div
+    <a
       key={p.slug}
+      href={p.slug}
       className={`flex h-48 w-full space-x-4 
       phone:flex-col phone:space-x-0 phone:space-y-0 
       phone:h-auto phone:w-full phone:p-4
@@ -30,7 +31,7 @@ export function ArchivePost(props) {
         phone:invisible phone:h-0 phone:w-0
         `}
       >
-        <div className="text-xl">{p.title}</div>
+        <div className="text-base text-[blue]">{p.title}</div>
         <div>
           [{p.location}, {p.year}]
         </div>
@@ -70,6 +71,6 @@ export function ArchivePost(props) {
           ))}
         </div>
       </div>
-    </div>
+    </a>
   );
 }

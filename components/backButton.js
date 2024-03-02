@@ -10,8 +10,8 @@ export default function BackButton({ meta, nextProject }) {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
-      border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
+      className="fixed top-0 left-0 w-full h-16 bg-black text-white z-10 phone:h-10
+      border-b-[1px] border-black  text-xl flex items-center justify-center"
     >
       {/* DESKTOP */}
       <div
@@ -22,7 +22,7 @@ export default function BackButton({ meta, nextProject }) {
           Trudy Painter
         </Link>
         <div className="w-[80%] flex justify-between">
-          <div className="pl-6">{meta && meta.title}</div>
+          <div className="pl-6 ">{meta && meta.title}</div>
           <div className="text-base hover:underline  h-full flex flex-col justify-center items-center">
             <Link
               className="hover:underline"
@@ -41,7 +41,7 @@ export default function BackButton({ meta, nextProject }) {
       </div>
       <div
         className="md:hidden fixed bottom-0 left-0 w-full h-16 bg-yellow z-10 phone:h-10
-      border-t-[1px] border-black bg-[yellow] text-lg flex items-center justify-end p-2"
+      border-t-[1px] border-black bg-[black] text-lg flex items-center justify-end p-2"
       >
         <Link
           className="hover:underline "

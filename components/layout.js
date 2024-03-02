@@ -10,8 +10,17 @@ import Hero from './mdx/Hero';
 import TwoCol from './mdx/TwoCol';
 import Line from './mdx/Line';
 import posts from '../posts.json';
+import InstagramEmbed from './mdx/InstagramEmbed';
+import YouTubeEmbed from './mdx/YouTubeEmbed';
 
-const mdxComponents = { Callout, Hero, TwoCol, Line };
+const mdxComponents = {
+  Callout,
+  Hero,
+  TwoCol,
+  Line,
+  InstagramEmbed,
+  YouTubeEmbed,
+};
 
 export default function Blog(props) {
   const { meta, route, ...rest } = props;

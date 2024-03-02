@@ -31,14 +31,15 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
   return (
     <div
       className="fixed top-0 left-0 w-full h-16 bg-yellow z-30 phone:h-10
-      border-b-[1px] border-black bg-[yellow] text-2xl flex items-center justify-center"
+      border-b-[1px] border-black bg-black text-xl flex 
+      items-center justify-center"
     >
       {/* DESKTOP */}
       <div
         className={`w-[1000px] flex justify-between items-center 
-        mx-auto  phone:hidden text-black 
+        mx-auto  phone:hidden text-white 
         ${mapRange(
-          (window.innerHeight * 3) / 4 - scrollPosition,
+          (window.innerHeight * 1) / 2 - scrollPosition,
           64,
           0,
           0,
@@ -64,7 +65,7 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
       {/* PHONE */}
       <div
         className="block md:hidden text-lg flex 
-      justify-between w-full p-4"
+      justify-between w-full p-4 text-white"
       >
         <a href="/">Trudy Painter</a>
         <a className="hover:underline " href={'/about'}>

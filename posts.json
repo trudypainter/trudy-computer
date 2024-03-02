@@ -1,6 +1,41 @@
 {
     "posts": [
         {
+            "title": "BARD SOCIAL STRATEGY",
+            "year": "2024",
+            "location": "Google",
+            "description": "Short form videos for Google's chat AI, over 40 million views",
+            "image": "bard-social/cover.avif",
+            "tags": "machine learning, video",
+            "priority": "24",
+            "featured": "google",
+            "slug": "/projects/bard-social"
+        },
+        {
+            "title": "GEMINI MULTIMODAL LAUNCH",
+            "year": "2024",
+            "location": "Google",
+            "description": "Promotional (and controversial) videos for Google's biggest AI release to date",
+            "image": "gemini-launch/handson.avif",
+            "tags": "machine learning, video",
+            "priority": "23",
+            "featured": "google",
+            "link": "https://www.latentlab.ai/",
+            "slug": "/projects/gemini-launch"
+        },
+        {
+            "title": "GEMINI 1.5 PRO LAUNCH",
+            "year": "2024",
+            "location": "Google",
+            "description": "Tutorial videos to highlight AI research breakthrough",
+            "image": "gemini-15/covercrop.avif",
+            "tags": "machine learning, video",
+            "priority": "22",
+            "featured": "google",
+            "link": "https://www.latentlab.ai/",
+            "slug": "/projects/gemini-15"
+        },
+        {
             "title": "LATENT LAB",
             "year": "2023",
             "location": "MIT Media Lab",
@@ -8,7 +43,7 @@
             "image": "latent-lab/still.avif",
             "tags": "fullstack, machine learning, react, docker, vercel, archive, d3",
             "priority": "20",
-            "featured": "true",
+            "featured": "mit",
             "link": "https://www.latentlab.ai/",
             "slug": "/projects/latent-lab"
         },
