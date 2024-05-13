@@ -5,9 +5,7 @@ const TagButton = (props) => {
 
   //   console.log(props);
 
-  let tagClass =
-    'whitespace-nowrap rounded-md px-2  bg-gray-100 mr-1 mb-1 hover:cursor-pointer';
-
+  
   const getMatchingProj = (tagList) => {
     let projList = [];
     for (let projObj of props.allProjects) {
@@ -52,16 +50,20 @@ const TagButton = (props) => {
     selected = setSelected(!selected);
   };
 
+  let tagClass =
+    `whitespace-nowrap rounded-md px-2 mr-1 mb-1 
+    hover:cursor-pointer border-[1.2px] border-gray-400 `;
+
   return (
     <span
       className={
         selected
-          ? tagClass + ' bg-gray-300'
-          : tagClass + 'bg-gray-100 hover:bg-gray-200 hover:cursor-pointer'
+          ? tagClass + ' bg-gray-300 '
+          : tagClass + 'bg-gray-100 hover:bg-gray-300 hover:cursor-pointer text-gray-500'
       }
       onClick={tagClicked}
     >
-      {props.tag} {selected && <span className="text-xs">✕ </span>}
+      {props.tag} {selected && <span className=" text-xs">✕ </span>}
     </span>
   );
 };

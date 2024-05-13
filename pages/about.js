@@ -7,34 +7,49 @@ export default function About() {
       <BackButton />
 
       <div
-        className="max-w-[1000px] mx-auto flex m-4  
-           leading-snug my-32 space-x-8 phone:space-x-0
+        className="w-full p-4 flex m-0  justify-center 
+           leading-snug my-24 mt-20 space-x-8 phone:space-x-0 
+
            phone:flex-col phone:px-4 phone:pt-2 phone:w-full phone:m-0
-           phone:space-y-8 phone:my-12
+           phone:space-y-8 phone:my-12 
           "
       >
-        <div className="w-1/2 phone:w-[300px]">
-          <img
-            className="w-[300px] h-[300px] object-cover"
-            src="about/me.jpg"
-          ></img>
+        <div className="w-1/3 phone:w-2/3">
+          <div className="sticky top-24">
+            <img
+              className="w-full h-[40vw] object-cover rounded-t-3xl border-2 
+              border-gray-200 phone:h-[80vw]
+              "
+              src="about/april24.jpg"
+            ></img>
+            <div className="text-gray-500 text-sm mt-2 ">
+              Photo taken by{' '}
+              <a
+                target="_blank"
+                href="https://www.instagram.com/abilorenzini/"
+                className="underline"
+              >
+                Abby Lorenzini
+              </a>
+            </div>
+          </div>
         </div>
         <div
-          className="flex flex-col space-y-8 
-        w-full phone:w-full text-lg phone:pb-8"
+          className="flex flex-col space-y-8 text-gray-500  
+        w-2/3 max-w-[800px] phone:w-full text-lg phone:pb-8 phone:text-base"
         >
           <div className="leading-6 ">
             Hi, my name is Trudy. I work at{' '}
             <a href="https://experiments.withgoogle.com/" className="underline">
               Google Creative Lab
             </a>{' '}
-            in New York City. I'm building AI experiments to make large language
-            models more approachable and accessible.
+            in New York City. I care about building tools and experiments to
+            make AI approachable for a wide audience.
           </div>
           <div>
-            At Google, half of my time is spent building prototypes and the
-            other half is spent creating clear communications around AI usage.
-            Check out my work on{' '}
+            At Google, I split my time between building experimental AI
+            prototypes and designing communication strategies for the company’s
+            biggest AI research releases. Check out my work on{' '}
             <a href="/projects/bard-social" className="underline">
               AI advertisements
             </a>{' '}
@@ -76,11 +91,20 @@ export default function About() {
             <a href="/projects/meshup" className="underline">
               Meshup
             </a>
-            .
+            . Through the comparative media studies major, I was involved with
+            digital archive design and even travelled to Prague to build a{' '}
+            <a
+              href="https://shass.mit.edu/news/mit-and-czech-teams-develop-novel-digital-history-project-supported-misti-czech-seed-fund"
+              target="_blank"
+              className="underline"
+            >
+              custom archive
+            </a>{' '}
+            for historians working with WW2 documents.
           </div>
 
           <hr
-            className="border-t-2 w-full bg-blue-100 border-black m-0
+            className="border-t-2 w-full  border-gray-200 m-0
   phone:my-2
   "
           ></hr>
@@ -225,7 +249,7 @@ export default function About() {
           </div>
 
           <hr
-            className="border-t-2 w-full bg-blue-100 border-black m-0
+            className="border-t-2 w-full border-gray-200 m-0
   phone:my-2
   "
           ></hr>

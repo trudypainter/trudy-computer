@@ -81,7 +81,7 @@
             "slug": "/projects/curatorcentral"
         },
         {
-            "title": "TRUDY.TUBE",
+            "title": "Music Listening Tracker",
             "year": "2022",
             "location": "Personal Project",
             "description": "Every single song I\u2019ve listened to, charted by time of day",
@@ -176,7 +176,7 @@
             "slug": "/projects/pokemon-archive"
         },
         {
-            "title": "TRUDY.COMPUTER",
+            "title": "Personal Website",
             "year": "2022",
             "location": "Personal Project",
             "description": "How I built my personal website using Vercel and Next.js",

@@ -18,10 +18,11 @@ const FilterBarSide = (props) => {
   return (
     <div
       className="-md:invisible -md:h-0 -md:p-0 
-      visible w-[200px] mt-4 mx-0 flex flex-col space-y-4 "
+      bg-gray-100 p-4 rounded-md
+      visible w-full mt-4 mx-0 flex flex-col space-y-4 text-gray-500"
       id="filterBar"
     >
-      <div className="flex  flex-wrap">
+      <div className="flex  flex-wrap ">
         <span className="locationTitle mr-1">Location: </span>
 
         {locations.map((tag) => (

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export function Footer() {
   return (
-    <div class="px-4 mt-0 mx-auto py-8 bg-gray-100 border-black border-b">
+    <div class="px-4 mt-0 mx-auto py-16 bg-white border-t border-gray-200">
       {/* <div>
         Built by me. Inspired by{' '}
         <a className="underline" target="_blank" href="https://gossipsweb.net/">
@@ -12,17 +12,21 @@ export function Footer() {
         .
       </div> */}
 
-      <div className="text-sm  max-w-[600px]">
-        <div className="italic">
-          Prior to the preeminence of sticks, swords and the Hero's long, hard,
-          killing tools, our ancestors' greatest invention was the container:
-          the basket of wild oats, the medicine bundle, the net made of your own
-          hair, the home, the shrine, the place that contains whatever is
-          sacred.
-        </div>
-        <div className="mt-4">
-          - Ursula K. Le Guin in "The Carrier Bag Theory of Fiction"
-        </div>
+      <div className="text-sm bg-gray-100 text-gray-500 rounded-3xl p-8  max-w-[800px] mx-auto">
+        Hey thanks for scrolling... if you made it this far we probably have
+        some shared interests. Sincerely, send me an email{' '}
+        <a className="underline" href="mailto:hello@trudy.computer">
+          hello@trudy.computer
+        </a>
+        . Or check out my{' '}
+        <a
+          target="_blank"
+          className="underline"
+          href="https://are.na/trudy-painter"
+        >
+          Are.na
+        </a>
+        .
       </div>
     </div>
   );
