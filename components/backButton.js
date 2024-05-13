@@ -11,7 +11,7 @@ export default function BackButton({ meta, nextProject }) {
   return (
     <div
       className="fixed top-0 left-0 w-full p-4 bg-white text-gray-900 z-10 
-      tablet:h-10
+      tablet:h-10 py-0 h-16
       border-b-2 border-gray-200  text-2xl flex items-center justify-center"
     >
       {/* DESKTOP */}
