@@ -156,8 +156,8 @@ export default function Home(props) {
                   Google Creative Lab
                 </div>
                 <div className="mt-1 mb-0 w-full text-gray-500 text-lg phone:text-base">
-                  At Google, half of my time is spent building prototypes and
-                  the other half is spent creating clear communications around
+                  At Google, I split my time between building prototypes and
+                  creating clear communications around
                   AI usage. I've worked on some of the largest AI launches at
                   Google, including Google's state of the art multimodal model,
                   Gemini.
