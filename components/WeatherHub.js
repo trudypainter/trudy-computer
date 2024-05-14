@@ -88,7 +88,7 @@ export default function WeatherHub() {
       setBackground(gradient);
 
       // Set the description to include the weather and the day progress and temperature
-      setDescription(`In NYC it's ${description} and ${data.current.temp}°F`);
+      setDescription(`${description} and ${data.current.temp}°F`);
     };
 
     updateBackground();
@@ -133,7 +133,7 @@ export default function WeatherHub() {
         bg-blend-overlay w-auto h-12 flex items-center justify-center"
       >
         <div className="text-sm text-gray-900">
-          {description} and {currentTime}. Gradient generated with these values.
+          In NYC, it's {currentTime} with {description}. Gradient generated with these values.
         </div>
       </div>
       {/* <div
