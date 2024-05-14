@@ -80,11 +80,8 @@ export default function WeatherHub() {
       // Modify gradient intensity based on temperature
       const tempFactor = Math.max(0, Math.min(100, ((temp - 32) / 68) * 100)); // Scale from 0% to 100% for temperatures 32°F to 100°F
 
-      // Adjust gradient based on time of day and temperature
-      // Ensure both factors are represented in the gradient
-      const gradient = `linear-gradient(${color1} ${tempFactor}%, ${color2} ${
-        100 - tempFactor
-      }%)`;
+      // Smooth linear gradient background
+      const gradient = `linear-gradient(${color1} 50%, ${color2} 100%)`;
       setBackground(gradient);
 
       // Set the description to include the weather and the day progress and temperature
