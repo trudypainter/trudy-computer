@@ -9,7 +9,11 @@ import FilterBarSide from '../components/FilterBarSide';
 import { useState } from 'react';
 import { useEffect, useRef } from 'react';
 import HomeMenu from '../components/HomeMenu';
+
+// import dynamic from 'next/dynamic';
+// const FractalTree = dynamic(() => import('../components/FractalTree'), { ssr: false });
 // import P5Background from '../components/pfive2';
+import WeatherHub from '../components/WeatherHub';
 
 export default function Home(props) {
   const allProjects = posts.posts;
@@ -120,7 +124,9 @@ export default function Home(props) {
           <div
             className="w-2/3 phone:w-full bg-gray-100 rounded-md h-full 
           flex justify-end items-end phone:mt-4 phone:h-64"
-          ></div>
+          >
+           <WeatherHub />
+          </div>
         </header>
 
         {displayMenu && (
@@ -254,12 +260,7 @@ export default function Home(props) {
 
             {/* phone version of header */}
             <div className="hidden phone:block w-full px-4">
-              <div
-                className="text-lg text-gray-900"
-              >
-                {' '}
-                Project Archive
-              </div>
+              <div className="text-lg text-gray-900"> Project Archive</div>
               <div className="text-gray-500 text-base">
                 All projects, big and small.
               </div>
