@@ -66,15 +66,37 @@ export default function WeatherHub() {
       let color1, color2;
 
       // Adjust colors based on weather
-      if (weather === 'Clear') {
-        color1 = 'yellow';
-        color2 = 'blue';
-      } else if (weather === 'Rain') {
-        color1 = 'gray';
-        color2 = 'darkblue';
-      } else {
-        color1 = 'orange';
-        color2 = 'purple';
+      switch (weather) {
+        case 'Clear':
+          color1 = 'yellow';
+          color2 = 'lightblue';
+          break;
+        case 'Rain':
+        case 'Drizzle':
+          color1 = 'gray';
+          color2 = 'darkblue';
+          break;
+        case 'Thunderstorm':
+          color1 = 'darkgray';
+          color2 = 'black';
+          break;
+        case 'Snow':
+          color1 = 'lightblue';
+          color2 = 'white';
+          break;
+        case 'Clouds':
+          color1 = 'lightgray';
+          color2 = 'darkgray';
+          break;
+        case 'Fog':
+        case 'Mist':
+        case 'Haze':
+          color1 = 'lightblue';
+          color2 = 'gray';
+          break;
+        default:
+          color1 = 'orange';
+          color2 = 'purple';
       }
 
       // Modify gradient intensity based on temperature
