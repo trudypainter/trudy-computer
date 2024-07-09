@@ -87,7 +87,7 @@ export default function Home(props) {
     <>
       <div
         className="absolute inset-0 w-screen overflow-x-hidden font-sans 
-      phone:p-0 phone:m-0 bg-red-100
+      phone:p-0 phone:m-0 bg-white
       "
         ref={scrollRef}
       >
