@@ -1,0 +1,90 @@
+---
+title: AI ROADTRIP
+year: 2024
+location: Google
+description: Prototyped first of its kind AI-powered short form video generator
+image: gen-bpf/hero3.avif
+tags: machine learning, video, fullstack
+priority: 24
+featured: google
+---
+
+<Hero>
+  <div>
+   
+    <Callout
+      link={
+        'https://developers.googleblog.com/en/how-its-made-ai-roadtrip-a-pixel-campaign-powered-by-generative-ai-and-fans/'
+      }
+      text={'AI Roadtrip Developer Blog Post'}
+    />
+  
+  </div>
+  <div>
+
+AI Roadtrip was an experimental short form video campaign for the Google Pixel.
+ The campaign featured Pixel and iPhone travelling around to destinations suggested by user comments on Instagram.
+
+ The campaign was the first of its kind from Google. 
+ It was made possible by Google's AI models and a custom AI-powered video generator. 
+
+ I built the first prototype for the video generator tool. 
+ Then, I helped brief [The Mill](https://themill.com/) and 
+ [Leftfield Labs](https://www.leftfieldlabs.com/) to build the robust video generation pipeline.
+
+  </div>
+  
+</Hero>
+![](/gen-bpf/banner.png)
+<Line />
+
+<TwoCol>
+
+**How It Works**
+
+The AI Roadtrip leveraged the power of generative AI to create custom, fan-driven content at scale. 
+When a fan commented a location idea on Instagram, our purpose-built tool generated a 
+custom video response within minutes. This tool combined Google AI models like Gemini 1.5 Pro for script generation, 
+Imagen for background image creation, and Cloud Text-to-Speech for dialogue synthesis.
+
+</TwoCol>
+
+![](/gen-bpf/flow.png)
+
+
+<Line />
+
+<TwoCol>
+**Asset Generation**
+
+![](/gen-bpf/assets.png)
+
+**Script Generation**
+
+Gemini 1.5 Pro generated multiple scripts based on the commented location, incorporating location-specific references and humor. Our creative team selected, edited, and reviewed these scripts to ensure they aligned with the campaign's voice and style.
+
+**Image and Audio Generation**
+
+Imagen created a gallery of potential background images that matched the script's context, setting the scene for the adventure. Cloud Text-to-Speech outputted the dialogues from the generated scripts, giving voice to our phone besties. Our internal tools added emphasis and inflections to the synthesized speech, bringing the characters to life.
+
+**Final Composition**
+
+All generated assets were ingested into Unreal Engine and composited into a 3D scene with Pixel, iPhone, and the car. The background image wrapped around the scene, providing a dynamic and immersive environment. Our nonlinear animation editor allowed creatives to add motion and personalize each video with dynamic elements and textures.
+
+
+From start to finish, a short video could be generated in as little as 10 minutes, including render time. This innovative approach allowed us to produce hundreds of custom mini-episodes in a single day, all inspired by the imagination of the Pixel community on social media.
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Personal Note**
+
+This project explored the potential of using AI to create more personalized and immersive content. 
+I have a hunch that there will be more of this type of ["AI-powered" advertising campaign](https://adage.com/article/special-report-cannes-lions/how-tombras-used-ai-create-6000-location-based-ads-pods/2566186). 
+
+AI alone will always just output the most *feasible* thing. AKA boringgggg. However, AI used to support already
+brilliant creatives will amplify their unique perspective. AKA delightful.
+
+</TwoCol>

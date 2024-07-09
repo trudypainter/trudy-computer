@@ -1,15 +1,26 @@
 {
     "posts": [
         {
-            "title": "BARD SOCIAL STRATEGY",
+            "title": "GENTYPE",
             "year": "2024",
             "location": "Google",
-            "description": "Short form videos for Google's chat AI, over 40 million views",
-            "image": "bard-social/cover.avif",
-            "tags": "machine learning, video",
+            "description": "Sole developer for AI-powered alphabet creator, used to demo new AI image models",
+            "image": "gentype/hero.avif",
+            "tags": "machine learning, video, fullstack",
+            "priority": "25",
+            "featured": "google",
+            "slug": "/projects/gentype"
+        },
+        {
+            "title": "AI ROADTRIP",
+            "year": "2024",
+            "location": "Google",
+            "description": "Prototyped first of its kind AI-powered short form video generator",
+            "image": "gen-bpf/hero3.avif",
+            "tags": "machine learning, video, fullstack",
             "priority": "24",
             "featured": "google",
-            "slug": "/projects/bard-social"
+            "slug": "/projects/gen-bpf"
         },
         {
             "title": "GEMINI MULTIMODAL LAUNCH",
@@ -22,6 +33,17 @@
             "featured": "google",
             "link": "https://www.latentlab.ai/",
             "slug": "/projects/gemini-launch"
+        },
+        {
+            "title": "BARD SOCIAL STRATEGY",
+            "year": "2023",
+            "location": "Google",
+            "description": "Short form videos for Google's chat AI, over 40 million views",
+            "image": "bard-social/cover.avif",
+            "tags": "machine learning, video",
+            "priority": "22",
+            "featured": "google",
+            "slug": "/projects/bard-social"
         },
         {
             "title": "GEMINI 1.5 PRO LAUNCH",

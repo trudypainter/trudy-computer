@@ -2,6 +2,25 @@ import Link from 'next/link';
 export function FeaturedPost(props) {
   let p = props.post;
 
+  const formatTitle = (title) => {
+    let formattedTitle = title
+      .split(' ')
+      .map(
+        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      )
+      .join(' ');
+
+      if (formattedTitle === "Gentype") {
+        formattedTitle = "GenType";
+      }
+
+      if (formattedTitle === "Ai Roadtrip") {
+        formattedTitle = "AI Road Trip";
+      }
+
+    return formattedTitle;
+  };
+
   return (
     <div className='bg-white bg-gray-100 p-4 rounded-md hover:bg-gray-200
     phone:p-4
@@ -16,12 +35,8 @@ export function FeaturedPost(props) {
 
       <div className="text-gray-900 mt-2 text-lg phone:text-base">
         {' '}
-        {p.title
-          .split(' ')
-          .map(
-            (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-          )
-          .join(' ')}
+        {formatTitle(p.title)}
+         
       </div>
       <div className="text-gray-500 text-lg phone:text-base">{p.description}</div>
     </a>

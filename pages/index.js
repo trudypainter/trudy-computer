@@ -167,7 +167,15 @@ export default function Home(props) {
 
             <div className="w-2/3 phone:w-full phone:mt-4">
               <div>
+                <FeaturedPost post={getProject('GENTYPE')} />
+              </div>
+              <div className="flex space-x-4 mt-4">
+                <div className='w-1/2'>
                 <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
+                </div>
+                <div className='w-1/2'>
+                <FeaturedPost post={getProject('AI ROADTRIP')} />
+                </div>
               </div>
               <div className="flex space-x-4 mt-4">
                 <div className="w-1/2 ">

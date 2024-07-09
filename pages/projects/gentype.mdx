@@ -1,0 +1,126 @@
+---
+title: GENTYPE
+year: 2024
+location: Google
+description: Sole developer for AI-powered alphabet creator, used to demo new AI image models
+image: gentype/hero.avif
+tags: machine learning, video, fullstack
+priority: 25
+featured: google
+---
+
+<Hero>
+  <div>
+   <Callout
+      link={'https://labs.google/gentype'}
+      text={'Try GenType'}
+    />
+    <Callout
+      link={
+        'https://developers.googleblog.com/en/how-its-made-gentype-alphabet-creator/'
+      }
+      text={'GenType Developer Blog Post'}
+    />
+    <Callout
+      link={'https://www.youtube.com/watch?v=gKj1FEnN7pk'}
+      text={'Video Explainer'}
+    />
+  </div>
+  <div>
+
+GenType is an alphabet creator that uses AI to let you make an alphabet out of anything.
+
+This experimental software tool was used to demonstrate Google's text to image model capabilities in a fun, approachable way. It's been used at Google I/O, Cannes, and more. 
+The tool is available to try at [labs.google/gentype](https://labs.google/gentype).
+
+I was the sole web developer on this project. I wrote all of the deployed code.
+
+  </div>
+  
+</Hero>
+<YouTubeEmbed id="gKj1FEnN7pk" />
+<Line />
+
+<TwoCol>
+**Prompting Strategy**
+
+We made GenType using Google’s Imagen model, and a simple prompt recipe. Each letter of an alphabet is generated following the prompt recipe of:
+
+*The letter "letter" made out of "prompt"*
+
+![GenType Prompt](/gentype/gentype-prompt.png)
+
+For example, this “A” was generated just with the prompt
+
+*The letter “A” made out of grape jelly, on toast, aerial shot*
+
+![GenType A](/gentype/a.png)
+
+The GenType tool is clever because it takes a single input from the user and turns it into a full alphabet of 26 letters.
+
+
+<video src="/gentype/prompt-explosion.mp4" autoPlay loop muted playsInline />
+
+
+Here's how it works:
+
+**01. User Input:** You tell the tool what material or object you want to use. For example, you could type in “grape jelly, on toast, aerial shot.”
+
+**02. Prompt Recipe:** The tool then uses this input to create each letter of the alphabet from A to Z. It makes a separate request for each letter using a format like this: "The letter 'A' made out of grape jelly, on toast, aerial shot."
+
+**03. Automation:** Instead of making one request at a time, GenType automates this process. It sends out 26 requests, one for each letter, all from your initial input of “grape jelly, on toast, aerial shot”. The result is a complete set of unique letters, all consistent with the theme you chose.
+
+By giving GenType one simple input, you get a whole set of creative, customized letters. This makes it super easy to watch an idea turn into an entire alphabet!
+
+<video src="/gentype/ui.mp4" autoPlay loop muted playsInline />
+
+Here's what you can do with the GenType tool after creating your letters:
+
+**01. Type out phrases:** With your custom letters, you can spell out anything you like, from your name to a special birthday message.
+
+**02. Save and Copy:** You can save your favorite phrases, the entire custom alphabet, or individual letters. You can also copy them to use in other applications.
+
+**03. Regenerate Letters:** If you're not satisfied with how a particular letter turned out, you can regenerate it using the same prompt to try for a different style or look.
+
+
+</TwoCol>
+
+<Line />
+
+
+<TwoCol>
+**Google I/O Appearances**
+
+GenType was first demoed at Google I/O 2024. It was used to showcase Google's newest text to image model, Imagen 3. I gave the demos to 
+the visitors and press at the event.
+
+![GenType I/O](/gentype/iodemo.png)
+
+Below is me and rapper Lupe Fiasco chatting about the tool.
+
+![GenType I/O](/gentype/lupe.png)
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**GenType Craft Night Launch Event**
+
+For the launch of the tool, we hosted a GenType Craft Night in New York. 
+I helped organize the event and gave a presentation on the tool. 
+I also managed the guest list and helped with the logistics of the event. 
+Guests were able to make custom shirts, stickers, and tote bags.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A peek into our <a href="https://twitter.com/hashtag/GenType?src=hash&amp;ref_src=twsrc%5Etfw">#GenType</a> Craft Night, hosted at Creative Lab, for those who weren’t there in person 👀 <a href="https://t.co/qyzDn7dFn2">pic.twitter.com/qyzDn7dFn2</a></p>&mdash; labs.google (@labsdotgoogle) <a href="https://twitter.com/labsdotgoogle/status/1806074176538874011?ref_src=twsrc%5Etfw">June 26, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</TwoCol>
+
+<Line />
+
+<TwoCol>
+**Make an alphabet**
+
+GenType is available to try at [labs.google/gentype](https://labs.google/gentype).
+
+</TwoCol>
