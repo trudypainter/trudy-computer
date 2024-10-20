@@ -2,7 +2,7 @@ import React from 'react';
 
 const FigmaEmbed = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-screen">
       <div className="fixed top-2 left-2 rounded-md bg-gray-100 text-gray-800 py-2 px-4">
         trudy.computer/ddp
       </div>
