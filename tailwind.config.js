@@ -161,7 +161,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Helvetica Neue', 'Helvetica'],
+      sans: ['ABC Diatype', 'Helvetica Neue', 'Helvetica'],
       serif: ['Times New Roman', 'Times', 'serif'],
     },
   },

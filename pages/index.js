@@ -88,7 +88,7 @@ export default function Home(props) {
       <div
         className="absolute inset-0 w-screen overflow-x-hidden font-sans 
       phone:p-0 phone:m-0 bg-white
-      "
+      font-['ABC_Diatype']"
         ref={scrollRef}
       >
         {/* <Header scrollPosition={scrollPosition} /> */}
@@ -98,7 +98,8 @@ export default function Home(props) {
         </div> */}
 
         <header
-          className="h-1/2 bg-white flex bg-white p-4 space-x-4
+          className="h-1/2 bg-white flex 
+          p-16 space-x-16
         phone:flex-col phone:w-full phone:p-4 phone:space-x-0 phone:h-auto
         "
         >
@@ -107,9 +108,8 @@ export default function Home(props) {
           phone:text-lg
           "
           >
-            Trudy Painter is a creative technologist at Google Creative Lab in
-            New York City and recent graduate of MIT. She designs and builds
-            prototypes to make AI models more approachable, for everyone.{' '}
+            Trudy Painter is a software engineer at Google Creative Lab in NYC,
+            making AI more approachable for everyone.
             <br className="phone:mb-12"></br>
             <div className="phone:mt-2 phone:mb-4 my-4">
               <a
@@ -125,7 +125,7 @@ export default function Home(props) {
             className="w-2/3 phone:w-full bg-gray-100 rounded-md h-full 
           flex justify-end items-end phone:mt-4 phone:h-64"
           >
-           <WeatherHub />
+            <WeatherHub />
           </div>
         </header>
 
@@ -137,17 +137,20 @@ export default function Home(props) {
         )}
 
         <div
-          className="bg-white w-screen pt-8 phone:pt-2 flex flex-col items-center 
-        border-t-2 border-gray-200 
+          className="bg-white w-screen p-16
+          phone:pt-2 flex flex-col items-center 
+          phone:p-0
+        
         "
         >
           <div
-            className="w-full phone:p-4 flex p-4 space-x-4 
+            className="w-full phone:p-4 flex space-x-16 
           phone:flex-col phone:space-x-0
+          phone:invisible phone:h-0 phone:w-0 phone:px-0
           "
           >
             <div className="w-1/3 phone:w-full">
-              <div className="sticky top-20 phone:static">
+              <div className="sticky top-24 phone:static">
                 <div
                   className="text-2xl w-full text-gray-900
                 phone:text-lg 
@@ -157,10 +160,9 @@ export default function Home(props) {
                 </div>
                 <div className="mt-1 mb-0 w-full text-gray-500 text-lg phone:text-base">
                   At Google, I split my time between building prototypes and
-                  creating clear communications around
-                  AI usage. I've worked on some of the largest AI launches at
-                  Google, including Google's state of the art multimodal model,
-                  Gemini.
+                  creating clear communications around AI usage. I've worked on
+                  some of the largest AI launches at Google, including Google's
+                  state of the art multimodal model, Gemini.
                 </div>
               </div>
             </div>
@@ -170,11 +172,11 @@ export default function Home(props) {
                 <FeaturedPost post={getProject('GENTYPE')} />
               </div>
               <div className="flex space-x-4 mt-4">
-                <div className='w-1/2'>
-                <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
+                <div className="w-1/2">
+                  <FeaturedPost post={getProject('GEMINI MULTIMODAL LAUNCH')} />
                 </div>
-                <div className='w-1/2'>
-                <FeaturedPost post={getProject('AI ROADTRIP')} />
+                <div className="w-1/2">
+                  <FeaturedPost post={getProject('AI ROADTRIP')} />
                 </div>
               </div>
               <div className="flex space-x-4 mt-4">
@@ -187,15 +189,17 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-          <div className="h-12 phone:h-4"></div>
+          <div className="h-32 phone:h-0"></div>
           <div
-            className="max-full relative phone:w-full phone:p-4 p-4 pt-12 flex space-x-4
-          border-t-2 border-gray-200 overflow-visible
+            className="max-full relative  phone:p-4
+            flex space-x-16
+          overflow-visible
           phone:flex-col phone:space-x-0 
+          phone:invisible phone:h-0 phone:w-0 phone:px-0
           "
           >
             <div className="w-1/3 bg-white phone:w-full">
-              <div className="sticky top-20 phone:static">
+              <div className="sticky top-24 phone:static">
                 <div
                   className="text-2xl w-full text-gray-900
                 phone:text-lg
@@ -209,9 +213,8 @@ export default function Home(props) {
                 "
                 >
                   I graduated from MIT in 2023 with a double major in computer
-                  science and comparative media studies. I also published
-                  research on human + AI interaction with the MIT Media Lab,
-                  specifically the Viral Communications group.
+                  science + comparative media studies. I also published research
+                  on AI tools through the MIT Media Lab.
                 </div>
               </div>
             </div>
@@ -229,20 +232,20 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-          <div className="h-8 phone:h-2"></div>
+          <div className="h-24 phone:h-0"></div>
 
           <div
             className="flex space-x-0 mb-12 mx-auto
-            border-t-2 border-gray-200
-            phone:space-x-0 justify-center w-full phone:w-full phone:flex-col "
+            phone:space-x-0 justify-center w-full 
+            phone:w-full phone:flex-col "
           >
             <div
-              className="flex flex-col p-4 pr-0 w-1/3 
+              className="flex flex-col pr-0 w-1/3 
             phone:invisible phone:h-0 phone:w-0 phone:px-0"
             >
               <div
                 className="flex flex-col w-full space-x-0 
-              sticky top-16 bg-white"
+              sticky top-20 bg-white"
               >
                 <div
                   className="text-2xl text-left pt-4 
@@ -276,7 +279,7 @@ export default function Home(props) {
 
             <div
               className="flex flex-col w-2/3 space-y-4 
-            phone:w-full mt-24 p-4 phone:mt-0
+            phone:w-full mt-24 pl-12 phone:mt-0 phone:p-4
           "
             >
               {selectedProjects.map((p) => (

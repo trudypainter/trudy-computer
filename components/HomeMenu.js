@@ -1,7 +1,6 @@
-import next from 'next';
 import Link from 'next/dist/client/link';
 
-export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
+export default function HomeMenu({ scrollPosition, windowHeight }) {
   function mapRange(value, in_min, in_max, out_min, out_max) {
     const val = Math.min(
       Math.round(
@@ -31,8 +30,8 @@ export default function HomeMenu({ meta, scrollPosition, windowHeight }) {
   return (
     <div
       className="fixed top-0 left-0 w-full bg-yellow z-30 phone:h-10
-      border-b-2 border-gray-200 bg-white text-2xl flex text-gray-500
-      items-center justify-center p-4"
+       bg-white text-2xl flex text-gray-500
+      items-center justify-center p-4 px-16 phone:px-4"
     >
       {/* DESKTOP */}
       <div

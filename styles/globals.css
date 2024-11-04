@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'ABC Diatype';
+  src: url('/dinamo/ABC Diatype/ABCDiatype-Regular-Trial.woff2') format('woff2'),
+    url('/dinamo/ABC Diatype/ABCDiatype-Regular-Trial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Diatype';
+  src: url('/dinamo/ABC Diatype/ABCDiatype-Medium-Trial.woff2') format('woff2'),
+    url('/dinamo/ABC Diatype/ABCDiatype-Medium-Trial.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Diatype';
+  src: url('/dinamo/ABC Diatype/ABCDiatype-Bold-Trial.woff2') format('woff2'),
+    url('/dinamo/ABC Diatype/ABCDiatype-Bold-Trial.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add this new section before the Tailwind directives */
+@layer base {
+  * {
+    letter-spacing: -0.02em !important;
+  }
+
+  p,
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.35 !important;
+  }
+}
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

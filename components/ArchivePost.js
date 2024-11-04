@@ -11,32 +11,29 @@ export function ArchivePost(props) {
   const formatTitle = (title) => {
     let formattedTitle = title
       .split(' ')
-      .map(
-        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-      )
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
       .join(' ');
 
-      if (formattedTitle === "Gentype") {
-        formattedTitle = "GenType";
-      }
+    if (formattedTitle === 'Gentype') {
+      formattedTitle = 'GenType';
+    }
 
-      if (formattedTitle === "Ai Roadtrip") {
-        formattedTitle = "AI Road Trip";
-      }
+    if (formattedTitle === 'Ai Roadtrip') {
+      formattedTitle = 'AI Road Trip';
+    }
 
-      if (formattedTitle === "Llm Axis") {
-        formattedTitle = "LLM Axis";
-      }
-      if (formattedTitle.includes("Mit")) {
-        formattedTitle = formattedTitle.replace("Mit", "MIT");
-      }
-      if (formattedTitle.includes("Bpm")) {
-        formattedTitle = formattedTitle.replace("Bpm", "BPM");
-      }
-      if (formattedTitle.includes("Vsco")) {
-        formattedTitle = formattedTitle.replace("Vsco", "VSCO");
-      }
-      
+    if (formattedTitle === 'Llm Axis') {
+      formattedTitle = 'LLM Axis';
+    }
+    if (formattedTitle.includes('Mit')) {
+      formattedTitle = formattedTitle.replace('Mit', 'MIT');
+    }
+    if (formattedTitle.includes('Bpm')) {
+      formattedTitle = formattedTitle.replace('Bpm', 'BPM');
+    }
+    if (formattedTitle.includes('Vsco')) {
+      formattedTitle = formattedTitle.replace('Vsco', 'VSCO');
+    }
 
     return formattedTitle;
   };
@@ -83,7 +80,9 @@ export function ArchivePost(props) {
       >
         {isPhone && (
           <div className="flex justify-between mt-2 phone:py-0">
-            <div className="text-xl phone:text-base">{formatTitle(p.title)}</div>
+            <div className="text-xl phone:text-base">
+              {formatTitle(p.title)}
+            </div>
           </div>
         )}
         <div>

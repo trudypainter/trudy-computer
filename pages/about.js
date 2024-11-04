@@ -14,11 +14,10 @@ export default function About() {
            phone:space-y-8 phone:my-12 
           "
       >
-        <div className="w-1/3 phone:w-2/3">
+        <div className="w-1/4 phone:w-2/3">
           <div className="sticky top-24">
             <img
-              className="w-full h-[40vw] object-cover rounded-t-3xl border-2 
-              border-gray-200 phone:h-[80vw]
+              className="w-full h-[30vw] object-cover rounded-t-3xl  phone:h-[70vw]
               "
               src="about/april24.jpg"
             ></img>
@@ -47,9 +46,12 @@ export default function About() {
             make AI approachable for a wide audience.
           </div>
           <div>
-            At Google, I split my time between building experimental AI
-            prototypes and designing communication strategies for the company’s
-            biggest AI research releases. Check out my work on{' '}
+            At Google, I split my time between building{' '}
+            <a href="https://labs.google/gentype" className="underline">
+              experimental AI prototypes
+            </a>{' '}
+            and designing communication strategies for the company's biggest AI
+            research releases. Check out my work on{' '}
             <a href="/projects/bard-social" className="underline">
               AI advertisements
             </a>{' '}
@@ -102,6 +104,47 @@ export default function About() {
             </a>{' '}
             for historians working with WW2 documents.
           </div>
+          <hr
+            className="border-t-2 w-full  border-gray-200 m-0
+  phone:my-2
+  "
+          ></hr>
+          <div>
+            <div>Invited Talks</div>
+            <div className="mt-2">
+              <a href="/ddp" className="underline" target="_blank">
+                Digital Design @ Parsons
+              </a>
+              , 2024
+              <br />
+              <a
+                href="https://x.com/labsdotgoogle/status/1849604089103122889"
+                className="underline"
+                target="_blank"
+              >
+                USC x labs.google
+              </a>
+              , 2024
+              <br />
+              <a
+                href="https://github.com/golanlevin/60-212/blob/main/2024/assignments/assignment_5.md"
+                className="underline"
+                target="_blank"
+              >
+                CMU Creative Coding
+              </a>
+              , 2024
+              <br />
+              <a
+                href="https://videos.theconference.se/trudy-painter-algorithms-behind-ai"
+                className="underline"
+                target="_blank"
+              >
+                The Conference
+              </a>
+              , 2024
+            </div>
+          </div>
 
           <hr
             className="border-t-2 w-full  border-gray-200 m-0
@@ -111,140 +154,118 @@ export default function About() {
 
           <div className="div">
             <div>Professional Work Featured On</div>
-            <div>
-              <ul className="list-disc pl-5">
-                <li>
-                  <a
-                    href="https://www.theverge.com/2024/2/15/24073457/google-gemini-1-5-ai-model-llm"
-                    className="underline"
-                  >
-                    The Verge
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.wired.com/story/google-deepmind-gemini-pro-ai-upgrade/"
-                    className="underline"
-                  >
-                    Wired
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.bbc.com/news/technology-67650807"
-                    className="underline"
-                  >
-                    BBC
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.forbes.com/sites/richardnieva/2024/02/14/google-deepmind-gemini/?sh=5ed21c471ac6"
-                    className="underline"
-                  >
-                    Forbes
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://fortune.com/2024/02/15/google-gemini-pro-competition-openai/"
-                    className="underline"
-                  >
-                    Fortune
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.technologyreview.com/2024/02/15/1088367/googles-new-version-of-gemini-can-handle-far-bigger-amounts-of-data/"
-                    className="underline"
-                  >
-                    MIT Technology Review
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://www.cnbc.com/2023/12/08/google-faces-controversy-over-edited-gemini-ai-demo-video.html"
-                    className="underline"
-                  >
-                    CNBC
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://techcrunch.com/2024/02/15/googles-new-gemini-model-can-analyze-an-hour-long-video-but-few-people-can-use-it/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAL6zsktyt2ZHPBhNDgYATLbVqqwcp2j7RR53NWmMQ3BXIscNPzG0-X9MhfYT6VspW5oKraoaYE9Yme-vQ4xbnSgR7U-_uGcosUIJT3Vh5SH7YxntZazWD_kj-i3sFk2haislkvknt_i6yxGSRg5kKkfp4t1u9RmtzWfu_zd7FHl4"
-                    className="underline"
-                  >
-                    Tech Crunch
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.cnet.com/tech/google-teases-an-even-better-version-of-gemini-but-youll-have-to-wait-for-it/"
-                    className="underline"
-                  >
-                    CNET
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.bloomberg.com/news/articles/2024-02-15/google-rolls-out-updated-ai-model-capable-of-handling-longer-text-video"
-                    className="underline"
-                  >
-                    Bloomberg
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.nytimes.com/2023/12/08/podcasts/hardfork-google-gemini-cybertruck.html"
-                    className="underline"
-                  >
-                    Hard Fork Podcast
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://www.fastcompany.com/91029527/google-gemini-1-5-ai-llm"
-                    className="underline"
-                  >
-                    Fast Company
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.businessinsider.com/google-gemini-ai-demo-misleading-video-chatgpt-2023-12?IR=T"
-                    className="underline"
-                  >
-                    Business Insider
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://finance.yahoo.com/news/google-definitely-had-hands-gemini-154000931.html"
-                    className="underline"
-                  >
-                    Yahoo Finance
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://www.youtube.com/watch?v=tHS3qxU_3RE&t=320s"
-                    className="underline"
-                  >
-                    MKBHD
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://venturebeat.com/ai/google-unveils-gemini-1-5-a-next-gen-ai-model-with-million-token-context-window/"
-                    className="underline"
-                  >
-                    Venture Beat
-                  </a>
-                </li>
-              </ul>
+            <div className="mt-2">
+              <a
+                href="https://www.theverge.com/2024/2/15/24073457/google-gemini-1-5-ai-model-llm"
+                className="underline"
+              >
+                The Verge
+              </a>
+              ,{' '}
+              <a
+                href="https://www.wired.com/story/google-deepmind-gemini-pro-ai-upgrade/"
+                className="underline"
+              >
+                Wired
+              </a>
+              ,{' '}
+              <a
+                href="https://www.bbc.com/news/technology-67650807"
+                className="underline"
+              >
+                BBC
+              </a>
+              ,{' '}
+              <a
+                href="https://www.forbes.com/sites/richardnieva/2024/02/14/google-deepmind-gemini/?sh=5ed21c471ac6"
+                className="underline"
+              >
+                Forbes
+              </a>
+              ,{' '}
+              <a
+                href="https://fortune.com/2024/02/15/google-gemini-pro-competition-openai/"
+                className="underline"
+              >
+                Fortune
+              </a>
+              ,{' '}
+              <a
+                href="https://www.technologyreview.com/2024/02/15/1088367/googles-new-version-of-gemini-can-handle-far-bigger-amounts-of-data/"
+                className="underline"
+              >
+                MIT Technology Review
+              </a>
+              ,{' '}
+              <a
+                href="https://www.cnbc.com/2023/12/08/google-faces-controversy-over-edited-gemini-ai-demo-video.html"
+                className="underline"
+              >
+                CNBC
+              </a>
+              ,{' '}
+              <a
+                href="https://techcrunch.com/2024/02/15/googles-new-gemini-model-can-analyze-an-hour-long-video-but-few-people-can-use-it/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAL6zsktyt2ZHPBhNDgYATLbVqqwcp2j7RR53NWmMQ3BXIscNPzG0-X9MhfYT6VspW5oKraoaYE9Yme-vQ4xbnSgR7U-_uGcosUIJT3Vh5SH7YxntZazWD_kj-i3sFk2haislkvknt_i6yxGSRg5kKkfp4t1u9RmtzWfu_zd7FHl4"
+                className="underline"
+              >
+                Tech Crunch
+              </a>
+              ,{' '}
+              <a
+                href="https://www.cnet.com/tech/google-teases-an-even-better-version-of-gemini-but-youll-have-to-wait-for-it/"
+                className="underline"
+              >
+                CNET
+              </a>
+              ,{' '}
+              <a
+                href="https://www.bloomberg.com/news/articles/2024-02-15/google-rolls-out-updated-ai-model-capable-of-handling-longer-text-video"
+                className="underline"
+              >
+                Bloomberg
+              </a>
+              ,{' '}
+              <a
+                href="https://www.nytimes.com/2023/12/08/podcasts/hardfork-google-gemini-cybertruck.html"
+                className="underline"
+              >
+                Hard Fork Podcast
+              </a>
+              ,{' '}
+              <a
+                href="https://www.fastcompany.com/91029527/google-gemini-1-5-ai-llm"
+                className="underline"
+              >
+                Fast Company
+              </a>
+              ,{' '}
+              <a
+                href="https://www.businessinsider.com/google-gemini-ai-demo-misleading-video-chatgpt-2023-12?IR=T"
+                className="underline"
+              >
+                Business Insider
+              </a>
+              ,{' '}
+              <a
+                href="https://finance.yahoo.com/news/google-definitely-had-hands-gemini-154000931.html"
+                className="underline"
+              >
+                Yahoo Finance
+              </a>
+              ,{' '}
+              <a
+                href="https://www.youtube.com/watch?v=tHS3qxU_3RE&t=320s"
+                className="underline"
+              >
+                MKBHD
+              </a>
+              ,{' '}
+              <a
+                href="https://venturebeat.com/ai/google-unveils-gemini-1-5-a-next-gen-ai-model-with-million-token-context-window/"
+                className="underline"
+              >
+                Venture Beat
+              </a>
             </div>
           </div>
 

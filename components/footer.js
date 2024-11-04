@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export function Footer() {
   return (
-    <div class="px-4 mt-0 mx-auto py-16 bg-white border-t border-gray-200">
+    <div class="px-4 mt-0 mx-auto py-18 pb-32 ">
       {/* <div>
         Built by me. Inspired by{' '}
         <a className="underline" target="_blank" href="https://gossipsweb.net/">

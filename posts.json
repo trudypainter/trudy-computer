@@ -4,7 +4,7 @@
             "title": "GENTYPE",
             "year": "2024",
             "location": "Google",
-            "description": "Sole developer for AI-powered alphabet creator, used to demo new AI image models",
+            "description": "AI-powered alphabet creator",
             "image": "gentype/hero.avif",
             "tags": "machine learning, video, fullstack",
             "priority": "25",
