@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 const client_id = 'eccc5903792f4c2d917b6192e55db263'; // Your client id
 const client_secret = 'fb5698202cd14ab8a4f015d21e9671d7'; // Your secret
 const redirect_uri = 'http://localhost:3000/'; // Your redirect uri
-const authorization_code = 'AQB3d43LKeHZr27TWATybhSUmXRQvr15I5wWea7H9CYtjwXl0uiVSsu-1CrgrH-uQDhwpaf9BQZdD4owvW7Gp0xFpyVZLGeDPEbbhjTUjGLiF14biFeKxHehuFCbObj1noIgdVbR2-7q4EMaTXUG0DG9cGhH6iAMb8zjoHy2Prkg_G1UOflt7NDuzNcoAvR2pj4pBsYVttysgpSll34';
+const authorization_code =
+  'AQB3d43LKeHZr27TWATybhSUmXRQvr15I5wWea7H9CYtjwXl0uiVSsu-1CrgrH-uQDhwpaf9BQZdD4owvW7Gp0xFpyVZLGeDPEbbhjTUjGLiF14biFeKxHehuFCbObj1noIgdVbR2-7q4EMaTXUG0DG9cGhH6iAMb8zjoHy2Prkg_G1UOflt7NDuzNcoAvR2pj4pBsYVttysgpSll34';
 
 const fetchWeatherAndAstronomy = async () => {
   const apiKey = '30cdc141d452409d92a5d032c7799521';
@@ -11,7 +12,13 @@ const fetchWeatherAndAstronomy = async () => {
   const lon = '-74.0060';
   const part = 'minutely,hourly';
   const response = await fetch(
-    `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=imperial`,
+    {
+      mode: 'cors',
+      headers: {
+        Origin: 'https://www.trudy.computer',
+      },
+    }
   );
   const data = await response.json();
 
@@ -26,11 +33,14 @@ const fetchWeatherAndAstronomy = async () => {
 };
 
 const fetchRecentlyPlayed = async (accessToken) => {
-  const response = await fetch('https://api.spotify.com/v1/me/player/recently-played', {
-    headers: {
-      'Authorization': `Bearer ${accessToken}`
+  const response = await fetch(
+    'https://api.spotify.com/v1/me/player/recently-played',
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
     }
-  });
+  );
   const data = await response.json();
   console.log(data);
 };
@@ -40,9 +50,11 @@ const exchangeToken = async () => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Basic ' + btoa(`${client_id}:${client_secret}`)
+      Authorization: 'Basic ' + btoa(`${client_id}:${client_secret}`),
     },
-    body: `grant_type=authorization_code&code=${authorization_code}&redirect_uri=${encodeURIComponent(redirect_uri)}`
+    body: `grant_type=authorization_code&code=${authorization_code}&redirect_uri=${encodeURIComponent(
+      redirect_uri
+    )}`,
   });
 
   const data = await response.json();
@@ -53,7 +65,8 @@ const exchangeToken = async () => {
 
 const generateRandomString = (length) => {
   let text = '';
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const possible =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   for (let i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
@@ -164,7 +177,7 @@ export default function WeatherHub() {
           these values.
         </div>
       </div>
-      
+
       {/* <button
         onClick={handleSpotifyAuth}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
