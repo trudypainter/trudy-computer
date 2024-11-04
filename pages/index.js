@@ -179,14 +179,6 @@ export default function Home(props) {
                   <FeaturedPost post={getProject('AI ROADTRIP')} />
                 </div>
               </div>
-              <div className="flex space-x-4 mt-4">
-                <div className="w-1/2 ">
-                  <FeaturedPost post={getProject('BARD SOCIAL STRATEGY')} />
-                </div>
-                <div className="w-1/2 ">
-                  <FeaturedPost post={getProject('GEMINI 1.5 PRO LAUNCH')} />
-                </div>
-              </div>
             </div>
           </div>
           <div className="h-32 phone:h-0"></div>
@@ -225,9 +217,6 @@ export default function Home(props) {
               <div className="flex space-x-4 mt-4">
                 <div className="w-2/3 phone:w-1/2">
                   <FeaturedPost post={getProject('MESHUP')} />
-                </div>
-                <div className="w-1/3 phone:w-1/2">
-                  <FeaturedPost post={getProject('REAL TALK RADIO')} />
                 </div>
               </div>
             </div>
