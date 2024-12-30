@@ -2,7 +2,7 @@
   "name": "trudypainter",
   "private": true,
   "scripts": {
-    "dev": "python3 make_posts_json.py && next dev",
+    "dev": "python3 make_posts_json.py && NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "build": "next build"
   },
   "dependencies": {

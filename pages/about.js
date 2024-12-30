@@ -112,8 +112,17 @@ export default function About() {
           <div>
             <div>Invited Talks</div>
             <div className="mt-2">
+              <a
+                href="https://x.com/zachlieberman/status/1856318997442220476"
+                className="underline"
+                target="_blank"
+              >
+                MIT Media Lab
+              </a>
+              , 2024
+              <br />
               <a href="/ddp" className="underline" target="_blank">
-                Digital Design @ Parsons
+                Parsons School of Design
               </a>
               , 2024
               <br />
@@ -122,7 +131,7 @@ export default function About() {
                 className="underline"
                 target="_blank"
               >
-                USC x labs.google
+                University of Southern California
               </a>
               , 2024
               <br />
@@ -131,7 +140,7 @@ export default function About() {
                 className="underline"
                 target="_blank"
               >
-                CMU Creative Coding
+                Carnegie Mellon University
               </a>
               , 2024
               <br />
